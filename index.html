@@ -1,217 +1,541 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dimitri Méyépa – Portfolio</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
   <style>
     html {
       scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
-      color: #212529;
+      font-family: 'Poppins', sans-serif;
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+      margin: 0;
     }
 
-    .hero {
-      background: linear-gradient(135deg, #000000, #a4a4ea);
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
+    h1, h2, h3, h5 {
+      color: #4b6cb7;
+    }
+    
+
+    h5 { 
+      font-size: 16px;
+      font-weight: bold;
     }
 
-    .hero h1 {
-      font-size: 4rem;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    .btn-custom {
-      background-color: #ffffff;
-      color: #000;
-      border: none;
-      padding: 0.75rem 2rem;
-      font-weight: 500;
-      border-radius: 50px;
-      transition: all 0.3s ease-in-out;
-    }
+    /* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: #1e1e1e;
+  padding: 80px 20px;
+}
 
-    .btn-custom:hover {
-      background-color: #e2e6ea;
-      color: #000;
-      transform: scale(1.05);
-    }
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+}
 
+.hero p {
+  color: #bbb;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.btn-custom {
+  background: #4b6cb7;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.3s;
+  display: inline-block;
+}
+
+.btn-custom:hover {
+  background: #354c80;
+  transform: scale(1.05);
+}
+
+.linkedin-btn {
+  font-size: 2rem;
+  color: #4b6cb7;
+  margin-top: 15px;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block;
+}
+
+.linkedin-btn:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.hero img {
+  width: 80%;
+  max-width: 400px;
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+  .hero img {
+    margin-top: 5px; 
+  }
+
+  .btn-custom, .linkedin-btn {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    display: block;
+  }
+}
+
+    /* Sections */
     .section {
       padding: 80px 20px;
-      animation: fadeIn 1s ease-in-out both;
+      color: #fff;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+    .section.bg-dark {
+      background: #2b2b2b;
+    }
+    /* À propos */
+#apropos {
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center; /* Centrer le texte dans la section */
+}
+
+.about-description {
+  color: #d0d0d0;
+  line-height: 1.6;
+  text-align: center; /* Centrer le texte de la description */
+}
+
+.about-info-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrer les éléments à l'intérieur */
+  margin-top: 30px;
+}
+
+.about-info-section {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrer les éléments horizontalement */
+  align-items: center; /* Centrer les éléments verticalement */
+  font-size: 14px;
+}
+
+.about-info-section {
+  margin: 30px auto; /* Centre la section */
+  max-width: 1000px; /* Largeur maximale pour pas que ce soit trop étalé */
+  padding-left: 150px; /* Décalage interne vers la droite */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  font-size: 14px;
+  justify-items: start;
+}
+
+/* Responsive pour petit écran */
+@media (max-width: 768px) {
+  .about-info-section {
+    padding-left: 0; /* Enlève le décalage sur mobile */
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+}
+
+.about-info-item {
+  display: flex;
+  align-items: center; /* Aligner les icônes et le texte */
+  justify-content: start; /* Aligner le texte à gauche */
+}
+
+.about-info-item .material-symbols-outlined {
+  font-size: 18px;
+  margin-right: 8px;
+  color: #4b6cb7;
+}
+
+.about-info-item strong {
+  color: #4b6cb7;
+  margin-right: 6px;
+}
+
+    
+
+    /* Formations */
+    #formations .col-md-4 {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-bottom: 30px;
     }
 
-    .project-img {
-      transition: transform 0.4s ease;
+    /* Skills */
+    #skills .skill-item {
+      background: #2b2b2b;
+      padding: 20px;
       border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
 
-    .project-img:hover {
-      transform: scale(1.05);
+    .skill-bar {
+      background: #444;
+      height: 6px;
+      border-radius: 3px;
+      margin-top: 10px;
+      overflow: hidden;
     }
 
+    .skill-bar-fill {
+      background: #4b6cb7;
+      height: 100%;
+    }
+
+    /* Cards */
     .card {
+      background: #2b2b2b;
+      color: white;
       border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+      height: 100%;
     }
 
-    h2 {
-      font-weight: 700;
-      margin-bottom: 40px;
+    .card:hover {
+      transform: translateY(-5px);
     }
 
-    .list-group-item {
-      border: none;
-      background: transparent;
-      font-size: 1.1rem;
+    /* Contact Floating Button */
+    #contact-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #4b6cb7;
+      color: white;
+      border-radius: 8px;
+      padding: 20px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    #contact-box {
+      display: none;
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      background: #2b2b2b;
+      padding: 30px;
+      width: 400px;
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    #contact-box a {
+      color: #4b6cb7;
+      display: block;
+      margin-top: 10px;
+    }
+
+    #contact-box .contact-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Modal */
+    .modal-content {
+      background-color: #1e1e1e;
+      color: #a1a1a1;
+    }
+
+    .modal-content h5 {
+      color: #fff;
+    }
+
+    .modal-title {
+      color: #4b6cb7;
+    }
+
+    .btn-close {
+      filter: invert(1);
+    }
+
+    .btn {
+      background-color: #4b6cb7;
+      border: 1px solid #354c80;
+    }
+
+    .btn:hover {
+      background-color: #354c80;
+      border: 1px solid #354c80;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero img {
+        margin-top: 30px;
+      }
+
+      .btn-custom, .linkedin-btn {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+        display: block;
+      }
+
+      #contact-box {
+        width: 90%;
+        right: 5%;
+      }
     }
   </style>
 </head>
+
 <body>
 
- 
-  <section class="hero">
-    <div class="container">
-      <h1 class="fw-bold mb-3">Dimitri Méyépa</h1>
-      <p class="lead mb-4">Étudiant en BTS Services Informatiques aux Organisations</p>
-      <a href="CV - Dimitri (1).pdf" target="_blank" class="btn btn-custom">Voir mon CV</a>
-    </div>
-  </section>
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mx-auto text-center" data-aos="fade-up">
+        <h1>Dimitri Méyépa</h1>
+        <p>Étudiant en BTS SIO</p>
 
-<section class="section bg-white text-center">
-    <div class="container">
-      <h2 class="display-6">Formations</h2>
-      <div class="row justify-content-center g-4">
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">2024 – 2026</h5>
-              <p class="card-text">BTS SIO – MCCI Business School</p>
-            </div>
-          </div>
+        <div class="mt-4 d-flex flex-column align-items-center">
+          <a href="CV - Dimitri (1).pdf" target="_blank" class="btn btn-custom">Voir mon CV</a>
+          <a href="https://www.linkedin.com/in/dimitri-meyepa-b725b2361/" target="_blank" class="linkedin-btn">
+            <i class="fab fa-linkedin"></i>
+          </a>
         </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">2023</h5>
-              <p class="card-text">Baccalauréat Général – Lycée La Bourdonnais</p>
-            </div>
-          </div>
+      </div>
+      <div class="col-md-6 text-center" data-aos="fade-left">
+        <img src="photo.png" alt="Photo Dimitri">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- À propos -->
+<section class="section bg-dark" id="apropos">
+  <div class="container" data-aos="fade-up">
+      <h2 class="mb-5">À propos de moi</h2>
+      <p class="about-description">
+        Actuellement étudiant en BTS SIO (Services Informatiques aux Organisations), je me passionne pour le développement web, le développement d'application et la programmation
+      </p>
+      <p class="about-description">
+        J'ai pour objectif de devenir développeur full stack à l'issue de mes études.
+      </p>
+    
+      <div class="about-info-section">
+        <div class="about-info-item">
+          <span class="material-symbols-outlined">calendar_month</span>
+          <strong>Date de naissance : </strong> 15 Juin 2005
         </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">2020</h5>
-              <p class="card-text">Brevet – Lycée La Bourdonnais</p>
-            </div>
-          </div>
+        <div class="about-info-item">
+          <span class="material-symbols-outlined">flag</span>
+          <strong>Nationalité :</strong> Mauricien
+        </div>
+        <div class="about-info-item">
+          <span class="material-symbols-outlined">call</span>
+          <strong>Téléphone :</strong> +230 5536-0799
+        </div>
+        <div class="about-info-item">
+          <span class="material-symbols-outlined">location_on</span>
+          <strong>Adresse :</strong> Curepipe, Ile Maurice
+        </div>
+        <div class="about-info-item">
+          <span class="material-symbols-outlined">mail</span>
+          <strong>Email :</strong> dimitri.meyepa1@gmail.com
+        </div>
+        <div class="about-info-item">
+          <span class="material-symbols-outlined">translate</span>
+          <strong>Langues parlées :</strong> Français - Anglais - Espagnol
+        </div>
+        
+      </div>
+    </div>
+</section>
+
+
+<!-- Formations -->
+<section class="section" id="formations">
+  <div class="container" data-aos="fade-up">
+    <h2 class="text-center mb-5">Parcours Scolaire</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-4 d-flex">
+        <div class="card p-4 flex-fill text-center">
+          <h3 class="mb-3">2024 – 2026</h3>
+          <h5 class="mb-2">BTS Services Informatiques aux Organisations</h5>
+          <p class="mb-0">MCCI Business School - Île Maurice</p>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex">
+        <div class="card p-4 flex-fill text-center">
+          <h3 class="mb-3">2023</h3>
+          <h5 class="mb-2">Baccalauréat Général</h5>
+          <p class="mb-0">Lycée La Bourdonnais - Île Maurice</p>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex">
+        <div class="card p-4 flex-fill text-center">
+          <h3 class="mb-3">2020</h3>
+          <h5 class="mb-2">Brevet des collèges</h5>
+          <p class="mb-0">Lycée La Bourdonnais - Île Maurice</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-<!-- COMPÉTENCES -->
-<section class="section text-center">
-    <div class="container">
-      <h2 class="display-6 mb-5">Compétences Techniques</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <!-- Compétence -->
-          <div class="mb-4">
-            <div class="d-flex justify-content-between">
-              <span class="fw-semibold">HTML</span>
-              <span class="text-muted">20%</span>
-            </div>
-            <div class="progress" style="height: 10px;">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 20%;"></div>
-            </div>
-          </div>
-  
-          <div class="mb-4">
-            <div class="d-flex justify-content-between">
-              <span class="fw-semibold">CSS</span>
-              <span class="text-muted">15%</span>
-            </div>
-            <div class="progress" style="height: 10px;">
-              <div class="progress-bar bg-info" role="progressbar" style="width: 15%;"></div>
-            </div>
-          </div>
-  
-          <div class="mb-4">
-            <div class="d-flex justify-content-between">
-              <span class="fw-semibold">PHP</span>
-              <span class="text-muted">10%</span>
-            </div>
-            <div class="progress" style="height: 10px;">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 10%;"></div>
-            </div>
-          </div>
-  
-          <div class="mb-4">
-            <div class="d-flex justify-content-between">
-              <span class="fw-semibold">MySQL</span>
-              <span class="text-muted">10%</span>
-            </div>
-            <div class="progress" style="height: 10px;">
-              <div class="progress-bar bg-danger" role="progressbar" style="width: 10%;"></div>
-            </div>
-          </div>
-  
-          <div class="mb-4">
-            <div class="d-flex justify-content-between">
-              <span class="fw-semibold">Java</span>
-              <span class="text-muted">2%</span>
-            </div>
-            <div class="progress" style="height: 10px;">
-              <div class="progress-bar bg-primary" role="progressbar" style="width: 2%;"></div>
-            </div>
-          </div>
-  
-          <div class="mb-4">
-            <div class="d-flex justify-content-between">
-              <span class="fw-semibold">Github</span>
-              <span class="text-muted">20%</span>
-            </div>
-            <div class="progress" style="height: 10px;">
-              <div class="progress-bar bg-secondary" role="progressbar" style="width: 20%;"></div>
-            </div>
-          </div>
-  
+<!-- Compétences -->
+<section id="skills" class="section bg-dark">
+  <div class="container" data-aos="fade-up">
+    <h2 class="text-center">Compétences Techniques</h2>
+    <div class="row mt-5">
+      <div class="col-md-6">
+        <div class="skill-item">
+          <i class="fab fa-html5"></i> <strong>HTML</strong> <span>70%</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:70%"></div></div>
+        </div>
+        <div class="skill-item">
+          <i class="fab fa-css3-alt"></i> <strong>CSS</strong> <span>75%</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
+        </div>
+        <div class="skill-item">
+          <i class="fab fa-php"></i> <strong>PHP</strong> <span>60%</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:60%"></div></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="skill-item">
+          <i class="fas fa-database"></i> <strong>MySQL</strong> <span>60%</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:60%"></div></div>
+        </div>
+        <div class="skill-item">
+          <i class="fab fa-java"></i> <strong>Java</strong> <span>50%</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:50%"></div></div>
+        </div>
+        <div class="skill-item">
+          <i class="fab fa-github"></i> <strong>GitHub</strong> <span>80%</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
         </div>
       </div>
     </div>
-  </section>
-  
-  
+  </div>
+</section>
 
-  <!-- PROJETS -->
-  <section class="section bg-white text-center" id="projets">
-    <div class="container">
-      <h2 class="display-6">Projets</h2>
-      <a href="http://localhost/supercar/" target="_blank" class="text-decoration-none d-inline-block">
-        <div class="card shadow-sm mx-auto" style="max-width: 220px;">
-          <img src="logo1.png" class="card-img-top project-img p-3" alt="Supercar">
+<!-- Projets -->
+<section class="section" id="projets">
+  <div class="container" data-aos="fade-up">
+    <h2 class="text-center">Mes Projets</h2>
+    <div class="d-flex justify-content-center mt-5">
+      <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal">
+        <div class="card" style="width: 220px;">
+          <img src="logofff.png" class="card-img-top p-3" alt="Projet Supercar">
         </div>
       </a>
     </div>
-  </section>
-  
+  </div>
+</section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Modale -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="projectModalLabel">Projet Supercar</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5><strong>Description du projet</strong></h5>
+        <p>Le projet Supercar est une application web de gestion de voitures...</p>
+        <h5><strong>Technologies utilisées</strong></h5>
+        <ul>
+          <li>PHP</li>
+          <li>MySQL</li>
+          <li>HTML, CSS, JavaScript</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="http://localhost/supercar/" class="btn btn-primary" target="_blank">Voir le projet</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact flottant -->
+<div id="contact-float" onclick="toggleContactBox()">
+  <i class="fas fa-envelope"></i>
+</div>
+
+<div id="contact-box">
+  <span class="contact-close" onclick="toggleContactBox()">&times;</span>
+  <h4>Contact</h4>
+  <a href="mailto:dimitri.meyepa1@gmail.com"><i class="fas fa-envelope"></i> dimitri.meyepa1@gmail.com</a>
+  <a href="tel:+23055360799"><i class="fas fa-phone"></i> 5536-0799</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+
+  function toggleContactBox() {
+    var box = document.getElementById('contact-box');
+    box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'block' : 'none';
+  }
+</script>
+
 </body>
 </html>

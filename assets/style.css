@@ -37,25 +37,25 @@ html {
   .navbar-dark .navbar-toggler-icon {
     background-color: #f0f0f0;
   }
-  /* Désactiver le fond blanc du menu hamburger */
-.navbar-collapse {
+  
+ .navbar-collapse {
     background-color: transparent !important;
     border: none !important;
   }
   
-  /* S'assurer que le bouton hamburger n'a pas de fond ou de bord */
+ 
   .navbar-toggler {
     background-color: transparent !important;
     border: none !important;
   }
   
-  /* Empêcher tout effet de fond sur les liens de la navbar */
+  
   .navbar-nav .nav-item .nav-link {
     background-color: transparent !important;
     border: none !important;
   }
   
-  /* Optionnel: Si le carré blanc persiste, on peut essayer de désactiver l'ombre ou l'effet hover sur le bouton */
+  
   .navbar-toggler-icon {
     background-color: transparent !important;
     box-shadow: none !important;

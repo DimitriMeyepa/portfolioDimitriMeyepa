@@ -343,7 +343,17 @@ p.typing-effect {
   margin-top: 3rem;
   overflow: hidden;
   text-align: center;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: 
+    opacity 0.3s ease, 
+    visibility 0.3s ease, 
+    transform 0.3s ease, 
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.projet-carte:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .projet-carte.hidden {

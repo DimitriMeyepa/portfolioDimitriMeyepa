@@ -14,113 +14,205 @@
 
 <body>
 
-  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">Portfolio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#apropos">À propos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#formations">Formations</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#skills">Compétences</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projets">Projets</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+ <!-- Navbar -->
 
 <!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-6 mx-auto text-center" data-aos="fade-up">
-        <h1>Dimitri Méyépa</h1>
-        <p class="typing-effect">Étudiant en BTS SIO</p>
-        
-        <div class="mt-4 d-flex flex-column align-items-center">
-          <a href="CV - Dimitri (1).pdf" target="_blank" class="btn btn-custom mb-3">Voir mon CV</a>
-          <div class="d-flex gap-3">
-            <a href="https://www.linkedin.com/in/dimitri-meyepa-b725b2361/" target="_blank" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/DimitriMeyepa" target="_blank" class="linkedin-btn">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-        </div>
-        
-      </div>
-      <div class="col-md-6 text-center" data-aos="fade-left">
-        <img src="assets/img/photo.png" alt="Photo Dimitri">
+<section class="hero d-flex flex-column justify-content-center align-items-center text-center" data-aos="fade-in">
+  <nav class="navbar navbar-expand-lg navbar-dark" data-aos="fade-down" data-aos-delay="100">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#apropos">À propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projets">Projets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Compétences</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#formations">Formations</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="btn btn-primary btn-rounded" href="CV - Dimitri (1).pdf" target="_blank">Voir mon CV</a>
+          </li>
+        </ul>
       </div>
     </div>
+  </nav>
+  
+  <h1 class="typewriter fw-bold">Dimitri Méyépa</h1>
+  <div class="badge  mb-3">Étudiant en BTS SIO</div>
+  <p class="lead mt-3">Actuellement étudiant en BTS SIO (Services Informatiques aux Organisations),<br> je me passionne pour le développement web, le développement d'application et la programmation.</p>
+  
+  <div class="mt-4 d-flex">
+    <a href="CV - Dimitri (1).pdf" class="btn btn-primary btn-lg">Voir mon CV</a>
+  </div>
+
+  <div class="social-icons mt-5 d-flex gap-4">
+    <a href="https://www.linkedin.com/in/dimitri-meyepa-b725b2361/" target="_blank" class="text-decoration-none text-light fs-2">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/DimitriMeyepa" target="_blank" class="text-decoration-none text-light fs-2">
+      <i class="fab fa-github"></i>
+    </a>
   </div>
 </section>
+
 
 
 
 <!-- À propos -->
-<section class="section bg-dark" id="apropos">
+<section  id="apropos">
   <div class="container" data-aos="fade-up">
-      <h2 class="mb-5">À propos de moi</h2>
-      <p class="about-description">
-        Actuellement étudiant en BTS SIO (Services Informatiques aux Organisations), je me passionne pour le développement web, le développement d'application et la programmation
-      </p>
-      <p class="about-description">
-        J'ai pour objectif de devenir développeur full stack à l'issue de mes études.
-      </p>
-
-</section>
-
-
-
-<!-- Formations -->
-<section class="section" id="formations">
-  <div class="container" data-aos="fade-up">
-    <h2 class="text-center mb-5">Parcours Scolaire</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-4 d-flex" data-aos="fade-up" data-aos-delay="200">
-        <div class="card p-4 flex-fill text-center">
-          <h3 class="mb-3">2024 – 2026</h3>
-          <h5 class="mb-2">BTS Services Informatiques aux Organisations</h5>
-          <p class="mb-0">MCCI Business School - Île Maurice</p>
-        </div>
+   <h2 class="text-center mb-5" data-aos="zoom-in">À propos de moi</h2>
+    <div class="row align-items-center">
+      
+      <!-- Image -->
+      <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+        <img src="assets/img/Bureau.png" alt="Mon bureau" class="img-fluid rounded-4" style="max-width: 100%; height: 450px; margin-bottom: 20px;">
       </div>
-      <div class="col-md-4 d-flex" data-aos="fade-up" data-aos-delay="400">
-        <div class="card p-4 flex-fill text-center">
-          <h3 class="mb-3">2023</h3>
-          <h5 class="mb-2">Baccalauréat Général</h5>
-          <p class="mb-0">Lycée La Bourdonnais - Île Maurice</p>
+
+      <!-- Contenu texte + atouts -->
+      <div class="col-lg-6">
+        
+        <div class="row g-3 mb-4">
+          <div class="col-6">
+            <div class="bg-primary p-3 rounded-3 text-center">
+              <i class="fas fa-lightbulb mb-2"></i>
+              <h6 class="mb-0">Créativité</h6>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="bg-primary p-3 rounded-3 text-center">
+              <i class="fas fa-laptop-code mb-2"></i>
+              <h6 class="mb-0">Adaptabilité</h6>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="bg-primary p-3 rounded-3 text-center">
+              <i class="fas fa-bolt mb-2"></i>
+              <h6 class="mb-0">Autonomie</h6>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="bg-primary p-3 rounded-3 text-center">
+              <i class="fas fa-tasks mb-2"></i>
+              <h6 class="mb-0">Organisation</h6>
+            </div>
+          </div>
         </div>
+
+       <div class="ms-2">
+        <p class="fw-light">
+          Actuellement étudiant en BTS Services Informatiques aux Organisations, je me passionne pour le développement web et aspire à devenir développeur full stack.
+        </p>
+        <p class="fw-light">
+          Motivé et curieux, je cherche à enrichir mes compétences techniques en HTML, CSS, PHP et MySQL à travers des projets concrets.
+        </p>
+        <p class="fw-light">
+          Mon objectif est de contribuer activement au sein d'une entreprise dynamique tout en continuant à apprendre et à évoluer dans le domaine du développement.
+        </p>
       </div>
-      <div class="col-md-4 d-flex" data-aos="fade-up" data-aos-delay= "600">
-        <div class="card p-4 flex-fill text-center">
-          <h3 class="mb-3">2020</h3>
-          <h5 class="mb-2">Brevet des collèges</h5>
-          <p class="mb-0">Lycée La Bourdonnais - Île Maurice</p>
-        </div>
+        
+
       </div>
     </div>
   </div>
 </section>
 
+<section id="projets" class="projets-section" data-aos="fade-up">
+  <h2 class="text-center mb-5" data-aos="zoom-in">Mes projets</h2>
+
+  <div class="projets-filtres" data-aos="fade-right">
+    <button class="filtre actif" data-filtre="tous">Tous</button>
+    <button class="filtre" data-filtre="personnel">Projets personnels</button>
+    <button class="filtre" data-filtre="scolaire">Projets scolaires</button>
+    <button class="filtre" data-filtre="professionnel">Projets professionnels</button>
+  </div>
+
+  <div class="projets-grille">
+    <!-- Projet réel -->
+    <div class="projet-carte" data-type="scolaire" data-aos="fade-left">
+      <img src="assets/img/logofff.png" alt="Supercar">
+      <div class="projet-info">
+        <span class="badge">Développement web</span>
+        <h3>Supercar - Conduisez l'excellence</h3>
+       <a href="#" class="voir-plus" data-bs-toggle="modal" data-bs-target="#projectModal">Voir plus <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+ </section>
+
+ <!-- Modale -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="projectModalLabel">Projet Supercar</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5><strong>Description du projet</strong></h5>
+        <p>Le projet Supercar est une application web de gestion de voitures dans laquelle le client peut consulter les voitures disponibles, effectuer une demande d'essai qui nécessite une connexion ou une inscription.</p>
+        
+        <h5><strong>Technologies utilisées</strong></h5>
+        <ul>
+          <li>PHP</li>
+          <li>MySQL</li>
+          <li>HTML, CSS, Bootstrap, JavaScript</li>
+        </ul>
+
+        
+        <div class="text-center my-4">
+          <img src="assets/img/apercu_supercar.png" alt="Aperçu du projet Supercar" class="img-fluid rounded">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="http://localhost/supercar/" class="btn btn-primary" target="_blank">Voir le projet</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  const filtres = document.querySelectorAll('.filtre');
+  const projets = document.querySelectorAll('.projet-carte');
+
+  filtres.forEach(filtre => {
+    filtre.addEventListener('click', () => {
+      // Gérer le bouton actif
+      filtres.forEach(btn => btn.classList.remove('actif'));
+      filtre.classList.add('actif');
+
+      // Récupérer la catégorie demandée
+      const categorie = filtre.getAttribute('data-filtre');
+
+      projets.forEach(projet => {
+        const type = projet.getAttribute('data-type');
+
+        if (categorie === 'tous' || categorie === type) {
+          projet.classList.remove('hidden');
+        } else {
+          projet.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
+
+
 
 
 <!-- Compétences -->
-<section id="skills" class="section bg-dark">
+<section id="skills">
   <div class="container" data-aos="fade-up">
-    <h2 class="text-center">Compétences Techniques</h2>
+    <h2 class="text-center mb-5" data-aos="zoom-in"> Compétences Techniques</h2>
     <div class="row mt-5">
       <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
         <div class="skill-item">
@@ -167,51 +259,39 @@
 </section>
 
 
-
-<!-- Projets -->
-<section class="section" id="projets">
+<!-- Formations -->
+<section class="section" id="formations">
   <div class="container" data-aos="fade-up">
-    <h2 class="text-center">Mes Projets</h2>
-    <div class="d-flex justify-content-center mt-5">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal">
-        <div class="card" style="width: 220px;">
-          <img src="assets/img/logofff.png" class="card-img-top p-3" alt="Projet Supercar">
+   <h2 class="text-center mb-5" data-aos="zoom-in">Parcours Scolaire</h2>
+    <div class="row justify-content-center align-items-stretch">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card p-4 flex-fill text-center">
+          <h3 class="mb-3">2024 – 2026</h3>
+          <h5 class="mb-2">BTS Services Informatiques aux Organisations</h5>
+          <p class="mb-0">MCCI Business School - Île Maurice</p>
         </div>
-      </a>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="card p-4 flex-fill text-center">
+          <h3 class="mb-3">2023</h3>
+          <h5 class="mb-2">Baccalauréat Général</h5>
+          <p class="mb-0">Lycée La Bourdonnais - Île Maurice</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+        <div class="card p-4 flex-fill text-center">
+          <h3 class="mb-3">2020</h3>
+          <h5 class="mb-2">Brevet des collèges</h5>
+          <p class="mb-0">Lycée La Bourdonnais - Île Maurice</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Modale -->
-<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="projectModalLabel">Projet Supercar</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <h5><strong>Description du projet</strong></h5>
-        <p>Le projet Supercar est une application web de gestion de voitures dans laquelle le client peut consulter les voitures disponibles, effectuer une demande d'essai qui nécessite une connexion ou une inscription.</p>
-        
-        <h5><strong>Technologies utilisées</strong></h5>
-        <ul>
-          <li>PHP</li>
-          <li>MySQL</li>
-          <li>HTML, CSS, Bootstrap, JavaScript</li>
-        </ul>
 
-        
-        <div class="text-center my-4">
-          <img src="assets/img/apercu_supercar.png" alt="Aperçu du projet Supercar" class="img-fluid rounded">
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a href="http://localhost/supercar/" class="btn btn-primary" target="_blank">Voir le projet</a>
-      </div>
-    </div>
-  </div>
-</div>
+
+
 
 <!-- Contact flottant -->
 <div id="contact-float" onclick="toggleContactBox()">

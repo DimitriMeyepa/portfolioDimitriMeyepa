@@ -469,11 +469,7 @@ p.typing-effect {
   
   
 }
-@media screen and (max-width: 768px) {
-  .projet-carte {
-    margin-left: 2rem;
-  }
-}
+
 
 .projet-carte:hover {
   transform: translateY(-5px);

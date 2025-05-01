@@ -8,17 +8,13 @@
   <link rel="stylesheet" href="assets/style.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 
 <body>
-
- <!-- Navbar -->
-
-<!-- Hero Section -->
-<section class="hero d-flex flex-column justify-content-center align-items-center text-center" data-aos="fade-in">
-  <nav class="navbar navbar-expand-lg navbar-dark" data-aos="fade-down" data-aos-delay="100">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" data-aos="fade-down" data-aos-delay="100">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Portfolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -45,27 +41,32 @@
       </div>
     </div>
   </nav>
-  
-  <h1 class="typewriter fw-bold">Dimitri Méyépa</h1>
-  <div class="badge  mb-3">Étudiant en BTS SIO</div>
-  <p class="lead mt-3">Actuellement étudiant en BTS SIO (Services Informatiques aux Organisations),<br> je me passionne pour le développement web, le développement d'application et la programmation.</p>
-  
-  <div class="mt-4 d-flex">
-    <a href="CV - Dimitri (1).pdf" class="btn btn-primary btn-lg">Voir mon CV</a>
-  </div>
 
-  <div class="social-icons mt-5 d-flex gap-4">
-    <a href="https://www.linkedin.com/in/dimitri-meyepa-b725b2361/" target="_blank" class="text-decoration-none text-light fs-2">
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/DimitriMeyepa" target="_blank" class="text-decoration-none text-light fs-2">
-      <i class="fab fa-github"></i>
-    </a>
+  <!-- Hero -->
+<section class="hero-section d-flex align-items-center ms-lg-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Texte à gauche -->
+      <div class="col-md-6 text-light text-md-start text-center">
+        <h1 class="fw-bold" id="hero-name">Dimitri Méyépa</h1>
+        <h3 class="mb-3" data-aos="fade-right" data-aos-delay="1700">Étudiant en <span class="highlight">BTS SIO</span></h3>
+        <p class="mb-4" data-aos="fade-up" data-aos-delay="2100">Actuellement étudiant en BTS SIO (Services Informatiques aux Organisations), je me passionne pour le développement web, le développement d'application et la programmation.</p>
+        <div class="d-flex flex-wrap gap-3 justify-content-md-start justify-content-center">
+          <a href="CV - Dimitri (1).pdf" class="btn btn-primary" target="_blank" data-aos="fade-left" data-aos-delay="2400">Voir mon CV</a>
+        </div>
+      </div>
+
+      <!-- Image à droite -->
+      <div class="col-md-6 text-center mt-5 mt-md-0">
+        <div class="image-wrapper">
+          <img src="assets/img/exempleimg.png" alt="Dimitri Méyépa" class="hero-img img-fluid" data-aos="zoom-in">
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
-
-
-
 
 <!-- À propos -->
 <section  id="apropos">
@@ -74,7 +75,7 @@
     <div class="row align-items-center">
       
       <!-- Image -->
-      <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+      <div class="col-lg-6 mb-4 mb-lg-0 text-center" data-aos="fade-right" data-aos-delay="1000">
         <img src="assets/img/Bureau.png" alt="Mon bureau" class="img-fluid rounded-4" style="max-width: 100%; height: 450px; margin-bottom: 20px;">
       </div>
 
@@ -83,25 +84,25 @@
         
         <div class="row g-3 mb-4">
           <div class="col-6">
-            <div class="bg-primary p-3 rounded-3 text-center">
+            <div class="bg-primary p-3 rounded-3 text-center" data-aos="fade-up" data-aos-delay="200">
               <i class="fas fa-lightbulb mb-2"></i>
               <h6 class="mb-0">Créativité</h6>
             </div>
           </div>
           <div class="col-6">
-            <div class="bg-primary p-3 rounded-3 text-center">
+            <div class="bg-primary p-3 rounded-3 text-center" data-aos="fade-up" data-aos-delay="400">
               <i class="fas fa-laptop-code mb-2"></i>
               <h6 class="mb-0">Adaptabilité</h6>
             </div>
           </div>
           <div class="col-6">
-            <div class="bg-primary p-3 rounded-3 text-center">
+            <div class="bg-primary p-3 rounded-3 text-center" data-aos="fade-up" data-aos-delay="600">
               <i class="fas fa-bolt mb-2"></i>
               <h6 class="mb-0">Autonomie</h6>
             </div>
           </div>
           <div class="col-6">
-            <div class="bg-primary p-3 rounded-3 text-center">
+            <div class="bg-primary p-3 rounded-3 text-center" data-aos="fade-up" data-aos-delay="800">
               <i class="fas fa-tasks mb-2"></i>
               <h6 class="mb-0">Organisation</h6>
             </div>
@@ -109,13 +110,13 @@
         </div>
 
        <div class="ms-2">
-        <p class="fw-light">
-          Actuellement étudiant en BTS Services Informatiques aux Organisations, je me passionne pour le développement web et aspire à devenir développeur full stack.
+        <p class="fw-light" data-aos="fade-left" data-aos-delay="1200">
+          Actuellement étudiant en BTS Services Informatiques aux Organisations, je me passionne pour le développement et aspire à devenir développeur full stack.
         </p>
-        <p class="fw-light">
+        <p class="fw-light" data-aos="fade-left" data-aos-delay="1200">
           Motivé et curieux, je cherche à enrichir mes compétences techniques en HTML, CSS, PHP et MySQL à travers des projets concrets.
         </p>
-        <p class="fw-light">
+        <p class="fw-light" data-aos="fade-left" data-aos-delay="1200">
           Mon objectif est de contribuer activement au sein d'une entreprise dynamique tout en continuant à apprendre et à évoluer dans le domaine du développement.
         </p>
       </div>
@@ -130,22 +131,44 @@
   <h2 class="text-center mb-5" data-aos="zoom-in">Mes projets</h2>
 
   <div class="projets-filtres" data-aos="fade-right">
-    <button class="filtre actif" data-filtre="tous">Tous</button>
-    <button class="filtre" data-filtre="personnel">Projets personnels</button>
-    <button class="filtre" data-filtre="scolaire">Projets scolaires</button>
-    <button class="filtre" data-filtre="professionnel">Projets professionnels</button>
+    <select id="filtre-select" class="form-select">
+      <option value="tous" class="filtre" selected>Tous</option>
+      <option value="personnel" class="filtre">Projets personnels</option>
+      <option value="scolaire" class="filtre">Projets scolaires</option>
+      <option value="professionnel" class="filtre">Projets professionnels</option>
+    </select>
   </div>
 
   <div class="projets-grille">
-    <!-- Projet réel -->
+    <!-- Projet 1-->
     <div class="projet-carte" data-type="scolaire" data-aos="fade-left">
       <img src="assets/img/logofff.png" alt="Supercar">
       <div class="projet-info">
-        <span class="badge">Développement web</span>
-        <h3>Supercar - Conduisez l'excellence</h3>
+        <span class="badge">Application web</span>
+        <h3>Supercar</h3>
        <a href="#" class="voir-plus" data-bs-toggle="modal" data-bs-target="#projectModal">Voir plus <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
+     <!-- Projet 2 -->
+     <div class="projet-carte" data-type="scolaire" data-aos="fade-left">
+      <img src="assets/img/logofff.png" alt="Supercar" >
+      <div class="projet-info">
+        <span class="badge">Application Web</span>
+        <h3>Supercar - Admin</h3>
+       <a href="#" class="voir-plus" data-bs-toggle="modal" data-bs-target="#projectModal2">Voir plus <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+     <!-- Projet 3 -->
+     <div class="projet-carte" data-type="scolaire" data-aos="fade-left">
+      <img src="assets/img/logo_ML.png" alt="MachineLearning" >
+      <div class="projet-info">
+        <span class="badge">Web Statique</span>
+        <h3>Machine Learning</h3>
+       <a href="#" class="voir-plus" data-bs-toggle="modal" data-bs-target="#projectModal3">Voir plus <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  
  </section>
 
  <!-- Modale -->
@@ -179,84 +202,236 @@
   </div>
 </div>
 
+<!-- Modale 2 -->
+<div class="modal fade" id="projectModal2" tabindex="-1" aria-labelledby="projectModalLabel2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="projectModalLabel">Projet Supercar</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5><strong>Description du projet</strong></h5>
+        <p>La partie administrative du site Supercar. Ici, l'administrateur peut consulter le nombre de message de contact, le nombre de demande d'essais, le nombre d'utilisateur ainsi que les voitures disponibles et non disponibles. Il peut aussi ajouter, modifier et supprimer des éléments de chaque page du site Supercar.</p>
+        
+        <h5><strong>Technologies utilisées</strong></h5>
+        <ul>
+          <li>PHP</li>
+          <li>MySQL</li>
+          <li>HTML, CSS, Bootstrap, JavaScript</li>
+        </ul>
+
+        
+        <div class="text-center my-4">
+          <img src="assets/img/apercu_supercaradmin.png" alt="Aperçu du projet Supercar" class="img-fluid rounded">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="http://localhost/supercar-admin/" class="btn btn-primary" target="_blank">Voir le projet</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modale 3 -->
+<div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModalLabel3" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="projectModalLabel">Machine Learning</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5><strong>Description du projet</strong></h5>
+        <p>Site web statique à propos du Machine Learning</p>
+        
+        <h5><strong>Technologies utilisées</strong></h5>
+        <ul>
+          <li>HTML, CSS</li>
+        </ul>
+
+        
+        <div class="text-center my-4">
+          <img src="assets/img/apercu_machinelearning.png" alt="Aperçu du projet Supercar" class="img-fluid rounded">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="http://localhost/machinelearning/" class="btn btn-primary" target="_blank">Voir le projet</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <script>
-  const filtres = document.querySelectorAll('.filtre');
-  const projets = document.querySelectorAll('.projet-carte');
+ const filtreSelect = document.getElementById('filtre-select');
+const projets = Array.from(document.querySelectorAll('.projet-carte'));
+const grille = document.querySelector('.projets-grille');
 
-  filtres.forEach(filtre => {
-    filtre.addEventListener('click', () => {
-      // Gérer le bouton actif
-      filtres.forEach(btn => btn.classList.remove('actif'));
-      filtre.classList.add('actif');
 
-      // Récupérer la catégorie demandée
-      const categorie = filtre.getAttribute('data-filtre');
 
-      projets.forEach(projet => {
-        const type = projet.getAttribute('data-type');
+filtreSelect.addEventListener('change', () => {
+  const categorie = filtreSelect.value;
 
-        if (categorie === 'tous' || categorie === type) {
-          projet.classList.remove('hidden');
-        } else {
-          projet.classList.add('hidden');
-        }
-      });
+ 
+  const projetsFiltres = projets.filter(projet => {
+    return categorie === 'tous' || projet.getAttribute('data-type') === categorie;
+  });
+
+  
+  if (categorie === 'personnel') {
+    projetsFiltres.sort((a, b) => {
+      return a.querySelector('h3').textContent === 'Team Alouda - Web Cup' ? -1 : 1;
+    });
+  } else if (categorie === 'scolaire') {
+    projetsFiltres.sort((a, b) => {
+      return a.querySelector('h3').textContent === 'Supercar' ? -1 : 1;
+    });
+  }
+
+  
+  grille.innerHTML = '';
+  projetsFiltres.forEach(projet => {
+    projet.classList.remove('hidden');
+    grille.appendChild(projet);
+  });
+
+ 
+  projets.forEach(projet => {
+    if (!projetsFiltres.includes(projet)) {
+      projet.classList.add('hidden');
+    }
+  });
+  
+});
+
+
+</script>
+
+  <!--compétences -->
+<section id="skills" class="py-5">
+  <div class="container" data-aos="fade-up">
+    <h2 class="text-center mb-5" data-aos="zoom-in">Compétences Techniques</h2>
+
+    <div class="carousel-container position-relative">
+      <div class="carousel-wrapper" id="custom-carousel">
+        <!-- Frontend -->
+        <div class="carousel-slide active">
+          <div class="skill-box text-center">
+            <h5 class="mb-4">Frontend</h5>
+            <div class="row">
+              <div class="col-6 mb-4">
+                <i class="fab fa-html5 fa-2x mb-2"></i>
+                <div><strong>HTML</strong></div>
+                <div class="text-secondary">Avancé</div>
+              </div>
+              <div class="col-6 mb-4">
+                <i class="fab fa-css3-alt fa-2x mb-2"></i>
+                <div><strong>CSS</strong></div>
+                <div class="text-secondary">Avancé</div>
+              </div>
+              <div class="col-6 mb-4">
+                <i class="fab fa-bootstrap fa-2x mb-2"></i>
+                <div><strong>Bootstrap</strong></div>
+                <div class="text-secondary">Avancé</div>
+              </div>
+              <div class="col-6 mb-4">
+                <i class="fa fa-wind fa-2x mb-2"></i>
+                <div><strong>Tailwind</strong></div>
+                <div class="text-secondary">Avancé</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="carousel-slide">
+          <div class="skill-box text-center">
+            <h5 class="mb-4">Backend</h5>
+            <div class="row">
+              <div class="col-6 mb-4">
+                <i class="fab fa-php fa-2x mb-2"></i>
+                <div><strong>PHP</strong></div>
+                <div class="text-secondary">Intermédiaire</div>
+              </div>
+              <div class="col-6 mb-4">
+                <i class="fab fa-js fa-2x mb-2"></i>
+                <div><strong>JavaScript</strong></div>
+                <div class="text-secondary">Intermédiaire</div>
+              </div>
+              <div class="col-6 mb-4">
+                <i class="fab fa-java fa-2x mb-2"></i>
+                <div><strong>Java</strong></div>
+                <div class="text-secondary">Bases</div>
+              </div>
+              <div class="col-6 mb-4">
+                <i class="fab fa-python fa-2x mb-2"></i>
+                <div><strong>Python</strong></div>
+                <div class="text-secondary">Avancé</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 : BDD -->
+<div class="carousel-slide">
+  <div class="skill-box text-center">
+    <h5 class="mb-4">Base de données</h5>
+    <div class="row">
+      <!-- MySQL -->
+      <div class="col-6 mb-4">
+        <img src="assets/img/mysql.png" alt="MySQL" style="width: 32px; height: 32px; margin-bottom: 8px;">
+        <div><strong>MySQL</strong></div>
+        <div class="text-secondary">Intermédiaire</div>
+      </div>
+      <!-- PostgreSQL -->
+      <div class="col-6 mb-4">
+        <img src="assets/img/Postgresql.png" alt="PostgreSQL" style="width: 32px; height: 32px; margin-bottom: 8px;">
+        <div><strong>PostgreSQL</strong></div>
+        <div class="text-secondary">Intermédiaire</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+  const slides = document.querySelectorAll('.carousel-slide');
+  let current = 1;
+
+  function updateCarousel() {
+    slides.forEach((slide, index) => {
+      slide.classList.remove('left', 'center', 'right');
+      if (index === current) {
+        slide.classList.add('center');
+      } else if (index === (current - 1 + slides.length) % slides.length) {
+        slide.classList.add('left');
+      } else if (index === (current + 1) % slides.length) {
+        slide.classList.add('right');
+      }
+    });
+  }
+
+  slides.forEach((slide, index) => {
+    slide.addEventListener('click', () => {
+      if (index !== current) {
+        current = index;
+        updateCarousel();
+      }
     });
   });
+
+  window.addEventListener('DOMContentLoaded', updateCarousel);
 </script>
 
 
 
 
-<!-- Compétences -->
-<section id="skills">
-  <div class="container" data-aos="fade-up">
-    <h2 class="text-center mb-5" data-aos="zoom-in"> Compétences Techniques</h2>
-    <div class="row mt-5">
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="skill-item">
-          <i class="fab fa-html5"></i> <strong>HTML</strong> <span>70%</span>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" style="width: 70%" data-aos="progress-full" data-aos-duration="1500" data-aos-delay="300"></div>
-          </div>
-        </div>
-        <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
-          <i class="fab fa-css3-alt"></i> <strong>CSS</strong> <span>75%</span>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" style="width: 75%" data-aos="progress-full" data-aos-duration="1500" data-aos-delay="400"></div>
-          </div>
-        </div>
-        <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
-          <i class="fab fa-php"></i> <strong>PHP</strong> <span>60%</span>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" style="width: 60%" data-aos="progress-full" data-aos-duration="1500" data-aos-delay="500"></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="skill-item">
-          <i class="fas fa-database"></i> <strong>MySQL</strong> <span>60%</span>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" style="width: 60%" data-aos="progress-full" data-aos-duration="1500" data-aos-delay="300"></div>
-          </div>
-        </div>
-        <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
-          <i class="fab fa-java"></i> <strong>Java</strong> <span>50%</span>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" style="width: 50%" data-aos="progress-full" data-aos-duration="1500" data-aos-delay="400"></div>
-          </div>
-        </div>
-        <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
-          <i class="fab fa-github"></i> <strong>GitHub</strong> <span>80%</span>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" style="width: 80%" data-aos="progress-full" data-aos-duration="1500" data-aos-delay="500"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
+
 
 
 <!-- Formations -->
@@ -273,15 +448,15 @@
       </div>
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
         <div class="card p-4 flex-fill text-center">
-          <h3 class="mb-3">2023</h3>
-          <h5 class="mb-2">Baccalauréat Général</h5>
-          <p class="mb-0">Lycée La Bourdonnais - Île Maurice</p>
+          <h3 class="mb-3">2023-2024</h3>
+          <h5 class="mb-2">Licence Économie-Gestion</h5>
+          <p class="mb-0">Université Lyon 2</p>
         </div>
       </div>
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
         <div class="card p-4 flex-fill text-center">
-          <h3 class="mb-3">2020</h3>
-          <h5 class="mb-2">Brevet des collèges</h5>
+          <h3 class="mb-3">2023</h3>
+          <h5 class="mb-2">Baccalauréat Général</h5>
           <p class="mb-0">Lycée La Bourdonnais - Île Maurice</p>
         </div>
       </div>

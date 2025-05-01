@@ -468,16 +468,16 @@ filtreSelect.addEventListener('change', () => {
 
 
 
-<!-- Contact flottant -->
+<!-- Contact -->
 <div id="contact-float" onclick="toggleContactBox()">
   <i class="fas fa-envelope"></i>
 </div>
 
 <div id="contact-box">
   <span class="contact-close" onclick="toggleContactBox()">&times;</span>
-  <h4>Contact</h4>
-  <a href="mailto:dimitri.meyepa1@gmail.com"><i class="fas fa-envelope"></i> dimitri.meyepa1@gmail.com</a>
-  <a href="tel:+23055360799"><i class="fas fa-phone"></i> 5536-0799</a>
+  <h2>Contact</h2>
+  <p><i class="fas fa-envelope"></i> dimitri.meyepa1@gmail.com</p>
+  <p><i class="fas fa-phone"></i> (+230)5536-0799</p>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -496,13 +496,13 @@ filtreSelect.addEventListener('change', () => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
 
-    // Récupérer la cible du lien
+    
     const targetId = this.getAttribute('href').substring(1);
     const targetElement = document.getElementById(targetId);
 
-    // Scroll vers la section, en prenant en compte la hauteur du header fixe
+    
     window.scrollTo({
-      top: targetElement.offsetTop - document.querySelector('nav').offsetHeight, // Ajuste ici selon la hauteur de ton nav
+      top: targetElement.offsetTop - document.querySelector('nav').offsetHeight, 
       behavior: 'smooth'
     });
   });

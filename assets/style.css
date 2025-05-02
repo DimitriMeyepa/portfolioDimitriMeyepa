@@ -708,6 +708,10 @@ p.typing-effect {
  
 }
 
+#contact-box h2 {
+  margin-top: 0;
+}
+
 
 #contact-box p {
   color: #fff;

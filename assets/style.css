@@ -35,8 +35,6 @@ body {
   color: #4b6cb7;
 }
 
-
-
 .btn-primary {
   background-color: #4c64ea;
   border: none;
@@ -58,11 +56,6 @@ body {
 
 .btn-outline-light:hover {
   background-color: #4c64ea;
-}
-@media (max-width: 768px) {
-  .btn-primary { 
-    margin-right: 2rem;
-  }
 }
 
 /* Hero */
@@ -417,7 +410,11 @@ p.typing-effect {
 }
 
 
-
+.projets-grille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem;
+}
 
 
 @media (max-width: 992px) {
@@ -494,12 +491,6 @@ p.typing-effect {
 .projet-info {
   padding: 1rem;
 }
-@media (max-width: 768px) {
-  .projet-carte {
-    margin-left: 2rem;
-  }
-  }
-
 
 .badge {
   display: inline-block;
@@ -789,6 +780,3 @@ p.typing-effect {
     right: 5%;
   }
 }
-
-
-

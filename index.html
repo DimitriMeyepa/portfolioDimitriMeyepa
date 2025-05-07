@@ -48,7 +48,7 @@
   <div class="container">
     <div class="row align-items-center">
 
-      <!-- Texte à gauche -->
+    
       <div class="col-md-6 text-light text-md-start text-center">
         <h1 class="fw-bold" id="hero-name">Dimitri Méyépa</h1>
         <h3 class="mb-3" data-aos="fade-right" data-aos-delay="1700">Étudiant en <span class="highlight">BTS SIO</span></h3>
@@ -58,7 +58,7 @@
         </div>
       </div>
 
-      <!-- Image à droite -->
+  
       <div class="col-md-6 text-center mt-5 mt-md-0">
         <div class="image-wrapper">
           <img src="assets/img/photomoi.png" alt="Dimitri Méyépa" class="hero-img img-fluid" data-aos="zoom-in">
@@ -69,20 +69,18 @@
   </div>
 </section>
 
+
+
+
 <!-- À propos -->
 <section  id="apropos">
   <div class="container" data-aos="fade-up">
    <h2 class="text-center mb-5" data-aos="zoom-in">À propos de moi</h2>
     <div class="row align-items-center">
-      
-      <!-- Image -->
       <div class="col-lg-6 mb-4 mb-lg-0 text-center" data-aos="fade-right" data-aos-delay="1000">
         <img src="assets/img/Bureau.png" alt="Mon bureau" class="img-fluid rounded-4" style="max-width: 100%; height: 450px; margin-bottom: 20px;">
       </div>
-
-      <!-- Contenu texte + atouts -->
       <div class="col-lg-6">
-        
         <div class="row g-3 mb-4">
           <div class="col-6">
             <div class="bg-primary p-3 rounded-3 text-center" data-aos="fade-up" data-aos-delay="200">
@@ -109,7 +107,6 @@
             </div>
           </div>
         </div>
-
        <div class="ms-2">
         <p class="fw-light" data-aos="fade-left" data-aos-delay="1200">
           Actuellement étudiant en BTS Services Informatiques aux Organisations, je me passionne pour le développement et aspire à devenir développeur full stack.
@@ -126,6 +123,8 @@
     </div>
   </div>
 </section>
+
+<!--Projet-->
 
 <section id="projets" class="projets-section" data-aos="fade-up">
   <h2 class="text-center mb-5" data-aos="zoom-in">Mes projets</h2>
@@ -160,7 +159,7 @@
     </div>
 
      <!-- Projet 3 -->
-     <div class="projet-carte" data-type="scolaire" data-aos="fade-left">
+     <div class="projet-carte" data-type="personnel" data-aos="fade-left">
       <img src="assets/img/logo_ML.png" alt="MachineLearning" >
       <div class="projet-info">
         <span class="badge">Web Statique</span>
@@ -280,17 +279,6 @@ filtreSelect.addEventListener('change', () => {
   });
 
   
-  if (categorie === 'personnel') {
-    projetsFiltres.sort((a, b) => {
-      return a.querySelector('h3').textContent === 'Team Alouda - Web Cup' ? -1 : 1;
-    });
-  } else if (categorie === 'scolaire') {
-    projetsFiltres.sort((a, b) => {
-      return a.querySelector('h3').textContent === 'Supercar' ? -1 : 1;
-    });
-  }
-
-  
   grille.innerHTML = '';
   projetsFiltres.forEach(projet => {
     projet.classList.remove('hidden');
@@ -374,7 +362,7 @@ filtreSelect.addEventListener('change', () => {
           </div>
         </div>
 
-        <!-- Slide 3 : BDD -->
+        <!-- BDD -->
 <div class="carousel-slide">
   <div class="skill-box text-center">
     <h5 class="mb-4">Base de données</h5>

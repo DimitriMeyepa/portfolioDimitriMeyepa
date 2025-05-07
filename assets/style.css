@@ -113,7 +113,7 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.495);
 }
 
-/* Animation d'écriture pour le nom */
+
 @keyframes typing {
   0% {
     width: 0;
@@ -322,7 +322,7 @@ p.typing-effect {
 }
 
 .apropos-skill {
-  background: #1e1e1e; /* corrigé */
+  background: #1e1e1e; 
   padding: 10px 20px;
   border-radius: 8px;
   text-align: center;

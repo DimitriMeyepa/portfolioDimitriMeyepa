@@ -419,8 +419,8 @@ p.typing-effect {
   }
 
   .projet-carte {
-    width: 100%; /* Force une carte par ligne */
-    max-width: 500px; /* Pour éviter qu’elle soit trop large */
+    width: 100%; 
+    max-width: 500px; 
   }
 }
 

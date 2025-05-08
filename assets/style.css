@@ -72,15 +72,7 @@ body {
   background-position: center 20%;
 }
 
-.hero-offset {
-  margin-left: 400px; 
-}
 
-@media (max-width: 768px) {
-  .hero-offset {
-    margin-left: 0; 
-  }
-}
 
 .hero .badge {
   background-color: #0000000f;
@@ -101,7 +93,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
+  
   
 }
 
@@ -114,14 +106,7 @@ body {
 }
 
 
-@keyframes typing {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
+
 
 
 .hero-section h1 {
@@ -130,8 +115,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
   border-right: 0.1em solid transparent;
-  animation: typing 3s steps(30) 1s forwards;
-  animation-delay: 0s;
+ 
 }
 
 .hero-section h3 {
@@ -164,21 +148,6 @@ body {
 }
 
 
-
-.social-icon
-.typewriter {
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 0 auto;
-  animation: typing 3s steps(20, end) forwards;
-  font-size: 2.5rem;
-  color: white;
-  border: none; 
-}
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
 .social-icons a {
   color: #4c64ea;
   font-size: 32px;
@@ -403,18 +372,15 @@ p.typing-effect {
 
 
 .projets-grille {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-  margin-top: 2rem;
+  padding: 1rem;
 }
 
 
-.projets-grille {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 2rem;
-}
+
 
 
 @media (max-width: 992px) {
@@ -425,12 +391,7 @@ p.typing-effect {
 
 
 @media (max-width: 576px) {
-  .projets-grille {
-    grid-template-columns: 1fr; 
-  }
-
-  
-  .projet-carte img {
+   .projet-carte img {
     width: 100%;
     height: auto;
   }
@@ -469,6 +430,17 @@ p.typing-effect {
   animation: fadeInUp 0.5s ease forwards;
   
   
+}
+@media (max-width: 768px) {
+  .projets-grille {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projet-carte {
+    width: 100%; /* Force une carte par ligne */
+    max-width: 500px; /* Pour éviter qu’elle soit trop large */
+  }
 }
 
 
@@ -644,6 +616,7 @@ p.typing-effect {
 .carousel-control-next {
   right: 0;
 }
+
 
 
 .card {

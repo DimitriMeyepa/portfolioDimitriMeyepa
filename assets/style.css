@@ -132,32 +132,17 @@ body {
 
 
 
-/* Icônes */
-.social-icons {
-  margin-top: 40px;
-  
+.social-icon {
+  color: #4b6cb7; 
+  transition: transform 0.2s ease, color 0.2s ease;
+  margin-left: 4px;
 }
 
-.social-icons a {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #4b6cb7 !important; 
+.social-icon:hover {
+  color: #374d80;
   transform: scale(1.2);
 }
 
-
-.social-icons a {
-  color: #4c64ea;
-  font-size: 32px;
-  margin: 0 10px;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: #fff;
-}
 
 h2, h3, h5 {
   color: #4b6cb7;

@@ -133,6 +133,166 @@
   </div>
 </section>
 
+<!-- Formations -->
+<section class="section" id="formations">
+  <div class="container" data-aos="fade-up">
+   <h2 class="text-center mb-5" data-aos="zoom-in">Parcours Scolaire</h2>
+    <div class="row justify-content-center align-items-stretch">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card p-4 flex-fill text-center">
+          <h3 class="mb-3">2024 – 2026</h3>
+          <h5 class="mb-2">BTS Services Informatiques aux Organisations</h5>
+          <p class="mb-0">MCCI Business School - Île Maurice</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="card p-4 flex-fill text-center">
+          <h3 class="mb-3">2023-2024</h3>
+          <h5 class="mb-2">Licence Économie-Gestion</h5>
+          <p class="mb-0">Université Lyon 2</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+        <div class="card p-4 flex-fill text-center">
+          <h3 class="mb-3">2023</h3>
+          <h5 class="mb-2">Baccalauréat Général</h5>
+          <p class="mb-0">Lycée La Bourdonnais - Île Maurice</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!--compétences -->
+<section id="skills" class="py-5">
+  <div class="container" data-aos="fade-up">
+    <h2 class="text-center mb-5" data-aos="zoom-in">Compétences Techniques</h2>
+    
+    <div class="carousel-container position-relative">
+      <div class="carousel-wrapper" id="custom-carousel">
+  
+        <!-- Frontend -->
+        <div class="carousel-slide active">
+          <div class="skill-box text-center">
+            <h5 class="mb-4">Frontend</h5>
+            <div class="row">
+              <div class="col-6 mb-4">
+                <i class="fab fa-html5 fa-2x mb-2"></i>
+                <div><strong>HTML</strong></div>
+                <div class="text-secondary">Avancé</div>
+              </div>
+              <div class="col-6 mb-4">
+                <i class="fab fa-css3-alt fa-2x mb-2"></i>
+                <div><strong>CSS</strong></div>
+                <div class="text-secondary">Avancé</div>
+              </div>
+              <div class="col-6 mb-4">
+                <i class="fab fa-bootstrap fa-2x mb-2"></i>
+                <div><strong>Bootstrap</strong></div>
+                <div class="text-secondary">Avancé</div>
+              </div>
+              <div class="col-6 mb-4">
+                <i class="fa fa-wind fa-2x mb-2"></i>
+                <div><strong>Tailwind</strong></div>
+                <div class="text-secondary">Avancé</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="carousel-slide">
+          <div class="skill-box text-center">
+            <h5 class="mb-4">Backend</h5>
+            <div class="row">
+              <div class="col-6 mb-4">
+                <i class="fab fa-php fa-2x mb-2"></i>
+                <div><strong>PHP</strong></div>
+                <div class="text-secondary">Intermédiaire</div>
+              </div>
+              <div class="col-6 mb-4">
+                <i class="fab fa-js fa-2x mb-2"></i>
+                <div><strong>JavaScript</strong></div>
+                <div class="text-secondary">Intermédiaire</div>
+              </div>
+              <div class="col-6 mb-4">
+                <i class="fab fa-java fa-2x mb-2"></i>
+                <div><strong>Java</strong></div>
+                <div class="text-secondary">Bases</div>
+              </div>
+              <div class="col-6 mb-4">
+                <i class="fab fa-python fa-2x mb-2"></i>
+                <div><strong>Python</strong></div>
+                <div class="text-secondary">Avancé</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BDD -->
+<div class="carousel-slide">
+  <div class="skill-box text-center">
+    <h5 class="mb-4">Base de données</h5>
+    <div class="row">
+      <!-- MySQL -->
+      <div class="col-6 mb-4">
+        <img src="assets/img/mysql.png" alt="MySQL" style="width: 32px; height: 32px; margin-bottom: 8px;">
+        <div><strong>MySQL</strong></div>
+        <div class="text-secondary">Intermédiaire</div>
+      </div>
+      <!-- PostgreSQL -->
+      <div class="col-6 mb-4">
+        <img src="assets/img/Postgresql.png" alt="PostgreSQL" style="width: 32px; height: 32px; margin-bottom: 8px;">
+        <div><strong>PostgreSQL</strong></div>
+        <div class="text-secondary">Intermédiaire</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+  const slides = document.querySelectorAll('.carousel-slide');
+  let current = 1;
+
+  function updateCarousel() {
+    slides.forEach((slide, index) => {
+      slide.classList.remove('left', 'center', 'right');
+      if (index === current) {
+        slide.classList.add('center');
+      } else if (index === (current - 1 + slides.length) % slides.length) {
+        slide.classList.add('left');
+      } else if (index === (current + 1) % slides.length) {
+        slide.classList.add('right');
+      }
+    });
+  }
+
+  slides.forEach((slide, index) => {
+    slide.addEventListener('click', () => {
+      if (index !== current) {
+        current = index;
+        updateCarousel();
+      }
+    });
+  });
+
+  window.addEventListener('DOMContentLoaded', updateCarousel);
+</script>
+
+
+
+
+
+
+
+
+
 <!--Projet-->
 
 <section id="projets" class="projets-section" data-aos="fade-up">
@@ -288,162 +448,6 @@ filtreSelect.addEventListener('change', () => {
 
 
 </script>
-
-  <!--compétences -->
-<section id="skills" class="py-5">
-  <div class="container" data-aos="fade-up">
-    <h2 class="text-center mb-5" data-aos="zoom-in">Compétences Techniques</h2>
-    
-    <div class="carousel-container position-relative">
-      <div class="carousel-wrapper" id="custom-carousel">
-  
-        <!-- Frontend -->
-        <div class="carousel-slide active">
-          <div class="skill-box text-center">
-            <h5 class="mb-4">Frontend</h5>
-            <div class="row">
-              <div class="col-6 mb-4">
-                <i class="fab fa-html5 fa-2x mb-2"></i>
-                <div><strong>HTML</strong></div>
-                <div class="text-secondary">Avancé</div>
-              </div>
-              <div class="col-6 mb-4">
-                <i class="fab fa-css3-alt fa-2x mb-2"></i>
-                <div><strong>CSS</strong></div>
-                <div class="text-secondary">Avancé</div>
-              </div>
-              <div class="col-6 mb-4">
-                <i class="fab fa-bootstrap fa-2x mb-2"></i>
-                <div><strong>Bootstrap</strong></div>
-                <div class="text-secondary">Avancé</div>
-              </div>
-              <div class="col-6 mb-4">
-                <i class="fa fa-wind fa-2x mb-2"></i>
-                <div><strong>Tailwind</strong></div>
-                <div class="text-secondary">Avancé</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Backend -->
-        <div class="carousel-slide">
-          <div class="skill-box text-center">
-            <h5 class="mb-4">Backend</h5>
-            <div class="row">
-              <div class="col-6 mb-4">
-                <i class="fab fa-php fa-2x mb-2"></i>
-                <div><strong>PHP</strong></div>
-                <div class="text-secondary">Intermédiaire</div>
-              </div>
-              <div class="col-6 mb-4">
-                <i class="fab fa-js fa-2x mb-2"></i>
-                <div><strong>JavaScript</strong></div>
-                <div class="text-secondary">Intermédiaire</div>
-              </div>
-              <div class="col-6 mb-4">
-                <i class="fab fa-java fa-2x mb-2"></i>
-                <div><strong>Java</strong></div>
-                <div class="text-secondary">Bases</div>
-              </div>
-              <div class="col-6 mb-4">
-                <i class="fab fa-python fa-2x mb-2"></i>
-                <div><strong>Python</strong></div>
-                <div class="text-secondary">Avancé</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- BDD -->
-<div class="carousel-slide">
-  <div class="skill-box text-center">
-    <h5 class="mb-4">Base de données</h5>
-    <div class="row">
-      <!-- MySQL -->
-      <div class="col-6 mb-4">
-        <img src="assets/img/mysql.png" alt="MySQL" style="width: 32px; height: 32px; margin-bottom: 8px;">
-        <div><strong>MySQL</strong></div>
-        <div class="text-secondary">Intermédiaire</div>
-      </div>
-      <!-- PostgreSQL -->
-      <div class="col-6 mb-4">
-        <img src="assets/img/Postgresql.png" alt="PostgreSQL" style="width: 32px; height: 32px; margin-bottom: 8px;">
-        <div><strong>PostgreSQL</strong></div>
-        <div class="text-secondary">Intermédiaire</div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-</section>
-
-<script>
-  const slides = document.querySelectorAll('.carousel-slide');
-  let current = 1;
-
-  function updateCarousel() {
-    slides.forEach((slide, index) => {
-      slide.classList.remove('left', 'center', 'right');
-      if (index === current) {
-        slide.classList.add('center');
-      } else if (index === (current - 1 + slides.length) % slides.length) {
-        slide.classList.add('left');
-      } else if (index === (current + 1) % slides.length) {
-        slide.classList.add('right');
-      }
-    });
-  }
-
-  slides.forEach((slide, index) => {
-    slide.addEventListener('click', () => {
-      if (index !== current) {
-        current = index;
-        updateCarousel();
-      }
-    });
-  });
-
-  window.addEventListener('DOMContentLoaded', updateCarousel);
-</script>
-
-
-
-
-
-
-
-
-<!-- Formations -->
-<section class="section" id="formations">
-  <div class="container" data-aos="fade-up">
-   <h2 class="text-center mb-5" data-aos="zoom-in">Parcours Scolaire</h2>
-    <div class="row justify-content-center align-items-stretch">
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="card p-4 flex-fill text-center">
-          <h3 class="mb-3">2024 – 2026</h3>
-          <h5 class="mb-2">BTS Services Informatiques aux Organisations</h5>
-          <p class="mb-0">MCCI Business School - Île Maurice</p>
-        </div>
-      </div>
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-        <div class="card p-4 flex-fill text-center">
-          <h3 class="mb-3">2023-2024</h3>
-          <h5 class="mb-2">Licence Économie-Gestion</h5>
-          <p class="mb-0">Université Lyon 2</p>
-        </div>
-      </div>
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-        <div class="card p-4 flex-fill text-center">
-          <h3 class="mb-3">2023</h3>
-          <h5 class="mb-2">Baccalauréat Général</h5>
-          <p class="mb-0">Lycée La Bourdonnais - Île Maurice</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 

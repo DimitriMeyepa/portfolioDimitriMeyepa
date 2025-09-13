@@ -221,12 +221,12 @@
               <div class="col-6 mb-4">
                 <i class="fab fa-java fa-2x mb-2"></i>
                 <div><strong>Java</strong></div>
-                <div class="text-secondary">Bases</div>
+                <div class="text-secondary">Intermédiaire</div>
               </div>
               <div class="col-6 mb-4">
                 <i class="fab fa-python fa-2x mb-2"></i>
                 <div><strong>Python</strong></div>
-                <div class="text-secondary">Avancé</div>
+                <div class="text-secondary">Intermédiaire</div>
               </div>
             </div>
           </div>
@@ -302,14 +302,14 @@
     <select id="filtre-select" class="form-select">
       <option value="tous" class="filtre" selected>Tous</option>
       <option value="personnel" class="filtre">Projets personnels</option>
-      <option value="scolaire" class="filtre">Projets scolaires</option>
-      <option value="professionnel" class="filtre">Projets professionnels</option>
+      <option value="projet" class="filtre">Réalisations professionnelles</option>
+      <option value="stage" class="filtre">Formation en entreprise</option>
     </select>
   </div>
 
   <div class="projets-grille">
     <!-- Projet 1-->
-    <div class="projet-carte" data-type="scolaire" data-aos="fade-left">
+    <div class="projet-carte" data-type="projet" data-aos="fade-left">
       <img src="assets/img/logofff.png" alt="Supercar">
       <div class="projet-info">
         <span class="badge">Application web</span>
@@ -318,14 +318,25 @@
       </div>
     </div>
      <!-- Projet 2 -->
-     <div class="projet-carte" data-type="scolaire" data-aos="fade-left">
+     <div class="projet-carte" data-type="projet" data-aos="fade-left">
       <img src="assets/img/logofff.png" alt="Supercar" >
       <div class="projet-info">
-        <span class="badge">Administration - Application Web</span>
+        <span class="badge">Application Web</span>
         <h3>Supercar - Admin</h3>
        <a href="#" class="voir-plus" data-bs-toggle="modal" data-bs-target="#projectModal2">Voir plus <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
+      <!-- Projet 3 -->
+     <div class="projet-carte" data-type="stage" data-aos="fade-left">
+      <img src="assets/img/acensi_blanc_sans.png" alt="stage1" > 
+      <br>
+      <div class="projet-info">
+        <span class="badge">Formation en entreprise</span>
+        <h3>Stage 2025</h3>
+       <a href="#" class="voir-plus" data-bs-toggle="modal" data-bs-target="#projectModal3">Voir plus <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
 
      
 
@@ -354,7 +365,7 @@
 
         <h5><strong>Outils Collaboratifs</strong></h5>
         <ul>
-          <li><a href="Gestiontaches.pdf" target="_blank">Excel</a></li>
+          <li>Excel</li>
           <li>Google Drive</li>
           <li>Teams</li>
           <li>Git Hub</li>
@@ -410,6 +421,61 @@
     </div>
   </div>
 </div>
+
+<!-- Modale 3 -->
+<div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModalLabel3" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h3 class="modal-title" id="projectModalLabel3">Stage de première année</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      
+      <div class="modal-body">
+        
+        <!-- Phrase de contexte -->
+        <p class="mb-4">
+          J’ai effectué mon premier stage chez <strong>Acensi Mauritius</strong>, une entreprise spécialisée dans les services informatiques.  
+          Durant ce stage, j’ai eu l’opportunité de travailler sur le développement d’un <strong>CRM</strong>, ce qui m’a permis de mettre en pratique mes compétences en programmation et en gestion de projet.
+        </p>
+
+        <div class="row text-center">
+          <!-- Attestation -->
+          <div class="col-md-4 mb-4">
+            <a href="assets/Attestation de Stage_Dimitri MEYEPA (1).PDF" target="_blank">
+              <img src="assets/img/attestationimg.png" alt="Attestation" class="img-fluid rounded shadow-sm mb-2" style="max-height: 180px;">
+              <div><strong>Attestation de stage</strong></div>
+            </a>
+          </div>
+
+          <!-- Bilan -->
+          <div class="col-md-4 mb-4">
+            <a href="assets/Bilan de Stage_Dimitri Meyepa (2).PDF" target="_blank">
+              <img src="assets/img/Blianstageimg.png" alt="Bilan de stage" class="img-fluid rounded shadow-sm mb-2" style="max-height: 180px;">
+              <div><strong>Bilan de stage</strong></div>
+            </a>
+          </div>
+
+          <!-- Rapport -->
+          <div class="col-md-4 mb-4">
+            <a href="assets/Rapport de Stage premiere année.pdf" target="_blank">
+              <img src="assets/img/rpsimg.png" alt="Rapport de stage" class="img-fluid rounded shadow-sm mb-2" style="max-height: 180px;">
+              <div><strong>Rapport de stage</strong></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <a href="https://www.canva.com/design/DAGyq-S91ug/h8rxqyeSprUfwSOjZmM7Tg/edit?utm_content=DAGyq-S91ug&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn btn-primary" target="_blank">Voir le projet</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 
 

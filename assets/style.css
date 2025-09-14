@@ -734,3 +734,40 @@ p.typing-effect {
     right: 5%;
   }
 }
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-container img {
+  transition: all 0.4s ease;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-container .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.image-container:hover img {
+  filter: blur(4px) brightness(0.7);
+  transform: scale(1.05);
+}
+
+.image-container:hover .overlay-text {
+  opacity: 1;
+}
+

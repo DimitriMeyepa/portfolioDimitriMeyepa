@@ -780,3 +780,18 @@ p.typing-effect {
   cursor: pointer; 
 }
 
+.btn-success {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+}
+
+.btn-danger {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+}
+#admin-btn,
+#client-btn {
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+

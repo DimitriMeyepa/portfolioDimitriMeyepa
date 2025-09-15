@@ -301,7 +301,6 @@
   <div class="projets-filtres" data-aos="fade-right">
     <select id="filtre-select" class="form-select">
       <option value="tous" class="filtre" selected>Tous</option>
-      <option value="personnel" class="filtre">Projets personnels</option>
       <option value="projet" class="filtre">Réalisations professionnelles</option>
       <option value="stage" class="filtre">Formation en entreprise</option>
     </select>
@@ -315,15 +314,6 @@
         <span class="badge">Application web</span>
         <h3>Supercar</h3>
        <a href="#" class="voir-plus" data-bs-toggle="modal" data-bs-target="#projectModal">Voir plus <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
-     <!-- Projet 2 -->
-     <div class="projet-carte" data-type="projet" data-aos="fade-left">
-      <img src="assets/img/logofff.png" alt="Supercar" >
-      <div class="projet-info">
-        <span class="badge">Application Web</span>
-        <h3>Supercar - Admin</h3>
-       <a href="#" class="voir-plus" data-bs-toggle="modal" data-bs-target="#projectModal2">Voir plus <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
       <!-- Projet 3 -->
@@ -364,9 +354,11 @@
         </a>
       </div>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer d-flex justify-content-between">
+        <button class="btn btn-success" id="admin-btn">Administration</button>
         <a href="https://www.canva.com/design/DAGnNOwim94/oN7IqWmeKfSFEkQM31KUMw/view?utm_content=DAGnNOwim94&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hff787fdbdc" class="btn btn-primary" target="_blank">Présentation du projet</a>
       </div>
+
     </div>
   </div>
 </div>
@@ -394,14 +386,15 @@
         </a>
       </div>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer d-flex justify-content-between">
+        <button class="btn btn-danger" id="client-btn">Retour au client</button>
         <a href="https://www.canva.com/design/DAGnNOwim94/oN7IqWmeKfSFEkQM31KUMw/view?utm_content=DAGnNOwim94&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hff787fdbdc" class="btn btn-primary" target="_blank">Présentation du projet</a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Modale 3 -->
+<!-- Modale 2 -->
 <div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModalLabel3" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -412,8 +405,7 @@
       </div>
       
       <div class="modal-body">
-        
-        
+       <h5><strong>Description du stage</strong></h5>
         <p class="mb-4">
           J’ai effectué mon premier stage chez <strong>Acensi Mauritius</strong>, une entreprise spécialisée dans les services informatiques.  
           Durant ce stage, j’ai eu l’opportunité de travailler sur le développement d’un <strong>CRM</strong>, ce qui m’a permis de mettre en pratique mes compétences en programmation et en gestion de projet.
@@ -519,6 +511,23 @@ filtreSelect.addEventListener('change', () => {
     var box = document.getElementById('contact-box');
     box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'block' : 'none';
   }
+
+  const adminBtn = document.getElementById('admin-btn');
+  const modal1 = new bootstrap.Modal(document.getElementById('projectModal'));
+  const modal2 = new bootstrap.Modal(document.getElementById('projectModal2'));
+
+  adminBtn.addEventListener('click', () => {
+    modal1.hide();  
+    modal2.show(); 
+  });
+    const clientBtn = document.getElementById('client-btn');
+
+  clientBtn.addEventListener('click', () => {
+    modal2.hide();   
+    modal1.show();   
+  });
+
+  
 </script>
 
 <script>

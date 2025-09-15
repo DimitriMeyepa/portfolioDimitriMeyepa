@@ -771,3 +771,12 @@ p.typing-effect {
   opacity: 1;
 }
 
+.modal-body .img-fluid {
+  transition: transform 0.3s ease; 
+}
+
+.modal-body .img-fluid:hover {
+  transform: scale(1.1); 
+  cursor: pointer; 
+}
+

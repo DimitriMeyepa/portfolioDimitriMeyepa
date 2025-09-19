@@ -794,4 +794,18 @@ p.typing-effect {
   border-radius: 50px;
   padding: 10px 20px;
 }
+.modal-content {
+  border: 1px solid #1e1e1e; 
+ 
+}
+
+.modal-header {
+  border-bottom: 1px solid #353535!important;
+  
+}
+
+.modal-footer {
+  border-top: 1px solid #1e1e1e!important;
+}
+
 

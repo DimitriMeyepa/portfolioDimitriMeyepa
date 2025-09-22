@@ -807,5 +807,25 @@ p.typing-effect {
 .modal-footer {
   border-top: 1px solid #1e1e1e!important;
 }
+#contact-box form input,
+#contact-box form textarea {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+#contact-box form input::placeholder,
+#contact-box form textarea::placeholder {
+  color: #aaa; /* gris clair pour bien distinguer du texte */
+}
+
+#contact-box form input:focus,
+#contact-box form textarea:focus {
+  outline: none;
+  border-color: #4b6cb7; /* petite touche bleue élégante */
+  box-shadow: 0 0 6px rgba(75, 108, 183, 0.5);
+}
 
 

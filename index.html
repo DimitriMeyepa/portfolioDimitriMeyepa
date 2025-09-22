@@ -530,7 +530,40 @@ filtreSelect.addEventListener('change', () => {
   <h2>Contact</h2>
   <p><i class="fas fa-envelope"></i> dimitri.meyepa1@gmail.com</p>
   <p><i class="fas fa-phone"></i> (+230)5536-0799</p>
+
+  <form id="contact-form" action="https://formsubmit.co/dimitri.meyepa1@gmail.com" method="POST">
+    <!-- Champ objet -->
+    <div class="mb-3">
+      <input type="text" name="subject" class="form-control" placeholder="Objet" required>
+    </div>
+    <!-- Champ message -->
+    <div class="mb-3">
+      <textarea name="message" class="form-control" rows="4" placeholder="Votre message" required></textarea>
+    </div>
+    <!-- Sécurité : pas de captcha -->
+    <input type="hidden" name="_captcha" value="false">
+    <!-- Pas de redirection -->
+    <input type="hidden" name="_next" value="">
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+  </form>
 </div>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault(); // Empêche le rechargement/redirection
+  const form = e.target;
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form)
+  }).then(() => {
+    alert("✅ Message envoyé !");
+    form.reset(); // vide les champs
+  }).catch(() => {
+    alert("❌ Une erreur est survenue. Réessayez.");
+  });
+});
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

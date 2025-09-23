@@ -648,8 +648,8 @@ p.typing-effect {
 #contact-box {
   display: none;
   position: fixed;
-  bottom: 90px;
-  right: 30px;
+  top: 20%;
+  left: 450px;
   background: #1e1e1e; 
   padding: 20px;
   width: 400px;

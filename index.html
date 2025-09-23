@@ -524,25 +524,24 @@ filtreSelect.addEventListener('change', () => {
 <div id="contact-float" onclick="toggleContactBox()">
   <i class="fas fa-envelope"></i>
 </div>
-
-<div id="contact-box">
+<div id="contact-overlay" onclick="toggleContactBox()"></div>
+<div id= "contact-box">
   <span class="contact-close" onclick="toggleContactBox()">&times;</span>
   <h2>Contact</h2>
   <p><i class="fas fa-envelope"></i> dimitri.meyepa1@gmail.com</p>
   <p><i class="fas fa-phone"></i> (+230)5536-0799</p>
 
   <form id="contact-form" action="https://formsubmit.co/dimitri.meyepa1@gmail.com" method="POST">
-    <!-- Champ objet -->
+    <!-- Champ email -->
     <div class="mb-3">
-      <input type="text" name="subject" class="form-control" placeholder="Objet" required>
+      <input type="text" name="email" class="form-control" placeholder="Email" required>
     </div>
     <!-- Champ message -->
     <div class="mb-3">
       <textarea name="message" class="form-control" rows="4" placeholder="Votre message" required></textarea>
     </div>
-    <!-- Sécurité : pas de captcha -->
+    
     <input type="hidden" name="_captcha" value="false">
-    <!-- Pas de redirection -->
     <input type="hidden" name="_next" value="">
     <button type="submit" class="btn btn-primary">Envoyer</button>
   </form>

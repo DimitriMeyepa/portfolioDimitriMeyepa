@@ -68,7 +68,7 @@ body {
 
 /* Hero */
 .hero-section {
-  background: linear-gradient(180deg,#1d2434,  #1e1e1e);
+  background: linear-gradient(180deg,#333f5c,  #1e1e1e);
   min-height: 100vh;
   color: #fff;
   padding: 100px 0;
@@ -76,10 +76,11 @@ body {
 
 .hero-section h1 {
   font-size: 3rem;
+  color: white;
 }
 
 .hero-section .highlight {
-  color: #a8a8a8;
+  color: #ffffff;
 }
 
 
@@ -95,9 +96,6 @@ h2, h3, h5 {
   color: #4b6cb7;
 }
 
-h1 { 
-  color: #a1a1a1;
-}
 
 h2 {
   text-align: center;

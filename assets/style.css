@@ -68,7 +68,7 @@ body {
 
 /* Hero */
 .hero-section {
-  background: linear-gradient(135deg, #1e1e1e, #1d2434);
+  background: linear-gradient(180deg,#1d2434,  #1e1e1e);
   min-height: 100vh;
   color: #fff;
   padding: 100px 0;
@@ -806,5 +806,143 @@ p.typing-effect {
   border-color: #4b6cb7; /* petite touche bleue élégante */
   box-shadow: 0 0 6px rgba(75, 108, 183, 0.5);
 }
+
+/* 🌞 MODE CLAIR / LITE */
+body.light-mode {
+  background-color: #f8f9fa; /* fond global clair */
+  color: #222; /* texte foncé */
+}
+
+/* Navbar */
+body.light-mode .navbar {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+body.light-mode .navbar-brand {
+  color: #4c64ea;
+}
+
+body.light-mode .navbar-brand .highlight-letter {
+  color: #888;
+}
+
+body.light-mode .nav-link {
+  color: #333;
+}
+
+body.light-mode .nav-link:hover {
+  color: #4c64ea;
+}
+
+/* Boutons */
+body.light-mode .btn-primary {
+  background-color: #4c64ea;
+  color: white;
+}
+
+body.light-mode .btn-primary:hover {
+  background-color: #3b52cc;
+}
+
+body.light-mode .btn-outline-light {
+  color: #4c64ea;
+  border: 1px solid #4c64ea;
+}
+
+body.light-mode .btn-outline-light:hover {
+  background-color: #4c64ea;
+  color: white;
+}
+
+/* Section Hero */
+body.light-mode .hero-section {
+  background: linear-gradient(180deg, #ffffff, #f0f0f0);
+  color: #222;
+}
+
+body.light-mode .hero-section .highlight {
+  color: #555;
+}
+
+/* Titres */
+body.light-mode h1 {
+  color: #222;
+}
+body.light-mode h2, 
+body.light-mode h3, 
+body.light-mode h5 {
+  color: #4c64ea;
+}
+
+/* Sections */
+body.light-mode .section {
+  background: #ffffff;
+  color: #222;
+}
+
+/* Cartes / projets */
+body.light-mode .projet-carte {
+  background-color: #fdfdfd;
+  color: #222;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .badge {
+  background: #eaeaea;
+  color: #333;
+}
+
+/* Modals */
+body.light-mode .modal-content {
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #ddd;
+}
+
+body.light-mode .modal-title {
+  color: #4c64ea;
+}
+
+body.light-mode .modal-header,
+body.light-mode .modal-footer {
+  border-color: #ddd !important;
+}
+
+/* Bouton contact */
+body.light-mode #contact-float {
+  background: #4c64ea;
+  color: white;
+}
+
+body.light-mode #contact-box {
+  background: #fff;
+  color: #222;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode #contact-box input,
+body.light-mode #contact-box textarea {
+  background-color: #f9f9f9;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+body.light-mode #contact-box input::placeholder,
+body.light-mode #contact-box textarea::placeholder {
+  color: #888;
+}
+
+/* Carousel */
+body.light-mode .skill-box {
+  background: #f7f7f7;
+  color: #222;
+}
+
+/* Liens sociaux */
+body.light-mode .social-icon {
+  color: #4c64ea;
+}
+
 
 

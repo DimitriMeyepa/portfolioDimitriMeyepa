@@ -103,7 +103,7 @@ h2 {
   text-align: center;
   position: relative;
   margin: 0 auto;
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 
 h2::after {
@@ -257,8 +257,6 @@ p.typing-effect {
 .projets-section {
   text-align: center;
   padding: 4rem 2rem;
-  background-color: #1e1e1e;
-  color: #fff;
 }
 
 .projets-filtres {

@@ -17,7 +17,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" data-aos="fade-down" data-aos-delay="100">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">
+      <a class="navbar-brand fw-bold">
        Port<span class="highlight-letter">folio</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -322,11 +322,6 @@
       <div class="modal-body">
         <h5><strong>Description du projet</strong></h5>
         <p>Le projet Supercar est une application web de gestion de voitures dans laquelle le client peut consulter les voitures disponibles, effectuer une demande d'essai qui nécessite une connexion ou une inscription.</p>
-         <p class="text-center mt-3">
-          <a href="assets/docs/E5 Contexte RP1 SUPERCAR-WEB.pdf" target="_blank" class="text-decoration-none" style="color: #4b6cb7;">
-            <span class="ms-2">Voir le contexte</span>
-          </a>
-        </p>
         <div class="text-center my-4">
           <a href="https://www.canva.com/design/DAGzBvhLqJg/CVTNi4Nfut-rogdEW9VFmg/view" target="_blank" class="image-link">
             <div class="image-container">
@@ -337,13 +332,14 @@
         </div>
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button class="btn btn-primary" id="voirProjetBtn">Voir le projet</button>
+        <button class="btn btn-primary" id="voirProjetBtn">Démo du projet</button>
+        <button class="btn btn-primary" id="documents-supercar-btn">Voir documents</button>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Modale 3 -->
+<!-- Modale 2 -->
 <div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModalLabel3" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -463,6 +459,47 @@
   </div>
 </div>
 
+<!-- Modale 6 -->
+<div class="modal fade" id="projectModal6" tabindex="-1" aria-labelledby="projectModalLabel6" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h3 class="modal-title" id="projectModalLabel6">Documents du projet Supercar</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+
+      <div class="modal-body text-center">
+        <div class="row justify-content-center g-4">
+          <!-- Contexte -->
+          <div class="col-6">
+            <a href="assets/docs/Contexte Supercar 2024-26.pdf" target="_blank" class="image-link">
+              <div class="image-container">
+                <img src="assets/img/Contextesupercar.png" alt="Contexte Supercar" class="img-fluid rounded shadow">
+                <div class="overlay-text">Contexte</div>
+              </div>
+            </a>
+          </div>
+          <!-- Rapport -->
+          <div class="col-6">
+            <a href="assets/docs/Rapport de projet Supercar.pdf" target="_blank" class="image-link">
+              <div class="image-container">
+                <img src="assets/img/Rapport de projet Supercar.jpg" alt="Rapport Supercar" class="img-fluid rounded shadow">
+                <div class="overlay-text">Rapport de projet</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer justify-content-center">
+        <button class="btn btn-primary" id="backToSupercarBtn">Retour à la présentation</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
 
 
@@ -564,32 +601,52 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'block' : 'none';
   }
 
-   const voirProjetBtn = document.getElementById('voirProjetBtn');
+ // --- Gestion modales Supercar ---
   const modal1 = new bootstrap.Modal(document.getElementById('projectModal'));
   const modal5 = new bootstrap.Modal(document.getElementById('projectModal5'));
+  const modal6 = new bootstrap.Modal(document.getElementById('projectModal6'));
+
+  const voirProjetBtn = document.getElementById('voirProjetBtn');
+  const backToProjectBtn = document.getElementById('backToProjectBtn');
+  const documentsSupercarBtn = document.getElementById('documents-supercar-btn');
+  const backToSupercarBtn = document.getElementById('backToSupercarBtn');
 
   voirProjetBtn.addEventListener('click', () => {
     modal1.hide();
     modal5.show();
   });
 
-    backToProjectBtn.addEventListener('click', () => {
+  backToProjectBtn.addEventListener('click', () => {
     modal5.hide();
     modal1.show();
   });
 
-  const documentsBtn = document.getElementById('documents-btn');
-const modal3 = new bootstrap.Modal(document.getElementById('projectModal3'));
-const modal4 = new bootstrap.Modal(document.getElementById('projectModal4'));
+  documentsSupercarBtn.addEventListener('click', () => {
+    modal1.hide();
+    modal6.show();
+  });
 
-documentsBtn.addEventListener('click', () => {
-  modal3.hide();  
-  modal4.show();  
-});
-backToPresentationBtn.addEventListener('click', () => {
-  modal4.hide();
-  modal3.show();
-});
+  backToSupercarBtn.addEventListener('click', () => {
+    modal6.hide();
+    modal1.show();
+  });
+
+  // --- Gestion modales Stage ---
+  const modal3 = new bootstrap.Modal(document.getElementById('projectModal3'));
+  const modal4 = new bootstrap.Modal(document.getElementById('projectModal4'));
+
+  const documentsBtn = document.getElementById('documents-btn');
+  const backToPresentationBtn = document.getElementById('backToPresentationBtn');
+
+  documentsBtn.addEventListener('click', () => {
+    modal3.hide();
+    modal4.show();
+  });
+
+  backToPresentationBtn.addEventListener('click', () => {
+    modal4.hide();
+    modal3.show();
+  });
 
 
 

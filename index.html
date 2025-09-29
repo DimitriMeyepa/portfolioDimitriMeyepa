@@ -43,9 +43,10 @@
 
   <!-- Hero -->
 <section class="hero-section d-flex align-items-center justify-content-center">
+  <canvas id="stars-canvas"></canvas>
   <div class="container text-center text-light">
-    <h1 class="fw-bold" id="hero-name" data-aos="fade-down" data-aos-delay="100">Dimitri Méyépa</h1>
-    <h3 class="mb-3" data-aos="fade-right" data-aos-delay="200">
+    <h1 class="fw-bold" id="hero-name" data-aos="fade-up" data-aos-delay="100">Dimitri Méyépa</h1>
+    <h3 class="mb-3" data-aos="fade-up" data-aos-delay="200">
       Étudiant en <span class="highlight">BTS SIO</span>
     </h3>
     <p class="mb-4" data-aos="fade-up" data-aos-delay="300">
@@ -53,7 +54,7 @@
     </p>
 
     <div class="d-flex flex-wrap gap-3 justify-content-center">
-      <a href="assets/docs/CV - Dimitri (1).pdf" class="btn btn-primary" target="_blank" data-aos="fade-left" data-aos-delay="400">Voir mon CV</a>
+      <a href="assets/docs/CV - Dimitri (1).pdf" class="btn btn-primary" target="_blank" data-aos="fade-up" data-aos-delay="400">Voir mon CV</a>
     </div>
 
     <div class="d-flex gap-4 fs-3 justify-content-center mt-4" data-aos="fade-up" data-aos-delay="500">
@@ -66,6 +67,7 @@
     </div>
   </div>
 </section>
+
 
 
 <!-- À propos -->
@@ -277,237 +279,84 @@
 </section>
 
 
-<!--Projet-->
-
-<section id="projets" class="projets-section" data-aos="fade-up">
+<section id="projets" class="projets-section py-5" data-aos="fade-up">
   <h2 class="text-center mb-5" data-aos="zoom-in">Mes projets</h2>
 
-  <div class="projets-filtres" data-aos="fade-right">
-    <select id="filtre-select" class="form-select">
-      <option value="tous" class="filtre" selected>Tous</option>
-      <option value="projet" class="filtre">Réalisations professionnelles</option>
-      <option value="stage" class="filtre">Formation en entreprise</option>
-    </select>
-  </div>
-
-  <div class="projets-grille">
-<!-- Projet 1-->
-    <div class="projet-carte" data-type="projet" data-aos="fade-left">
-      <img src="assets/img/logofff.png" alt="Supercar">
-      <div class="projet-info">
-        <span class="badge"> RP1 - Application web</span>
-        <h3>Supercar</h3>
-        <div class="image-illustration">
-          <img src="assets/img/illustrationsupercar.png" alt="Illustration" class="illustration">
-        </div>
-
-        <a href="#" class="voir-plus" data-bs-toggle="modal" data-bs-target="#projectModal">Voir plus </a>
-      </div>
-    </div>
-   <!-- Projet 3 -->
-     <div class="projet-carte" data-type="stage" data-aos="fade-left">
-      <img src="assets/img/acensiwhitelogo.png" alt="stage1" > 
-      <br>
-      <div class="projet-info">
-        <span class="badge">Formation en entreprise</span>
-        <h3>Stage 2025</h3>
-          <div class="image-illustration">
-          <img src="assets/img/illustrationacensi.png" alt="Illustration" class="illustration">
-        </div>
-       <a href="#" class="voir-plus" data-bs-toggle="modal" data-bs-target="#projectModal3">Voir plus</a>
-      </div>
-    </div>
-  
- </section>
-
-<!-- Modale 1 -->
-<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="projectModalLabel">Projet Supercar</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <h5><strong>Description du projet</strong></h5>
-        <p>Le projet Supercar est une application web de gestion de voitures dans laquelle le client peut consulter les voitures disponibles, effectuer une demande d'essai qui nécessite une connexion ou une inscription.</p>
-        <div class="text-center my-4">
-          <a href="https://www.canva.com/design/DAGzBvhLqJg/CVTNi4Nfut-rogdEW9VFmg/view" target="_blank" class="image-link">
-            <div class="image-container">
-              <img src="assets/img/presentationsupercar.png" alt="Aperçu du projet Supercar" class="img-fluid rounded">
-              <div class="overlay-text">Présentation du projet</div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <button class="btn btn-primary" id="voirProjetBtn">Démo du projet</button>
-        <button class="btn btn-primary" id="documents-supercar-btn">Voir documents</button>
+  <!-- Filtres -->
+  <div class="container mb-4" data-aos="fade-right">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <select id="filtre-select" class="form-select text-center">
+          <option value="tous" selected>Tous</option>
+          <option value="projet">Réalisation professionnelle</option>
+          <option value="stage">Formation en entreprise</option>
+        </select>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Modale 2 -->
-<div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModalLabel3" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      
-      <div class="modal-header">
-        <h3 class="modal-title" id="projectModalLabel3">Stage de première année</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-      </div>
-      
-      <div class="modal-body">
-        <h5><strong>Description du stage</strong></h5>
-        <p class="mb-4">
-          J’ai effectué mon premier stage chez <strong>Acensi Mauritius</strong>, une entreprise spécialisée dans les services informatiques.  
-          Durant ce stage, j’ai eu l’opportunité de travailler sur le développement d’un <strong>CRM</strong>, ce qui m’a permis de mettre en pratique mes compétences en programmation et en gestion de projet.
-        </p>
+  <!-- Grille -->
+  <div class="container">
+    <div class="row g-4 justify-content-center projets-grille">
+<!-- Projet 1 -->
+<div class="col-md-6 col-lg-5 projet-item" data-type="projet">
+  <div class="card projet-card text-white">
+    <img src="assets/img/illustrationsupercar.png" class="card-img" alt="Supercar">
+    <div class="card-img-overlay d-flex flex-column justify-content-between p-4">
 
-         <div class="text-center my-4">
-        <a href="https://www.canva.com/design/DAGyq-S91ug/AF7o9bS3XKCuuLeHGzcPwA/view?utm_content=DAGyq-S91ug&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6b2d15b289" target="_blank" class="image-link">
-          <div class="image-container">
-            <img src="assets/img/presentationstage1.png" alt="Aperçu du projet Supercar" class="img-fluid rounded">
-            <div class="overlay-text">Présentation du stage</div>
-          </div>
-        </a>
-      </div>
-      </div>
-      
-
-      <div class="modal-footer justify-content-center">
-      <button class="btn btn-primary" id="documents-btn">Voir documents</button>
+      <!-- Badges en haut -->
+      <div>
+        <span class="badge bg-dark me-2">Dév. web</span>
+        <span class="badge bg-dark">Réalisation professionnelle</span>
       </div>
 
-    </div> 
-  </div>
-</div>
+      <!-- Titre et description -->
+      <div>
+        <h5 class="fw-bold mb-1">Supercar</h5>
+        <p class="mb-3">Conduisez l'excellence</p>
 
-<!-- Modale 4  -->
-<div class="modal fade" id="projectModal4" tabindex="-1" aria-labelledby="projectModalLabel4" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h3 class="modal-title" id="projectModalLabel4">Documents de stage</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        <!-- Boutons -->
+        <div class="d-flex flex-wrap gap-2 buttons-container">
+        <a href="https://www.canva.com/design/DAGzBvhLqJg/CVTNi4Nfut-rogdEW9VFmg/view" target="_blank" class="project-btn">Présentation</a>
+        <a href="#" class="project-btn btn2 documents-btn">Documents</a>
+        <a href="#" class="project-btn btn3 demo-btn">Démo</a>
       </div>
-
-      <div class="modal-body text-center">
-        <div class="row justify-content-center g-4">
-          <!-- Attestation -->
-          <div class="col-6">
-            <a href="assets/docs/Attestation de stage - Dimitri Meyepa.pdf" target="_blank" class="image-link">
-              <div class="image-container">
-                <img src="assets/img/attestationstage.png" alt="Attestation de stage" class="img-fluid rounded shadow">
-                <div class="overlay-text">Attestation de stage</div>
-              </div>
-            </a>
-          </div>
-          <!-- Rapport -->
-          <div class="col-6">
-            <a href="assets/docs/Rapport de Stage premiere année (1).pdf" target="_blank" class="image-link">
-              <div class="image-container">
-                <img src="assets/img/rpsimg.png" alt="Rapport de stage" class="img-fluid rounded shadow">
-                <div class="overlay-text">Rapport de stage</div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal-footer justify-content-center">
-        <button class="btn btn-primary" id="backToPresentationBtn"> Retour à la présentation</button>
       </div>
 
     </div>
   </div>
 </div>
 
-<!-- Modale 5  -->
-<div class="modal fade" id="projectModal5" tabindex="-1" aria-labelledby="projectModalLabel5" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
+<!-- Projet 2 -->
+<div class="col-md-6 col-lg-5 projet-item" data-type="stage">
+  <div class="card projet-card text-white">
+    <img src="assets/img/illustrationacensi.png" class="card-img" alt="Stage 2025">
+    <div class="card-img-overlay d-flex flex-column justify-content-between p-4">
 
-      <div class="modal-header">
-        <h3 class="modal-title" id="projectModalLabel5">Aperçu du projet Supercar</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      <!-- Badges en haut -->
+      <div>
+        <span class="badge bg-dark me-2">CRM</span>
+        <span class="badge bg-dark">Formation en entreprise</span>
       </div>
 
-      <div class="modal-body text-center">
-        <p class="mb-4">Voici un aperçu du projet Supercar. Cliquez sur une des images pour accéder directement au site client ou à l'administration.</p>
-        
-        <div class="row justify-content-center g-4">
-          <!-- Site client -->
-          <div class="col-6">
-            <a href="http://localhost/supercar/" target="_blank" class="image-link">
-              <div class="image-container">
-                <img src="assets/img/apercu_supercar.png" alt="Site Supercar" class="img-fluid rounded shadow">
-                <div class="overlay-text">Voir le site</div>
-              </div>
-            </a>
-          </div>
-          <!-- Admin -->
-          <div class="col-6">
-            <a href="http://localhost/supercar-admin/" target="_blank" class="image-link">
-              <div class="image-container">
-                <img src="assets/img/apercu_supercaradmin.png" alt="Admin Supercar" class="img-fluid rounded shadow">
-                <div class="overlay-text">Voir l’administration</div>
-              </div>
-            </a>
-          </div>
+      <!-- Titre et description -->
+      <div>
+        <h5 class="fw-bold mb-1">Stage 2025</h5>
+        <p class="mb-3">Apprentissage et innovation</p>
+
+        <!-- Boutons directement sur la carte -->
+       <div class="d-flex flex-wrap gap-2 buttons-container">
+          <a href="https://www.canva.com/design/DAGyq-S91ug/AF7o9bS3XKCuuLeHGzcPwA/view?utm_content=DAGyq-S91ug&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6b2d15b289"
+          target="_blank" class="project-btn">Présentation</a>
+          <a href="#" class="project-btn btn2 documents2-btn">Documents</a>
+          <a href="#" class="project-btn">Démo</a>
         </div>
-      </div>
-
-      <div class="modal-footer justify-content-center">
-        <button class="btn btn-primary" id="backToProjectBtn">Retour à la présentation</button>
       </div>
 
     </div>
   </div>
 </div>
-
-<!-- Modale 6 -->
-<div class="modal fade" id="projectModal6" tabindex="-1" aria-labelledby="projectModalLabel6" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h3 class="modal-title" id="projectModalLabel6">Documents du projet Supercar</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-      </div>
-
-      <div class="modal-body text-center">
-        <div class="row justify-content-center g-4">
-          <!-- Contexte -->
-          <div class="col-6">
-            <a href="assets/docs/Contexte Supercar 2024-26.pdf" target="_blank" class="image-link">
-              <div class="image-container">
-                <img src="assets/img/contexte_supercar.png" alt="Contexte Supercar" class="img-fluid rounded shadow">
-                <div class="overlay-text">Contexte</div>
-              </div>
-            </a>
-          </div>
-          <!-- Rapport -->
-          <div class="col-6">
-            <a href="assets/docs/Rapport de projet Supercar.pdf" target="_blank" class="image-link">
-              <div class="image-container">
-                <img src="assets/img/Rapport de projet Supercar.jpg" alt="Rapport Supercar" class="img-fluid rounded shadow">
-                <div class="overlay-text">Rapport de projet</div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal-footer justify-content-center">
-        <button class="btn btn-primary" id="backToSupercarBtn">Retour à la présentation</button>
-      </div>
-
-    </div>
-  </div>
-</div>
+</section>
 
 <!-- GLPI -->
 <section id="glpi" class="section">
@@ -583,6 +432,51 @@
 
 
 <script>
+  const canvas = document.getElementById('stars-canvas');
+const ctx = canvas.getContext('2d');
+
+let stars = [];
+const numStars = 150;
+
+function initStars() {
+  stars = [];
+  for (let i = 0; i < numStars; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 1.2,
+      alpha: Math.random()
+    });
+  }
+}
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  initStars();
+}
+
+function animateStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let star of stars) {
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+    ctx.fill();
+    
+    // scintillement
+    star.alpha += (Math.random() - 0.5) * 0.05;
+    if (star.alpha < 0) star.alpha = 0;
+    if (star.alpha > 1) star.alpha = 1;
+  }
+  requestAnimationFrame(animateStars);
+}
+
+window.addEventListener('resize', resizeCanvas);
+
+resizeCanvas();
+animateStars();
+
   const slides = document.querySelectorAll('.carousel-slide');
   let current = 1;
 
@@ -612,36 +506,150 @@
 </script>
 
 <script>
- const filtreSelect = document.getElementById('filtre-select');
-const projets = Array.from(document.querySelectorAll('.projet-carte'));
-const grille = document.querySelector('.projets-grille');
+ const select = document.getElementById("filtre-select");
+  const projets = document.querySelectorAll(".projet-item");
 
-
-
-filtreSelect.addEventListener('change', () => {
-  const categorie = filtreSelect.value;
-
- 
-  const projetsFiltres = projets.filter(projet => {
-    return categorie === 'tous' || projet.getAttribute('data-type') === categorie;
+  select.addEventListener("change", () => {
+    const value = select.value;
+    projets.forEach((p) => {
+      if (value === "tous" || p.dataset.type === value) {
+        p.style.display = "block";
+      } else {
+        p.style.display = "none";
+      }
+    });
   });
 
-  
-  grille.innerHTML = '';
-  projetsFiltres.forEach(projet => {
-    projet.classList.remove('hidden');
-    grille.appendChild(projet);
-  });
+ document.querySelectorAll('.projet-item').forEach(project => {
+  const container = project.querySelector('.buttons-container');
 
- 
-  projets.forEach(projet => {
-    if (!projetsFiltres.includes(projet)) {
-      projet.classList.add('hidden');
-    }
-  });
-  
+  const btn1Text = 'Présentation';
+  const btn2Text = 'Documents';
+  const btn3Text = 'Démo';
+
+  // -------- DOCUMENTS --------
+  const documentsHandler = e => {
+    e.preventDefault();
+
+    container.innerHTML = `
+      <a href="assets/docs/Contexte Supercar 2024-26.pdf" target="_blank" class="project-btn">Contexte</a>
+      <a href="assets/docs/Rapport%20de%20projet%20Supercar.pdf" target="_blank" class="project-btn">Rapport de projet</a>
+      <a href="#" class="project-btn back-btn">Retour</a>
+    `;
+
+    container.querySelector('.back-btn').addEventListener('click', e => {
+      e.preventDefault();
+      container.innerHTML = `
+        <a href="#" class="project-btn btn1" target="_blank">${btn1Text}</a>
+        <a href="#" class="project-btn btn2 documents-btn" target="_blank">${btn2Text}</a>
+        <a href="#" class="project-btn btn3 demo-btn" target="_blank">${btn3Text}</a>
+      `;
+      // Rétablir les écouteurs
+      container.querySelector('.documents-btn').addEventListener('click', documentsHandler);
+      container.querySelector('.demo-btn').addEventListener('click', demoHandler);
+    });
+  };
+
+  container.querySelector('.documents-btn').addEventListener('click', documentsHandler);
+
+  // -------- DEMO --------
+  const demoHandler = e => {
+    e.preventDefault();
+
+    container.innerHTML = `
+      <a href="http://localhost/supercar/" target="_blank" class="project-btn">Client</a>
+      <a href="http://localhost/supercar-admin/" target="_blank" class="project-btn">Administration</a>
+      <a href="#" class="project-btn back-btn">Retour</a>
+    `;
+
+    container.querySelector('.back-btn').addEventListener('click', e => {
+      e.preventDefault();
+      container.innerHTML = `
+        <a href="#" class="project-btn btn1" target="_blank">${btn1Text}</a>
+        <a href="#" class="project-btn btn2 documents-btn" target="_blank">${btn2Text}</a>
+        <a href="#" class="project-btn btn3 demo-btn" target="_blank">${btn3Text}</a>
+      `;
+      // Rétablir les écouteurs
+      container.querySelector('.documents-btn').addEventListener('click', documentsHandler);
+      container.querySelector('.demo-btn').addEventListener('click', demoHandler);
+    });
+  };
+
+  container.querySelector('.demo-btn').addEventListener('click', demoHandler);
 });
 
+document.querySelectorAll('.projet-item[data-type="stage"]').forEach(project => {
+  const container = project.querySelector('.buttons-container');
+
+  const btn1Text = 'Présentation';
+  const btn2Text = 'Documents';
+  const btn3Text = 'Démo';
+
+  // -------- DOCUMENTS (Projet 2) --------
+  const documents2Handler = e => {
+    e.preventDefault();
+
+    container.innerHTML = `
+      <a href="assets/docs/stage_contexte.pdf" target="_blank" class="project-btn">Attestation</a>
+      <a href="assets/docs/stage_rapport.pdf" target="_blank" class="project-btn">Rapport de Stage</a>
+      <a href="#" class="project-btn back-btn">Retour</a>
+    `;
+
+    // Bouton Retour
+    container.querySelector('.back-btn').addEventListener('click', e => {
+      e.preventDefault();
+      container.innerHTML = `
+        <a href="#" class="project-btn btn1">${btn1Text}</a>
+        <a href="#" class="project-btn btn2 documents2-btn">${btn2Text}</a>
+        <a href="#" class="project-btn btn3 demo2-btn">${btn3Text}</a>
+      `;
+
+      // Réactiver l'écouteur Documents
+      container.querySelector('.documents2-btn').addEventListener('click', documents2Handler);
+    });
+  };
+
+  // Écouteur initial
+  container.querySelector('.documents2-btn').addEventListener('click', documents2Handler);
+});
+
+
+
+
+
+
+</script>
+<script>
+  document.querySelectorAll('.projet-item[data-type="stage"]').forEach(project => {
+  const container = project.querySelector('.buttons-container');
+
+  const btn1Text = 'Présentation';
+  const btn2Text = 'Documents';
+  const btn3Text = 'Démo';
+
+  const documents2Handler = e => {
+    e.preventDefault();
+
+    container.innerHTML = `
+      <a href="assets/docs/Attestation de stage - Dimitri Meyepa.pdf" target="_blank" class="project-btn">Attestation</a>
+      <a href="assets/docs/Rapport%20de%20Stage%20premiere%20ann%C3%A9e%20(1).pdf" target="_blank" class="project-btn">Rapport de Stage</a>
+      <a href="#" class="project-btn back-btn">Retour</a>
+    `;
+
+    container.querySelector('.back-btn').addEventListener('click', e => {
+      e.preventDefault();
+      container.innerHTML = `
+        <a href="#" class="project-btn btn1">${btn1Text}</a>
+        <a href="#" class="project-btn btn2 documents2-btn">${btn2Text}</a>
+        <a href="#" class="project-btn btn3">${btn3Text}</a>
+      `;
+      // Rétablir le listener
+      container.querySelector('.documents2-btn').addEventListener('click', documents2Handler);
+    });
+  };
+
+  container.querySelector('.documents2-btn').addEventListener('click', documents2Handler);
+});
 
 </script>
 

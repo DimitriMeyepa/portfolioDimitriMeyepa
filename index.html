@@ -27,18 +27,15 @@
         <ul class="navbar-nav align-items-center">
           <li class="nav-item">
             <a class="nav-link" href="#apropos">À propos</a>
-          </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#formations">Formations</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="#skills">Compétences</a>
           </li>
            <li class="nav-item">
             <a class="nav-link" href="#projets">Projets</a>
           </li>
-         
-         
+          <li class="nav-item">
+            <a class="nav-link" href="#glpi">GLPI</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -122,8 +119,6 @@
     </div>
   </div>
 </section>
-
-<!-- Formations -->
 <section class="section" id="formations">
   <div class="container" data-aos="fade-up">
    <h2 class="text-center mb-5" data-aos="zoom-in">Parcours Scolaire</h2>
@@ -244,36 +239,43 @@
 </div>
 </div>
 </div>
+<!-- Outils Collaboratifs -->
+  <div class="container" data-aos="fade-up">
+    <h3 class="text-center mb-5" data-aos="zoom-in">Outils Collaboratifs</h3>
+    <div class="row text-center g-4">
+  <div class="row text-center justify-content-center g-4">
+  <!-- Teams -->
+  <div class="col-2">
+    <img src="https://cdn.worldvectorlogo.com/logos/microsoft-teams-1.svg" alt="Teams" style="width:40px; height:40px; display:block; margin:auto;">
+    <div>Teams</div>
+  </div>
+
+  <!-- Trello -->
+  <div class="col-2">
+    <img src="https://cdn.worldvectorlogo.com/logos/trello.svg" alt="Trello" style="width:40px; height:40px; display:block; margin:auto;">
+    <div>Trello</div>
+  </div>
+
+  <!-- Jira -->
+  <div class="col-2">
+    <img src="https://cdn.worldvectorlogo.com/logos/jira-3.svg" alt="Jira" style="width:40px; height:40px; display:block; margin:auto;">
+    <div>Jira</div>
+  </div>
+
+  <!-- GitHub -->
+  <div class="col-2">
+    <i class="fab fa-github" style="font-size:40px; display:block; margin:auto;"></i>
+    <div>GitHub</div>
+  </div>
+
+  <!-- Figma -->
+  <div class="col-2">
+    <i class="fa-brands fa-figma" style="font-size:40px; color:orange; display:block; margin:auto;"></i>
+    <div>Figma</div>
+  </div>
+  </div>
 </section>
 
-<script>
-  const slides = document.querySelectorAll('.carousel-slide');
-  let current = 1;
-
-  function updateCarousel() {
-    slides.forEach((slide, index) => {
-      slide.classList.remove('left', 'center', 'right');
-      if (index === current) {
-        slide.classList.add('center');
-      } else if (index === (current - 1 + slides.length) % slides.length) {
-        slide.classList.add('left');
-      } else if (index === (current + 1) % slides.length) {
-        slide.classList.add('right');
-      }
-    });
-  }
-
-  slides.forEach((slide, index) => {
-    slide.addEventListener('click', () => {
-      if (index !== current) {
-        current = index;
-        updateCarousel();
-      }
-    });
-  });
-
-  window.addEventListener('DOMContentLoaded', updateCarousel);
-</script>
 
 <!--Projet-->
 
@@ -289,22 +291,29 @@
   </div>
 
   <div class="projets-grille">
-    <!-- Projet 1-->
+<!-- Projet 1-->
     <div class="projet-carte" data-type="projet" data-aos="fade-left">
       <img src="assets/img/logofff.png" alt="Supercar">
       <div class="projet-info">
         <span class="badge"> RP1 - Application web</span>
         <h3>Supercar</h3>
-       <a href="#" class="voir-plus" data-bs-toggle="modal" data-bs-target="#projectModal">Voir plus </a>
+        <div class="image-illustration">
+          <img src="assets/img/illustrationsupercar.png" alt="Illustration" class="illustration">
+        </div>
+
+        <a href="#" class="voir-plus" data-bs-toggle="modal" data-bs-target="#projectModal">Voir plus </a>
       </div>
     </div>
-      <!-- Projet 3 -->
+   <!-- Projet 3 -->
      <div class="projet-carte" data-type="stage" data-aos="fade-left">
       <img src="assets/img/acensiwhitelogo.png" alt="stage1" > 
       <br>
       <div class="projet-info">
         <span class="badge">Formation en entreprise</span>
         <h3>Stage 2025</h3>
+          <div class="image-illustration">
+          <img src="assets/img/illustrationacensi.png" alt="Illustration" class="illustration">
+        </div>
        <a href="#" class="voir-plus" data-bs-toggle="modal" data-bs-target="#projectModal3">Voir plus</a>
       </div>
     </div>
@@ -500,6 +509,68 @@
   </div>
 </div>
 
+<!-- GLPI -->
+<section id="glpi" class="section">
+  <div class="container text-center">
+    <h2 class="mb-5" data-aos="zoom-in">GLPI</h2>
+
+    <div class="row justify-content-center g-4">
+      <!-- Cadre 1 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card p-4 text-center">
+          <i class="fas fa-server fa-2x mb-3" style="color:#4b6cb7;"></i>
+          <h5>Installation & Configuration</h5>
+          <p>Installer et configurer GLPI sur un serveur web (Apache + PHP + MySQL).</p>
+        </div>
+      </div>
+
+      <!-- Cadre 2 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card p-4 text-center">
+          <i class="fas fa-users-cog fa-2x mb-3" style="color:#f39c12;"></i>
+          <h5>Gestion des utilisateurs</h5>
+          <p>Gérer les utilisateurs, profils et droits d’accès.</p>
+        </div>
+      </div>
+
+      <!-- Cadre 3 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card p-4 text-center">
+          <i class="fas fa-headset fa-2x mb-3" style="color:#e74c3c;"></i>
+          <h5>Tickets & Helpdesk</h5>
+          <p>Suivre et traiter les tickets d’incidents et de demandes.</p>
+        </div>
+      </div>
+
+      <!-- Cadre 4 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="card p-4 text-center">
+          <i class="fas fa-laptop fa-2x mb-3" style="color:#1abc9c;"></i>
+          <h5>Inventaire Matériel</h5>
+          <p>Inventorier le matériel et les logiciels de l’organisation.</p>
+        </div>
+      </div>
+
+      <!-- Cadre 5 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="card p-4 text-center">
+          <i class="fas fa-chart-line fa-2x mb-3" style="color:#9b59b6;"></i>
+          <h5>Rapports & Dashboard</h5>
+          <p>Créer des rapports et tableaux de bord pour le suivi des interventions.</p>
+        </div>
+      </div>
+
+      <!-- Cadre 6 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+        <div class="card p-4 text-center">
+          <i class="fas fa-lightbulb fa-2x mb-3" style="color:#f1c40f;"></i>
+          <h5>Compétences Développées</h5>
+          <p>Administration système, gestion de base de données, ITSM et support utilisateur.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -509,6 +580,36 @@
 
 
 
+
+
+<script>
+  const slides = document.querySelectorAll('.carousel-slide');
+  let current = 1;
+
+  function updateCarousel() {
+    slides.forEach((slide, index) => {
+      slide.classList.remove('left', 'center', 'right');
+      if (index === current) {
+        slide.classList.add('center');
+      } else if (index === (current - 1 + slides.length) % slides.length) {
+        slide.classList.add('left');
+      } else if (index === (current + 1) % slides.length) {
+        slide.classList.add('right');
+      }
+    });
+  }
+
+  slides.forEach((slide, index) => {
+    slide.addEventListener('click', () => {
+      if (index !== current) {
+        current = index;
+        updateCarousel();
+      }
+    });
+  });
+
+  window.addEventListener('DOMContentLoaded', updateCarousel);
+</script>
 
 <script>
  const filtreSelect = document.getElementById('filtre-select');

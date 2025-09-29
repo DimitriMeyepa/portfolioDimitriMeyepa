@@ -344,8 +344,8 @@ p.typing-effect {
 .projet-carte {
   background-color: #2a2a2a;
   border-radius: 1rem;
-  width: 23rem;
-  height: 18rem;
+  width: 30rem;
+  height: auto;
   margin-top: 3rem;
   overflow: hidden;
   text-align: center;
@@ -370,6 +370,20 @@ p.typing-effect {
     width: 100%; 
     max-width: 500px; 
   }
+}
+.image-illustration {
+  margin: 1rem 0; /* espace entre le titre et le bouton */
+}
+
+.image-illustration .illustration {
+  width: 330px;       /* largeur fixe */
+  height: 220px;      /* hauteur fixe */
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;  /* évite la déformation et garde le centrage */
 }
 
 
@@ -841,14 +855,23 @@ h3 {
 
 #contact-box form input::placeholder,
 #contact-box form textarea::placeholder {
-  color: #aaa; /* gris clair pour bien distinguer du texte */
+  color: #aaa;
 }
 
 #contact-box form input:focus,
 #contact-box form textarea:focus {
   outline: none;
-  border-color: #4b6cb7; /* petite touche bleue élégante */
+  border-color: #4b6cb7; 
   box-shadow: 0 0 6px rgba(75, 108, 183, 0.5);
+}
+#glpi {
+  background-color: #1e1e1e!important;
+  color: #f5f5f5; 
+}
+.icon-tool {
+  width: 48px;  /* largeur fixe */
+  height: 48px; /* hauteur fixe */
+  margin-bottom: 8px;
 }
 
 

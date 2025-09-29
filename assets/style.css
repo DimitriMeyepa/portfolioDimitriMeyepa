@@ -387,6 +387,7 @@ p.typing-effect {
   width: 50%;
   height: auto;
   margin-top: 30px;
+  border-radius: 10px;             
 }
 
 .projet-info {
@@ -395,19 +396,66 @@ p.typing-effect {
 
 .badge {
   display: inline-block;
-  background: #333;
-  border-radius: 10px;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.8rem;
-  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #545454, #363636); 
+  border-radius: 20px;            
+  padding: 0.35rem 0.9rem;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.5px;       
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, 
+              box-shadow 0.2s ease, 
+              filter 0.3s ease;    
+  filter: brightness(0.9);         
 }
 
+
 .voir-plus {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 1rem;
+  background: #354c80; 
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  padding: 0.4rem 0.8rem;   
+  border-radius: 50px;
+  font-size: 0.9rem;        
+  position: relative;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.25);
+  transition: background 0.3s;
+}
+
+
+.voir-plus::after {
+  content: "+";
+  font-size: 1rem;      
+  font-weight: bold;
+  margin-left: 0.6rem;
+  background: rgba(0,0,0,0.1);
+  width: 1.6rem;           
+  height: 1.6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voir-plus:hover {
+  background: #2c3e6a; 
+}
+h3 {
+  font-size: 1.8rem;
+  color: white;
+  background: #4b6cb7; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+  position: relative;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
 }
 
 

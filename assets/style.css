@@ -440,6 +440,70 @@ h3 {
   padding-right: 15px;
   margin-bottom: 30px;
 }
+.timeline-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin: 4rem 0;
+  padding: 0 20px;
+}
+
+.timeline-horizontal::before {
+  content: '';
+  position: absolute;
+  top: 70px; /* aligné avec les points */
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #8d6eff, #4b6cb7);
+  z-index: 1;
+}
+
+.timeline-step {
+  position: relative;
+  text-align: center;
+  flex: 1;
+  max-width: 250px; /* plus large */
+  z-index: 2;
+}
+
+.timeline-logo img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border: 3px solid #8d6eff;
+  background: #fff;
+}
+
+
+.timeline-content {
+  margin-top: 20px;
+  padding: 20px;
+  background: #1e1e1e;
+  color: #fff;
+  height: 220px; /* grande hauteur uniforme */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.timeline-content h3 {
+  color: #8d6eff;
+  margin-bottom: 5px;
+}
+
+.timeline-content h5 {
+  color: #4b6cb7;
+  margin-bottom: 5px;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 0.9rem;
+}
 
 .bg-dark-blue {
   background-color: #1f2a40; 

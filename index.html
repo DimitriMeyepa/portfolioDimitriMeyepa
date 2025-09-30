@@ -432,15 +432,32 @@
   </div>
 </section>
 
+<!-- Contact -->
+<div id="contact-float" onclick="toggleContactBox()">
+  <i class="fas fa-envelope"></i>
+</div>
+<div id="contact-overlay" onclick="toggleContactBox()"></div>
+<div id= "contact-box">
+  <span class="contact-close" onclick="toggleContactBox()">&times;</span>
+  <h2>Contact</h2>
+  <p><i class="fas fa-envelope"></i> dimitri.meyepa1@gmail.com</p>
+  <p><i class="fas fa-phone"></i> (+230)5536-0799</p>
 
-
-
-
-
-
-
-
-
+  <form id="contact-form" action="https://formsubmit.co/dimitri.meyepa1@gmail.com" method="POST">
+    <!-- Champ email -->
+    <div class="mb-3">
+      <input type="text" name="email" class="form-control" placeholder="Email" required>
+    </div>
+    <!-- Champ message -->
+    <div class="mb-3">
+      <textarea name="message" class="form-control" rows="4" placeholder="Votre message" required></textarea>
+    </div>
+    
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="">
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+  </form>
+</div>
 
 <script>
   const canvas = document.getElementById('stars-canvas');
@@ -568,8 +585,8 @@ animateStars();
     e.preventDefault();
 
     container.innerHTML = `
-      <a href="http://localhost/supercar/" target="_blank" class="project-btn">Client</a>
-      <a href="http://localhost/supercar-admin/" target="_blank" class="project-btn">Administration</a>
+      <a href="http://localhost/supercar/supercar-client/" target="_blank" class="project-btn">Client</a>
+      <a href="http://localhost/supercar/supercar-admin/" target="_blank" class="project-btn">Administration</a>
       <a href="#" class="project-btn back-btn">Retour</a>
     `;
 
@@ -668,32 +685,7 @@ document.querySelectorAll('.projet-item[data-type="stage"]').forEach(project => 
 
 
 
-<!-- Contact -->
-<div id="contact-float" onclick="toggleContactBox()">
-  <i class="fas fa-envelope"></i>
-</div>
-<div id="contact-overlay" onclick="toggleContactBox()"></div>
-<div id= "contact-box">
-  <span class="contact-close" onclick="toggleContactBox()">&times;</span>
-  <h2>Contact</h2>
-  <p><i class="fas fa-envelope"></i> dimitri.meyepa1@gmail.com</p>
-  <p><i class="fas fa-phone"></i> (+230)5536-0799</p>
 
-  <form id="contact-form" action="https://formsubmit.co/dimitri.meyepa1@gmail.com" method="POST">
-    <!-- Champ email -->
-    <div class="mb-3">
-      <input type="text" name="email" class="form-control" placeholder="Email" required>
-    </div>
-    <!-- Champ message -->
-    <div class="mb-3">
-      <textarea name="message" class="form-control" rows="4" placeholder="Votre message" required></textarea>
-    </div>
-    
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="">
-    <button type="submit" class="btn btn-primary">Envoyer</button>
-  </form>
-</div>
 
 <script>
 document.getElementById("contact-form").addEventListener("submit", function(e) {

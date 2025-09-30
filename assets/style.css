@@ -93,6 +93,19 @@ body {
   z-index: 1;
 }
 
+/* Ombre et contour bleu plus intense autour de la photo */
+.shadow-photo {
+  border: 3px solid #4b6cb7; /* contour bleu */
+  box-shadow: 0 15px 40px rgba(75, 108, 183, 0.8); /* shadow bleu plus forte */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shadow-photo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(75, 108, 183, 0.9); /* shadow bleu plus intense au hover */
+}
+
+
 .social-icon {
   color: #4b6cb7;
   transition: transform 0.2s ease, color 0.2s ease;

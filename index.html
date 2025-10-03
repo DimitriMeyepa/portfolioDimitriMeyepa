@@ -345,11 +345,11 @@
         <p class="mb-3">Conduisez l'excellence</p>
 
         <!-- Boutons -->
-        <div class="d-flex flex-wrap gap-2 buttons-container">
-        <a href="https://www.canva.com/design/DAGzBvhLqJg/CVTNi4Nfut-rogdEW9VFmg/view" target="_blank" class="project-btn">Présentation</a>
-        <a href="#" class="project-btn btn2 documents-btn">Documents</a>
-        <a href="#" class="project-btn btn3 demo-btn">Démo</a>
-      </div>
+          <div class="d-flex flex-wrap gap-2 buttons-container">
+          <a href="https://www.canva.com/design/DAGzBvhLqJg/CVTNi4Nfut-rogdEW9VFmg/view" target="_blank" class="project-btn">Présentation</a>
+          <button class="project-btn btn2" data-bs-toggle="modal" data-bs-target="#docsSupercar">Documents</button>
+          <button class="project-btn btn3" data-bs-toggle="modal" data-bs-target="#demoSupercar">Démo</button>
+        </div>
       </div>
 
     </div>
@@ -375,17 +375,78 @@
 
         <!-- Boutons directement sur la carte -->
        <div class="d-flex flex-wrap gap-2 buttons-container">
-          <a href="https://www.canva.com/design/DAGyq-S91ug/AF7o9bS3XKCuuLeHGzcPwA/view?utm_content=DAGyq-S91ug&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6b2d15b289"
-          target="_blank" class="project-btn">Présentation</a>
-          <a href="#" class="project-btn btn2 documents2-btn">Documents</a>
-          <a href="#" class="project-btn">Démo</a>
-        </div>
+        <a href="https://www.canva.com/design/DAGyq-S91ug/AF7o9bS3XKCuuLeHGzcPwA/view?utm_content=DAGyq-S91ug&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6b2d15b289"
+        target="_blank" class="project-btn">Présentation</a>
+        <button class="project-btn btn2" data-bs-toggle="modal" data-bs-target="#docsStage2025">Documents</button>
+        <button class="project-btn btn3" data-bs-toggle="modal" data-bs-target="#demoStage2025">Démo</button>
+      </div>
       </div>
 
     </div>
   </div>
 </div>
 </section>
+<!-- Modal Documents Supercar -->
+<div class="modal fade" id="docsSupercar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">Documents - Supercar</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body d-flex flex-column gap-2">
+        <a href="assets/docs/Contexte Supercar 2024-26.pdf" target="_blank" class="modal-btn">Contexte</a>
+        <a href="assets/docs/Rapport de projet Supercar.pdf" target="_blank" class="modal-btn">Rapport de projet</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Démo Supercar -->
+<div class="modal fade" id="demoSupercar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">Démo - Supercar</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body d-flex flex-column gap-2">
+        <a href="http://localhost/supercar/supercar-client/" target="_blank" class="modal-btn">Client</a>
+        <a href="http://localhost/supercar/supercar-admin/" target="_blank" class="modal-btn">Administration</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Documents Stage 2025 -->
+<div class="modal fade" id="docsStage2025" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">Documents - Stage 2025</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body d-flex flex-column gap-2">
+        <a href="assets/docs/Attestation de stage - Dimitri Meyepa.pdf" target="_blank" class="modal-btn">Attestation</a>
+        <a href="assets/docs/Rapport de Stage premiere année (1).pdf" target="_blank" class="modal-btn">Rapport de stage</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Démo Stage 2025 -->
+<div class="modal fade" id="demoStage2025" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">Démo - Stage 2025</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body d-flex flex-column gap-2">
+        <a href="http://localhost:4200/deals/deals-list" target="_blank" class="modal-btn">Deals</a>
+        <a href="http://localhost:4200/tasks/all-tasks" target="_blank" class="modal-btn">Tasks</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- GLPI -->
 <section id="glpi" class="section">
@@ -566,104 +627,6 @@ animateStars();
     });
   });
 
- document.querySelectorAll('.projet-item').forEach(project => {
-  const container = project.querySelector('.buttons-container');
-
-  const btn1Text = 'Présentation';
-  const btn2Text = 'Documents';
-  const btn3Text = 'Démo';
-
-  // -------- DOCUMENTS --------
-  const documentsHandler = e => {
-    e.preventDefault();
-
-    container.innerHTML = `
-      <a href="assets/docs/Contexte Supercar 2024-26.pdf" target="_blank" class="project-btn">Contexte</a>
-      <a href="assets/docs/Rapport%20de%20projet%20Supercar.pdf" target="_blank" class="project-btn">Rapport de projet</a>
-      <a href="#" class="project-btn back-btn">Retour</a>
-    `;
-
-    container.querySelector('.back-btn').addEventListener('click', e => {
-      e.preventDefault();
-      container.innerHTML = `
-        <a href="#" class="project-btn btn1" target="_blank">${btn1Text}</a>
-        <a href="#" class="project-btn btn2 documents-btn" target="_blank">${btn2Text}</a>
-        <a href="#" class="project-btn btn3 demo-btn" target="_blank">${btn3Text}</a>
-      `;
-      // Rétablir les écouteurs
-      container.querySelector('.documents-btn').addEventListener('click', documentsHandler);
-      container.querySelector('.demo-btn').addEventListener('click', demoHandler);
-    });
-  };
-
-  container.querySelector('.documents-btn').addEventListener('click', documentsHandler);
-
-  // -------- DEMO --------
-  const demoHandler = e => {
-    e.preventDefault();
-
-    container.innerHTML = `
-      <a href="http://localhost/supercar/supercar-client/" target="_blank" class="project-btn">Client</a>
-      <a href="http://localhost/supercar/supercar-admin/" target="_blank" class="project-btn">Administration</a>
-      <a href="#" class="project-btn back-btn">Retour</a>
-    `;
-
-    container.querySelector('.back-btn').addEventListener('click', e => {
-      e.preventDefault();
-      container.innerHTML = `
-        <a href="#" class="project-btn btn1" target="_blank">${btn1Text}</a>
-        <a href="#" class="project-btn btn2 documents-btn" target="_blank">${btn2Text}</a>
-        <a href="#" class="project-btn btn3 demo-btn" target="_blank">${btn3Text}</a>
-      `;
-      // Rétablir les écouteurs
-      container.querySelector('.documents-btn').addEventListener('click', documentsHandler);
-      container.querySelector('.demo-btn').addEventListener('click', demoHandler);
-    });
-  };
-
-  container.querySelector('.demo-btn').addEventListener('click', demoHandler);
-});
-
-document.querySelectorAll('.projet-item[data-type="stage"]').forEach(project => {
-  const container = project.querySelector('.buttons-container');
-
-  const btn1Text = 'Présentation';
-  const btn2Text = 'Documents';
-  const btn3Text = 'Démo';
-
-  // -------- DOCUMENTS (Projet 2) --------
-  const documents2Handler = e => {
-    e.preventDefault();
-
-    container.innerHTML = `
-      <a href="assets/docs/stage_contexte.pdf" target="_blank" class="project-btn">Attestation</a>
-      <a href="assets/docs/stage_rapport.pdf" target="_blank" class="project-btn">Rapport de Stage</a>
-      <a href="#" class="project-btn back-btn">Retour</a>
-    `;
-
-    // Bouton Retour
-    container.querySelector('.back-btn').addEventListener('click', e => {
-      e.preventDefault();
-      container.innerHTML = `
-        <a href="#" class="project-btn btn1">${btn1Text}</a>
-        <a href="#" class="project-btn btn2 documents2-btn">${btn2Text}</a>
-        <a href="#" class="project-btn btn3 demo2-btn">${btn3Text}</a>
-      `;
-
-      // Réactiver l'écouteur Documents
-      container.querySelector('.documents2-btn').addEventListener('click', documents2Handler);
-    });
-  };
-
-  // Écouteur initial
-  container.querySelector('.documents2-btn').addEventListener('click', documents2Handler);
-});
-
-
-
-
-
-
 </script>
 <script>
   document.querySelectorAll('.projet-item[data-type="stage"]').forEach(project => {
@@ -731,57 +694,6 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     var box = document.getElementById('contact-box');
     box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'block' : 'none';
   }
-
- // --- Gestion modales Supercar ---
-  const modal1 = new bootstrap.Modal(document.getElementById('projectModal'));
-  const modal5 = new bootstrap.Modal(document.getElementById('projectModal5'));
-  const modal6 = new bootstrap.Modal(document.getElementById('projectModal6'));
-
-  const voirProjetBtn = document.getElementById('voirProjetBtn');
-  const backToProjectBtn = document.getElementById('backToProjectBtn');
-  const documentsSupercarBtn = document.getElementById('documents-supercar-btn');
-  const backToSupercarBtn = document.getElementById('backToSupercarBtn');
-
-  voirProjetBtn.addEventListener('click', () => {
-    modal1.hide();
-    modal5.show();
-  });
-
-  backToProjectBtn.addEventListener('click', () => {
-    modal5.hide();
-    modal1.show();
-  });
-
-  documentsSupercarBtn.addEventListener('click', () => {
-    modal1.hide();
-    modal6.show();
-  });
-
-  backToSupercarBtn.addEventListener('click', () => {
-    modal6.hide();
-    modal1.show();
-  });
-
-  // --- Gestion modales Stage ---
-  const modal3 = new bootstrap.Modal(document.getElementById('projectModal3'));
-  const modal4 = new bootstrap.Modal(document.getElementById('projectModal4'));
-
-  const documentsBtn = document.getElementById('documents-btn');
-  const backToPresentationBtn = document.getElementById('backToPresentationBtn');
-
-  documentsBtn.addEventListener('click', () => {
-    modal3.hide();
-    modal4.show();
-  });
-
-  backToPresentationBtn.addEventListener('click', () => {
-    modal4.hide();
-    modal3.show();
-  });
-
-
-
-
   
 </script>
 
@@ -804,6 +716,7 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
 
 
 </script>
+
 
 </body>
 </html>

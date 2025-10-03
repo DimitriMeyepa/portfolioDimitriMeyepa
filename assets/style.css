@@ -367,11 +367,10 @@ p.typing-effect {
 }
 
 
-.voir-plus {
+.modal-btn {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 1rem;
   background: #354c80; 
   color: #fff;
   text-decoration: none;
@@ -385,7 +384,7 @@ p.typing-effect {
 }
 
 
-.voir-plus::after {
+.modal-btn::after {
   content: "+";
   font-size: 1rem;      
   font-weight: bold;
@@ -399,7 +398,7 @@ p.typing-effect {
   justify-content: center;
 }
 
-.voir-plus:hover {
+.modal-btn:hover {
   background: #2c3e6a; 
 }
 
@@ -489,6 +488,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
 }
+
 
 .timeline-content h3 {
   color: #8d6eff;

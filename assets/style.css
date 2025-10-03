@@ -10,37 +10,45 @@ body {
   overflow-x: hidden;
 }
 
-/* Navbar */
 .navbar {
-  background: rgba(0, 0, 0, 0.2); 
-  backdrop-filter: blur(10px); 
-  border-radius: 40px;
-  padding: 10px 30px;
-  margin: 20px auto;
-  margin-bottom: 2rem;
-  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #1e1e1e74; 
+  backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px); 
+  border-radius: 0; 
 }
-.navbar-brand {
-  font-size: 1.4rem;
-  color: #3b52cc; 
-}
-
-.navbar-brand .highlight-letter {
-  color: #ffffff; 
-}
-
 
 .navbar-brand {
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
 }
 
 .nav-link {
-  color: #ffffff;
-  margin-right: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .nav-link:hover {
   color: #4b6cb7;
+}
+.highlight-letter {
+  color: #4b6cb7; 
 }
 
 .btn-primary {
@@ -511,21 +519,25 @@ h3 {
 
 
 
+/* Carousel Wrapper */
 .carousel-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 100%;
-  height: 320px;   /* hauteur fixe du carousel */
+  max-width: 100%; /* s'assure qu'il reste dans l'écran */
+  height: 320px;
   perspective: 1200px;
   margin-bottom: 8rem;
 }
 
+/* Carousel Slide */
 .carousel-slide {
   position: absolute;
-  width: 320px;   /* largeur fixe des cadres */
-  height: 100%;   /* prend la hauteur du wrapper */
+  width: 80%; /* largeur relative, plus flexible */
+  max-width: 320px; /* limite pour grands écrans */
+  height: 100%;
   transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
   cursor: pointer;
   opacity: 0.4;
@@ -534,24 +546,25 @@ h3 {
   filter: blur(2px);
 }
 
+/* Classes principales */
 .carousel-slide.center {
-  transform: translateX(0) scale(1.05) rotateY(0deg);
+  transform: translateX(0) scale(1) rotateY(0deg);
   opacity: 1;
   z-index: 3;
   filter: none;
-
 }
 
 .carousel-slide.left {
-  transform: translateX(-340px) rotateY(20deg) scale(0.85);
+  transform: translateX(-110%) rotateY(20deg) scale(0.85);
   z-index: 2;
 }
 
 .carousel-slide.right {
-  transform: translateX(340px) rotateY(-20deg) scale(0.85);
+  transform: translateX(110%) rotateY(-20deg) scale(0.85);
   z-index: 2;
 }
 
+/* Skill Box */
 .carousel-slide .skill-box {
   width: 100%;
   height: 100%;
@@ -561,11 +574,34 @@ h3 {
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   display: flex;
-  flex-direction: column; /* titre en haut */
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .carousel-wrapper { height: 280px; }
+  .carousel-slide { max-width: 280px; }
+  .carousel-slide.left { transform: translateX(-100%) rotateY(15deg) scale(0.8); }
+  .carousel-slide.right { transform: translateX(100%) rotateY(-15deg) scale(0.8); }
+}
+
+@media (max-width: 768px) {
+  .carousel-wrapper { height: 240px; }
+  .carousel-slide { max-width: 220px; }
+  .carousel-slide.left { transform: translateX(-90%) rotateY(10deg) scale(0.75); }
+  .carousel-slide.right { transform: translateX(90%) rotateY(-10deg) scale(0.75); }
+}
+
+@media (max-width: 480px) {
+  .carousel-wrapper { height: 200px; }
+  .carousel-slide { max-width: 180px; }
+  .carousel-slide.left, .carousel-slide.right {
+    transform: translateX(0) rotateY(0deg) scale(0.7); /* empilement vertical */
+  }
 }
 
 /* Titre toujours en haut */
@@ -575,12 +611,47 @@ h3 {
   color: #fff;
 }
 
-/* Contenu en grille 2 colonnes */
-.skill-box .content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 par ligne */
-  gap: 1rem;
+/* Skill Box : contenu responsive */
+.carousel-slide .skill-box {
   width: 100%;
+  height: 100%;
+  padding: 1rem; /* réduit le padding sur petits écrans */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Titre responsive */
+.carousel-slide .skill-box h3 {
+  font-size: clamp(1rem, 2vw, 1.5rem); /* s’adapte à la taille de l’écran */
+  margin-bottom: 1rem;
+}
+
+/* Contenu en grille 2 colonnes adaptatif */
+.carousel-slide .skill-box .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* auto-fit et minmax */
+  gap: 0.5rem;
+  width: 100%;
+}
+
+/* Texte et badges à l’intérieur */
+.carousel-slide .skill-box .content p,
+.carousel-slide .skill-box .content .badge {
+  font-size: clamp(0.7rem, 1.5vw, 1rem); /* texte et badges adaptatifs */
+  padding: 0.25rem 0.5rem;
+}
+@media (max-width: 480px) {
+  .carousel-slide .skill-box {
+    padding: 0.5rem;
+  }
+
+  .carousel-slide .skill-box .content {
+    grid-template-columns: 1fr; /* une seule colonne pour mobile */
+  }
 }
 
 
@@ -696,7 +767,7 @@ h3 {
   border-radius: 15px;
   box-shadow: 0px 6px 20px rgba(0,0,0,0.25);
   display: none;
-  z-index: 999;
+  z-index: 1001;
 }
 
 #contact-box h2 {
@@ -704,14 +775,15 @@ h3 {
   margin-bottom: 15px;
 }
 
+
 .contact-close {
-  position: absolute;
-  top: 12px;
-  right: 15px;
-  font-size: 1.4rem;
+  position: absolute; /* permet de la placer exactement */
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
   cursor: pointer;
-  color: #333;
-}
+  z-index: 1002; /* plus haut que la box pour être cliquable */
+} 
 
 /* Champs formulaire */
 #contact-box input,

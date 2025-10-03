@@ -17,22 +17,33 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" data-aos="fade-down" data-aos-delay="100">
     <div class="container">
-      <a class="navbar-brand fw-bold">
+      <a class="navbar-brand fw-bold" href="#hero-section">
        Port<span class="highlight-letter">folio</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav align-items-center">
-          <li class="nav-item">
-            <a class="nav-link" href="#apropos">À propos</a>
+       <ul class="navbar-nav ms-3 align-items-center"> 
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aproposDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              À propos
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="aproposDropdown">
+              <li><a class="dropdown-item" href="#apropos">À propos de moi</a></li>
+              <li><a class="dropdown-item" href="#formations">Parcours scolaire</a></li>
+              <li><a class="dropdown-item" href="#skills">Compétences techniques</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Compétences</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="#projets">Projets</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="projetsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Projets
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="projetsDropdown">
+              <li><a class="dropdown-item filter-link" href="#" data-filter="tous">Tous</a></li>
+              <li><a class="dropdown-item filter-link" href="#" data-filter="projet">Réalisation professionnelle</a></li>
+              <li><a class="dropdown-item filter-link" href="#" data-filter="stage">Formation en entreprise</a></li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#glpi">GLPI</a>
@@ -49,7 +60,7 @@
   </nav>
 
   <!-- Hero -->
-<section class="hero-section d-flex align-items-center justify-content-center">
+<section  id="hero-section" class="hero-section d-flex align-items-center justify-content-center">
   <canvas id="stars-canvas"></canvas>
   <div class="container text-light d-flex flex-column flex-lg-row align-items-center justify-content-center">
 
@@ -141,9 +152,8 @@
 </section>
 <section class="section" id="formations">
   <div class="container" data-aos="fade-up">
-    <h2 class="text-center mb-5" data-aos="zoom-in">Parcours Scolaire</h2>
-
-    <div class="timeline-horizontal">
+    <h3 class="text-center mb-5" data-aos="zoom-in">Parcours scolaire</h3>
+      <div class="timeline-horizontal">
       <!-- Baccalauréat -->
       <div class="timeline-step" data-aos="fade-up">
         <div class="timeline-logo">
@@ -192,8 +202,8 @@
   <!--compétences -->
 <section id="skills" class="py-5">
   <div class="container" data-aos="fade-up">
-    <h2 class="text-center mb-5" data-aos="zoom-in">Compétences Techniques</h2>
-    
+   <h3 class="text-center mb-5" data-aos="zoom-in">Compétences Techniques</h3>
+
     <div class="carousel-container position-relative">
       <div class="carousel-wrapper" id="custom-carousel">
   
@@ -633,46 +643,43 @@ animateStars();
       }
     });
   });
+    const filterLinks = document.querySelectorAll('.filter-link');
+  const projetsItems = document.querySelectorAll('.projet-item');
+  const selectFilter = document.getElementById("filtre-select");
 
-</script>
-<script>
-  document.querySelectorAll('.projet-item[data-type="stage"]').forEach(project => {
-  const container = project.querySelector('.buttons-container');
-
-  const btn1Text = 'Présentation';
-  const btn2Text = 'Documents';
-  const btn3Text = 'Démo';
-
-  const documents2Handler = e => {
-    e.preventDefault();
-
-    container.innerHTML = `
-      <a href="assets/docs/Attestation de stage - Dimitri Meyepa.pdf" target="_blank" class="project-btn">Attestation</a>
-      <a href="assets/docs/Rapport%20de%20Stage%20premiere%20ann%C3%A9e%20(1).pdf" target="_blank" class="project-btn">Rapport de Stage</a>
-      <a href="#" class="project-btn back-btn">Retour</a>
-    `;
-
-    container.querySelector('.back-btn').addEventListener('click', e => {
-      e.preventDefault();
-      container.innerHTML = `
-        <a href="#" class="project-btn btn1">${btn1Text}</a>
-        <a href="#" class="project-btn btn2 documents2-btn">${btn2Text}</a>
-        <a href="#" class="project-btn btn3">${btn3Text}</a>
-      `;
-      // Rétablir le listener
-      container.querySelector('.documents2-btn').addEventListener('click', documents2Handler);
+  function filterProjects(filter) {
+    projetsItems.forEach(p => {
+      if (filter === "tous" || p.dataset.type === filter) {
+        p.style.display = "block";
+      } else {
+        p.style.display = "none";
+      }
     });
-  };
+  }
 
-  container.querySelector('.documents2-btn').addEventListener('click', documents2Handler);
-});
+  // Navbar click
+  filterLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const filter = link.dataset.filter;
+
+      // Filtrer les projets
+      filterProjects(filter);
+
+      // Mettre à jour le select
+      selectFilter.value = filter;
+
+      // Scroll vers la section projets
+      document.getElementById('projets').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Select change
+  selectFilter.addEventListener("change", () => {
+    filterProjects(selectFilter.value);
+  });
 
 </script>
-
-
-
-
-
 
 
 <script>

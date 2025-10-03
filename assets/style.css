@@ -43,6 +43,30 @@ body {
   text-decoration: none;
   font-weight: 500;
 }
+.navbar .dropdown-menu {
+  background-color: #1e1e1e; /* même couleur que le navbar */
+  border: none;
+  padding: 0.5rem 0;
+  min-width: 200px;
+}
+
+/* Liens du menu déroulant */
+.navbar .dropdown-item {
+  color: #f0f0f0; /* texte clair */
+  padding: 0.5rem 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+
+.navbar .dropdown-item:hover {
+  background-color: #1e1e1e; 
+  color: #4b6cb7;
+}
+
+/* Petite flèche si nécessaire */
+.navbar .dropdown-toggle::after {
+  margin-left: 0.3rem;
+}
 
 .nav-link:hover {
   color: #4b6cb7;

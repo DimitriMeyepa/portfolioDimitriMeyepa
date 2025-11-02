@@ -4,733 +4,817 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dimitri Méyépa – Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" href="assets/img/logoDM.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="assets/img/logoDM.png" type="image/png">
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" data-aos="fade-down" data-aos-delay="100">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#hero-section">
-       Port<span class="highlight-letter">folio</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-       <ul class="navbar-nav ms-3 align-items-center"> 
-         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="aproposDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              À propos
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="aproposDropdown">
-              <li><a class="dropdown-item" href="#apropos">À propos de moi</a></li>
-              <li><a class="dropdown-item" href="#formations">Parcours scolaire</a></li>
-              <li><a class="dropdown-item" href="#skills">Compétences techniques</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="projetsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Projets
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="projetsDropdown">
-              <li><a class="dropdown-item filter-link" href="#" data-filter="tous">Tous</a></li>
-              <li><a class="dropdown-item filter-link" href="#" data-filter="projet">Réalisation professionnelle</a></li>
-              <li><a class="dropdown-item filter-link" href="#" data-filter="stage">Formation en entreprise</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#glpi">GLPI</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#veille">Veille technologique</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#synthese">Tableau de synthèse</a>
-          </li>
+<body class="bg-[#1e1e1e] text-white font-['Poppins']">
+  <!-- Navigation -->
+<nav class="navbar fixed top-0 left-0 w-full bg-[#1e1e1e74] backdrop-blur-md z-50 py-3" data-aos="fade-down" data-aos-delay="100">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center">
+        <a class="navbar-brand text-xl font-bold text-white" href="#hero-section">
+          Port<span class="highlight-letter">folio</span>
+        </a>
+        
+        <!-- Bouton menu mobile -->
+        <button class="navbar-toggler md:hidden text-white" type="button" id="mobileMenuButton">
+          <i class="fas fa-bars"></i>
+        </button>
+        
+        <!-- Menu desktop -->
+        <div class="hidden md:flex justify-end">
+          <ul class="navbar-nav flex space-x-6 items-center">
+            <!-- Menu À propos avec dropdown -->
+            <li class="nav-item dropdown relative">
+              <a class="nav-link text-white hover:text-[#4b6cb7] transition-colors cursor-pointer">
+                À propos
+              </a>
+              <ul class="dropdown-menu absolute hidden bg-[#1e1e1e] min-w-[200px] mt-2 rounded-md shadow-lg z-10 border border-gray-700">
+                <li><a class="dropdown-item block px-4 py-2 text-white hover:bg-[#2d2d2d] hover:text-[#4b6cb7] transition-colors" href="#apropos">À propos de moi</a></li>
+                <li><a class="dropdown-item block px-4 py-2 text-white hover:bg-[#2d2d2d] hover:text-[#4b6cb7] transition-colors" href="#formations">Parcours scolaire</a></li>
+                <li><a class="dropdown-item block px-4 py-2 text-white hover:bg-[#2d2d2d] hover:text-[#4b6cb7] transition-colors" href="#skills">Compétences techniques</a></li>
+              </ul>
+            </li>
+            
+            <!-- Menu Projets avec dropdown -->
+            <li class="nav-item dropdown relative">
+              <a class="nav-link text-white hover:text-[#4b6cb7] transition-colors cursor-pointer">
+                Projets
+              </a>
+              <ul class="dropdown-menu absolute hidden bg-[#1e1e1e] min-w-[250px] mt-2 rounded-md shadow-lg z-10 border border-gray-700">
+                <li><a class="dropdown-item filter-link block px-4 py-2 text-white hover:bg-[#2d2d2d] hover:text-[#4b6cb7] transition-colors" href="#" data-filter="tous">Tous les projets</a></li>
+                <li><a class="dropdown-item filter-link block px-4 py-2 text-white hover:bg-[#2d2d2d] hover:text-[#4b6cb7] transition-colors" href="#" data-filter="projet">Réalisation professionnelle</a></li>
+                <li><a class="dropdown-item filter-link block px-4 py-2 text-white hover:bg-[#2d2d2d] hover:text-[#4b6cb7] transition-colors" href="#" data-filter="stage">Formation en entreprise</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link text-white hover:text-[#4b6cb7] transition-colors" href="#glpi">GLPI</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link text-white hover:text-[#4b6cb7] transition-colors" href="#veille">Veille technologique</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link text-white hover:text-[#4b6cb7] transition-colors" href="#synthese">Tableau de synthèse</a>
+            </li>
+            
+
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Menu mobile -->
+      <div class="md:hidden mt-4 hidden transition-all duration-300" id="navbarNav">
+        <ul class="space-y-2">
+          <li><a class="block py-2 text-white hover:text-[#4b6cb7] transition-colors" href="#apropos">À propos</a></li>
+          <li><a class="block py-2 text-white hover:text-[#4b6cb7] transition-colors" href="#projets">Projets</a></li>
+          <li><a class="block py-2 text-white hover:text-[#4b6cb7] transition-colors" href="#glpi">GLPI</a></li>
+          <li><a class="block py-2 text-white hover:text-[#4b6cb7] transition-colors" href="#veille">Veille technologique</a></li>
+          <li><a class="block py-2 text-white hover:text-[#4b6cb7] transition-colors" href="#synthese">Tableau de synthèse</a></li>
+          <li><a class="block py-2 text-white hover:text-[#4b6cb7] transition-colors" href="#autrescompetences">Autres compétences</a></li>
         </ul>
       </div>
     </div>
   </nav>
-
-  <!-- Hero -->
-<section  id="hero-section" class="hero-section d-flex align-items-center justify-content-center">
+<!-- Hero Section -->
+<section id="hero-section" class="min-h-screen flex items-center justify-center relative pt-16">
   <canvas id="stars-canvas"></canvas>
-  <div class="container text-light d-flex flex-column flex-lg-row align-items-center justify-content-center">
-
+  <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-center relative z-10">
     <!-- Texte à gauche -->
-    <div class="hero-text text-center text-lg-start me-lg-4" data-aos="fade-right" data-aos-delay="100" style="max-width: 550px;">
-      <h1 class="fw-bold" id="hero-name">Dimitri Méyépa</h1>
-      <h3 class="mb-3">
+    <div class="hero-text text-center lg:text-left lg:mr-8 max-w-xl" data-aos="fade-right" data-aos-delay="100">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4">Dimitri Méyépa</h1>
+      <h3 class="text-xl lg:text-2xl mb-6">
         Étudiant en <span class="highlight">BTS SIO</span>
       </h3>
-      <p class="mb-4">
+      <p class="mb-8 text-lg">
         Actuellement étudiant en BTS SIO (Services Informatiques aux Organisations), je me passionne pour le développement web, le développement d'application et la programmation.
       </p>
 
-      <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mb-4">
-        <a href="assets/docs/CV - Dimitri (1).pdf" class="btn btn-primary" target="_blank">Voir mon CV</a>
-      </div>
-
-      <div class="d-flex gap-4 fs-3 justify-content-center justify-content-lg-start">
-        <a href="https://www.linkedin.com/in/dimitri-meyepa-b725b2361/" target="_blank" class="social-icon">
-          <i class="fab fa-linkedin"></i>
+      <div class="flex flex-col items-center lg:items-start gap-4 mb-8">
+        <!-- Bouton CV -->
+        <a 
+          href="assets/docs/CV - Dimitri (1).pdf" 
+          class="
+            relative
+            bg-gradient-to-r from-[#4b6cb7] to-[#8d6eff] 
+            text-white px-6 py-3 rounded-lg 
+            transition-all duration-500 ease-out
+            overflow-hidden
+            group
+            hover:bg-gradient-to-br hover:from-[#8d6eff] hover:to-[#4b6cb7]
+            hover:shadow-2xl hover:shadow-purple-500/40
+            hover:scale-105
+          " 
+          target="_blank"
+        >
+          <!-- Effet de brillance au survol -->
+          <span class="
+            absolute inset-0
+            bg-gradient-to-r from-transparent via-white/30 to-transparent
+            -translate-x-full
+            group-hover:translate-x-full
+            transition-transform duration-700 ease-out
+          "></span>
+          
+          Voir mon CV
         </a>
-        <a href="https://github.com/DimitriMeyepa" target="_blank" class="social-icon">
-          <i class="fab fa-github"></i>
-        </a>
+        
+        <!-- Boutons GitHub et LinkedIn côte à côte -->
+        <div class="flex gap-4">
+          <!-- Bouton LinkedIn -->
+          <a href="https://www.linkedin.com/in/dimitri-meyepa-b725b2361/" target="_blank" 
+            class="
+              relative
+              bg-gradient-to-br from-[#0077B5] to-[#0A66C2]
+              text-white px-5 py-3 rounded-lg
+              transition-all duration-300 ease-out
+              overflow-hidden
+              group
+              hover:shadow-lg hover:shadow-blue-500/40
+              hover:scale-105
+              flex items-center justify-center gap-2
+            ">
+            <!-- Effet de brillance au survol -->
+            <span class="
+              absolute inset-0
+              bg-gradient-to-r from-transparent via-white/30 to-transparent
+              -translate-x-full
+              group-hover:translate-x-full
+              transition-transform duration-700 ease-out
+            "></span>
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          
+          <!-- Bouton GitHub -->
+          <a href="https://github.com/DimitriMeyepa" target="_blank" 
+            class="
+              relative
+              bg-gradient-to-br from-[#333] to-[#6e5494]
+              text-white px-5 py-3 rounded-lg
+              transition-all duration-300 ease-out
+              overflow-hidden
+              group
+              hover:shadow-lg hover:shadow-purple-500/40
+              hover:scale-105
+              flex items-center justify-center gap-2
+            ">
+            <!-- Effet de brillance au survol -->
+            <span class="
+              absolute inset-0
+              bg-gradient-to-r from-transparent via-white/30 to-transparent
+              -translate-x-full
+              group-hover:translate-x-full
+              transition-transform duration-700 ease-out
+            "></span>
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
       </div>
     </div>
 
     <!-- Photo à droite -->
-   <div class="hero-image mt-5 mt-lg-0 ms-lg-4 text-center text-lg-end" data-aos="fade-left" data-aos-delay="200">
-  <img src="assets/img/photomoi.png" alt="Dimitri Méyépa" class="img-fluid rounded-circle shadow-photo" style="max-width: 250px;">
-</div>
-
+    <div class="hero-image mt-10 lg:mt-0 lg:ml-8 text-center lg:text-right" data-aos="fade-left" data-aos-delay="200">
+      <img src="assets/img/photomoi.png" alt="Dimitri Méyépa" class="rounded-full shadow-photo max-w-[250px] mx-auto lg:mx-0 transition-transform hover:-translate-y-2">
+    </div>
   </div>
 </section>
-
-
-
-
 <!-- À propos -->
-<section  id="apropos">
-  <div class="container" data-aos="fade-up">
-   <h2 class="text-center mb-5" data-aos="zoom-in">À propos de moi</h2>
-    <div class="row align-items-center">
-      <div class="col-lg-6 mb-4 mb-lg-0 text-center" data-aos="fade-right" data-aos-delay="800">
-        <img src="assets/img/Bureau.png" alt="Mon bureau" class="img-fluid rounded-4" style="max-width: 100%; height: 450px; margin-bottom: 20px;">
-      </div>
-      <div class="col-lg-6">
-        <div class="row g-3 mb-4">
-          <div class="col-6">
-            <div class="bg-primary p-3 rounded-3 text-center" data-aos="fade-up" data-aos-delay="200">
-              <i class="fas fa-lightbulb mb-2"></i>
-              <h6 class="mb-0">Créativité</h6>
-            </div>
+<section id="apropos" class="py-20 relative overflow-hidden">
+  <div class="container mx-auto px-4" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-center mb-16 section-title" data-aos="zoom-in">
+      À propos de moi
+    </h2>
+    
+
+    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12 justify-center">
+      
+      <!-- Image centrée -->
+      <div class="lg:w-2/5 mb-10 lg:mb-0 flex justify-center" data-aos="fade-right" data-aos-delay="300">
+        <div class="relative inline-block group">
+          <div class="absolute -inset-4 bg-gradient-to-r from-[#4b6cb7] to-[#8d6eff] rounded-2xl opacity-20 group-hover:opacity-30 transition-all duration-500 blur-sm group-hover:blur-md"></div>
+          
+          <div class="relative overflow-hidden rounded-2xl shadow-2xl transform">
+            <img src="assets/img/Bureau.png" alt="Mon bureau" class="w-full h-[450px] object-cover mx-auto brightness-90">
           </div>
-          <div class="col-6">
-            <div class="bg-primary p-3 rounded-3 text-center" data-aos="fade-up" data-aos-delay="400">
-              <i class="fas fa-laptop-code mb-2"></i>
-              <h6 class="mb-0">Adaptabilité</h6>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="bg-primary p-3 rounded-3 text-center" data-aos="fade-up" data-aos-delay="600">
-              <i class="fas fa-bolt mb-2"></i>
-              <h6 class="mb-0">Autonomie</h6>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="bg-primary p-3 rounded-3 text-center" data-aos="fade-up" data-aos-delay="800">
-              <i class="fas fa-tasks mb-2"></i>
-              <h6 class="mb-0">Organisation</h6>
+          
+          <div class="absolute -bottom-3 -right-3 w-20 h-20 bg-gradient-to-br from-[#4b6cb7] to-[#8d6eff] rounded-xl -z-10 opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute -top-3 -left-3 w-16 h-16 bg-gradient-to-br from-[#8d6eff] to-[#4b6cb7] rounded-lg -z-10 opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+          
+          <div class="absolute -top-4 -left-4 bg-gradient-to-r from-[#4b6cb7] to-[#8d6eff] text-white px-5 py-3 rounded-xl shadow-lg animate-pulse group-hover:animate-none group-hover:scale-110 transition-transform duration-300 z-20">
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-code text-sm"></i>
+              <span class="font-bold">Développeur</span>
             </div>
           </div>
         </div>
-       <div class="ms-2">
-        <p class="fw-light" data-aos="fade-left" data-aos-delay="800">
-          Actuellement étudiant en BTS Services Informatiques aux Organisations, je me passionne pour le développement et aspire à devenir développeur full stack.
-        <br> <br>
-          Motivé et curieux, je cherche à enrichir mes compétences techniques en HTML, CSS, PHP et MySQL à travers des projets concrets.
-        <br> <br> 
-        
-          Mon objectif est de contribuer activement au sein d'une entreprise dynamique tout en continuant à apprendre et à évoluer dans le domaine du développement.
-        </p>
       </div>
-        
-
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section" id="formations">
-  <div class="container" data-aos="fade-up">
-    <h3 class="text-center mb-5" data-aos="zoom-in">Parcours scolaire</h3>
-      <div class="timeline-horizontal">
-      <!-- Baccalauréat -->
-      <div class="timeline-step" data-aos="fade-up">
-        <div class="timeline-logo">
-          <img src="assets/img/LLBlogo.png" alt="Lycée La Bourdonnais">
-        </div>
-        <div class="timeline-point"></div>
-        <div class="timeline-content">
-          <h3>2023</h3>
-          <h5>Baccalauréat Général</h5>
-          <p>Lycée La Bourdonnais - Île Maurice</p>
-        </div>
-      </div>
-
-      <!-- Licence -->
-      <div class="timeline-step" data-aos="fade-up">
-        <div class="timeline-logo">
-          <img src="assets/img/UL2.webp" alt="Université Lyon 2">
-        </div>
-        <div class="timeline-point"></div>
-        <div class="timeline-content">
-          <h3>2023 – 2024</h3>
-          <h5>Licence Économie-Gestion</h5>
-          <p>Université Lyon 2 - France</p>
-        </div>
-      </div>
-
-      <!-- BTS -->
-      <div class="timeline-step" data-aos="fade-up">
-        <div class="timeline-logo">
-          <img src="assets/img/MCCI.jpg" alt="MCCI Business School">
-        </div>
-        <div class="timeline-point"></div>
-        <div class="timeline-content">
-          <h3>2024 – 2026</h3>
-          <h5>BTS SIO</h5>
-          <p>MCCI Business School - Île Maurice</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-  <!--compétences -->
-<section id="skills" class="py-5">
-  <div class="container" data-aos="fade-up">
-   <h3 class="text-center mb-5" data-aos="zoom-in">Compétences Techniques</h3>
-
-    <div class="carousel-container position-relative">
-      <div class="carousel-wrapper" id="custom-carousel">
   
-        <!-- Frontend -->
-        <div class="carousel-slide active">
-          <div class="skill-box text-center">
-            <h5 class="mb-4">Frontend</h5>
-            <div class="row">
-              <div class="col-6 mb-4">
-                <i class="fab fa-html5 fa-2x mb-2"></i>
-                <div><strong>HTML</strong></div>
-                <div class="text-secondary">Avancé</div>
+      <!-- Contenu texte centré -->
+      <div class="lg:w-3/5 lg:pt-0 text-center lg:text-left">
+        <div class="mb-10" data-aos="fade-left" data-aos-delay="400">
+          <h3 class="text-2xl font-bold mb-4">Passionné par le <span class="highlight">développement</span></h3>
+          <p class="text-lg leading-relaxed text-gray-300">
+            Actuellement étudiant en BTS Services Informatiques aux Organisations, je me passionne pour le développement et aspire à devenir développeur full stack.
+            <br><br>
+            Motivé et curieux, je cherche à enrichir mes compétences techniques en HTML, CSS, PHP et MySQL à travers des projets concrets.
+            <br><br>
+            Mon objectif est de contribuer activement au sein d'une entreprise dynamique tout en continuant à apprendre et à évoluer dans le domaine du développement.
+          </p>
+        </div>
+        
+        <!-- Grille des qualités centrée -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8 justify-items-center">
+          <div class="quality-card group" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-gradient-to-br from-[#1e1e1e] to-[#2d2d2d] p-6 rounded-2xl text-center border border-gray-800 hover:border-[#4b6cb7] transition-all duration-500 group-hover:-translate-y-2 h-full flex flex-col items-center justify-center">
+              <div class="quality-icon mb-4 w-16 h-16 rounded-full bg-gradient-to-br from-[#4b6cb7] to-[#8d6eff] flex items-center justify-center text-white text-xl">
+                <i class="fas fa-lightbulb"></i>
               </div>
-              <div class="col-6 mb-4">
-                <i class="fab fa-css3-alt fa-2x mb-2"></i>
-                <div><strong>CSS</strong></div>
-                <div class="text-secondary">Avancé</div>
+              <h6 class="font-bold text-lg mb-2">Créativité</h6>
+              <p class="text-sm text-gray-400">Solutions innovantes</p>
+            </div>
+          </div>
+          
+          <div class="quality-card group" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-gradient-to-br from-[#1e1e1e] to-[#2d2d2d] p-6 rounded-2xl text-center border border-gray-800 hover:border-[#4b6cb7] transition-all duration-500 group-hover:-translate-y-2 h-full flex flex-col items-center justify-center">
+              <div class="quality-icon mb-4 w-16 h-16 rounded-full bg-gradient-to-br from-[#4b6cb7] to-[#8d6eff] flex items-center justify-center text-white text-xl">
+                <i class="fas fa-laptop-code"></i>
               </div>
-              <div class="col-6 mb-4">
-                <i class="fab fa-bootstrap fa-2x mb-2"></i>
-                <div><strong>Bootstrap</strong></div>
-                <div class="text-secondary">Avancé</div>
+              <h6 class="font-bold text-lg mb-2">Adaptabilité</h6>
+              <p class="text-sm text-gray-400">Nouvelles technologies</p>
+            </div>
+          </div>
+          
+          <div class="quality-card group" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-gradient-to-br from-[#1e1e1e] to-[#2d2d2d] p-6 rounded-2xl text-center border border-gray-800 hover:border-[#4b6cb7] transition-all duration-500 group-hover:-translate-y-2 h-full flex flex-col items-center justify-center">
+              <div class="quality-icon mb-4 w-16 h-16 rounded-full bg-gradient-to-br from-[#4b6cb7] to-[#8d6eff] flex items-center justify-center text-white text-xl">
+                <i class="fas fa-bolt"></i>
               </div>
-              <div class="col-6 mb-4">
-                <i class="fa fa-wind fa-2x mb-2"></i>
-                <div><strong>Tailwind</strong></div>
-                <div class="text-secondary">Avancé</div>
+              <h6 class="font-bold text-lg mb-2">Autonomie</h6>
+              <p class="text-sm text-gray-400">Projets personnels</p>
+            </div>
+          </div>
+          
+          <div class="quality-card group" data-aos="fade-up" data-aos-delay="500">
+            <div class="bg-gradient-to-br from-[#1e1e1e] to-[#2d2d2d] p-6 rounded-2xl text-center border border-gray-800 hover:border-[#4b6cb7] transition-all duration-500 group-hover:-translate-y-2 h-full flex flex-col items-center justify-center">
+              <div class="quality-icon mb-4 w-16 h-16 rounded-full bg-gradient-to-br from-[#4b6cb7] to-[#8d6eff] flex items-center justify-center text-white text-xl">
+                <i class="fas fa-tasks"></i>
+              </div>
+              <h6 class="font-bold text-lg mb-2">Organisation</h6>
+              <p class="text-sm text-gray-400">Gestion de projets</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Formations -->
+  <section id="formations" class="py-20 bg-[#1e1e1e]">
+    <div class="container mx-auto px-4" data-aos="fade-up">
+      <h3 class="text-3xl font-bold text-center mb-16 section-title" data-aos="zoom-in">Parcours scolaire</h3>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Baccalauréat -->
+        <div class="formation-card group" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-gradient-to-br from-[#1e1e1e] to-[#2d2d2d] rounded-2xl p-8 h-full border border-gray-800 hover:border-[#4b6cb7] transition-all duration-500 group-hover:transform group-hover:-translate-y-2">
+            <div class="flex flex-col items-center text-center h-full">
+              <div class="formation-logo mb-6">
+                <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#8d6eff] to-[#4b6cb7] p-1">
+                  <img src="assets/img/LLBlogo.png" alt="Lycée La Bourdonnais" class="w-full h-full object-contain rounded-xl bg-white p-2">
+                </div>
+              </div>
+              
+              <div class="formation-badge mb-4">
+                <span class="bg-gradient-to-r from-[#8d6eff] to-[#4b6cb7] text-white text-sm font-semibold px-4 py-2 rounded-full">
+                  2023
+                </span>
+              </div>
+              
+              <h4 class="text-xl font-bold text-white mb-3">Baccalauréat Général</h4>
+              <p class="text-gray-300 mb-4">Lycée La Bourdonnais</p>
+              <p class="text-sm text-gray-400 mt-auto">Île Maurice</p>
+              
+              <div class="formation-decoration mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div class="w-12 h-1 bg-gradient-to-r from-[#8d6eff] to-[#4b6cb7] rounded-full mx-auto"></div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Backend -->
-        <div class="carousel-slide">
-          <div class="skill-box text-center">
-            <h5 class="mb-4">Backend</h5>
-            <div class="row">
-              <div class="col-6 mb-4">
-                <i class="fab fa-php fa-2x mb-2"></i>
-                <div><strong>PHP</strong></div>
-                <div class="text-secondary">Intermédiaire</div>
+        <!-- Licence -->
+        <div class="formation-card group" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-gradient-to-br from-[#1e1e1e] to-[#2d2d2d] rounded-2xl p-8 h-full border border-gray-800 hover:border-[#4b6cb7] transition-all duration-500 group-hover:transform group-hover:-translate-y-2">
+            <div class="flex flex-col items-center text-center h-full">
+              <div class="formation-logo mb-6">
+                <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#8d6eff] to-[#4b6cb7] p-1">
+                  <img src="assets/img/UL2.webp" alt="Université Lyon 2" class="w-full h-full object-contain rounded-xl bg-white p-2">
+                </div>
               </div>
-              <div class="col-6 mb-4">
-                <i class="fab fa-js fa-2x mb-2"></i>
-                <div><strong>JavaScript</strong></div>
-                <div class="text-secondary">Intermédiaire</div>
+              
+              <div class="formation-badge mb-4">
+                <span class="bg-gradient-to-r from-[#8d6eff] to-[#4b6cb7] text-white text-sm font-semibold px-4 py-2 rounded-full">
+                  2023 – 2024
+                </span>
               </div>
-              <div class="col-6 mb-4">
-                <i class="fab fa-java fa-2x mb-2"></i>
-                <div><strong>Java</strong></div>
-                <div class="text-secondary">Intermédiaire</div>
-              </div>
-              <div class="col-6 mb-4">
-                <i class="fab fa-python fa-2x mb-2"></i>
-                <div><strong>Python</strong></div>
-                <div class="text-secondary">Intermédiaire</div>
+              
+              <h4 class="text-xl font-bold text-white mb-3">Licence Économie-Gestion</h4>
+              <p class="text-gray-300 mb-4">Université Lyon 2</p>
+              <p class="text-sm text-gray-400 mt-auto">France</p>
+              
+              <div class="formation-decoration mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div class="w-12 h-1 bg-gradient-to-r from-[#8d6eff] to-[#4b6cb7] rounded-full mx-auto"></div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- BDD -->
-<div class="carousel-slide">
-  <div class="skill-box text-center">
-    <h5 class="mb-4">Base de données</h5>
-    <div class="row">
-      <!-- MySQL -->
-      <div class="col-6 mb-4">
-        <img src="assets/img/mysql.png" alt="MySQL" style="width: 32px; height: 32px; margin-bottom: 8px;">
-        <div><strong>MySQL</strong></div>
-        <div class="text-secondary">Intermédiaire</div>
-      </div>
-      <!-- PostgreSQL -->
-      <div class="col-6 mb-4">
-        <img src="assets/img/Postgresql.png" alt="PostgreSQL" style="width: 32px; height: 32px; margin-bottom: 8px;">
-        <div><strong>PostgreSQL</strong></div>
-        <div class="text-secondary">Intermédiaire</div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-<!-- Outils Collaboratifs -->
-  <div class="container" data-aos="fade-up">
-    <h3 class="text-center mb-5" data-aos="zoom-in">Outils Collaboratifs</h3>
-    <div class="row text-center g-4">
-  <div class="row text-center justify-content-center g-4">
-  <!-- Teams -->
-  <div class="col-2">
-    <img src="https://cdn.worldvectorlogo.com/logos/microsoft-teams-1.svg" alt="Teams" style="width:40px; height:40px; display:block; margin:auto;">
-    <div>Teams</div>
-  </div>
-
-  <!-- Trello -->
-  <div class="col-2">
-    <img src="https://cdn.worldvectorlogo.com/logos/trello.svg" alt="Trello" style="width:40px; height:40px; display:block; margin:auto;">
-    <div>Trello</div>
-  </div>
-
-  <!-- Jira -->
-  <div class="col-2">
-    <img src="https://cdn.worldvectorlogo.com/logos/jira-3.svg" alt="Jira" style="width:40px; height:40px; display:block; margin:auto;">
-    <div>Jira</div>
-  </div>
-
-  <!-- GitHub -->
-  <div class="col-2">
-    <i class="fab fa-github" style="font-size:40px; display:block; margin:auto;"></i>
-    <div>GitHub</div>
-  </div>
-
-  <!-- Figma -->
-  <div class="col-2">
-    <i class="fa-brands fa-figma" style="font-size:40px; color:orange; display:block; margin:auto;"></i>
-    <div>Figma</div>
-  </div>
-  </div>
-</section>
-
-
-<section id="projets" class="projets-section py-5" data-aos="fade-up">
-  <h2 class="text-center mb-5" data-aos="zoom-in">Mes projets</h2>
-
-  <!-- Filtres -->
-  <div class="container mb-4" data-aos="fade-right">
-    <div class="row justify-content-center">
-      <div class="col-md-4">
-        <select id="filtre-select" class="form-select text-center">
-          <option value="tous" selected>Tous</option>
-          <option value="projet">Réalisation professionnelle</option>
-          <option value="stage">Formation en entreprise</option>
-        </select>
-      </div>
-    </div>
-  </div>
-
-  <!-- Grille -->
-  <div class="container">
-    <div class="row g-4 justify-content-center projets-grille">
-<!-- Projet 1 -->
-<div class="col-md-6 col-lg-5 projet-item" data-type="projet">
-  <div class="card projet-card text-white">
-    <img src="assets/img/illustrationsupercar.png" class="card-img" alt="Supercar">
-    <div class="card-img-overlay d-flex flex-column justify-content-between p-4">
-
-      <!-- Badges en haut -->
-      <div>
-        <span class="badge bg-dark me-2">Dév. web</span>
-        <span class="badge bg-dark">Réalisation professionnelle</span>
-      </div>
-
-      <!-- Titre et description -->
-      <div>
-        <h5 class="fw-bold mb-1">Supercar</h5>
-        <p class="mb-3">Conduisez l'excellence</p>
-
-        <!-- Boutons -->
-          <div class="d-flex flex-wrap gap-2 buttons-container">
-          <a href="https://www.canva.com/design/DAGzBvhLqJg/CVTNi4Nfut-rogdEW9VFmg/view" target="_blank" class="project-btn">Présentation</a>
-          <button class="project-btn btn2" data-bs-toggle="modal" data-bs-target="#docsSupercar">Documents</button>
-          <button class="project-btn btn3" data-bs-toggle="modal" data-bs-target="#demoSupercar">Démo</button>
+        <!-- BTS -->
+        <div class="formation-card group" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-gradient-to-br from-[#1e1e1e] to-[#2d2d2d] rounded-2xl p-8 h-full border border-gray-800 hover:border-[#4b6cb7] transition-all duration-500 group-hover:transform group-hover:-translate-y-2">
+            <div class="flex flex-col items-center text-center h-full">
+              <div class="formation-logo mb-6">
+                <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#8d6eff] to-[#4b6cb7] p-1">
+                  <img src="assets/img/MCCI.jpg" alt="MCCI Business School" class="w-full h-full object-contain rounded-xl bg-white p-2">
+                </div>
+              </div>
+              
+              <div class="formation-badge mb-4">
+                <span class="bg-gradient-to-r from-[#8d6eff] to-[#4b6cb7] text-white text-sm font-semibold px-4 py-2 rounded-full">
+                  2024 – 2026
+                </span>
+              </div>
+              
+              <h4 class="text-xl font-bold text-white mb-3">BTS SIO</h4>
+              <p class="text-gray-300 mb-4">MCCI Business School</p>
+              <p class="text-sm text-gray-400 mt-auto">Île Maurice</p>
+              
+              <div class="formation-decoration mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div class="w-12 h-1 bg-gradient-to-r from-[#8d6eff] to-[#4b6cb7] rounded-full mx-auto"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+  </section>
 
+<!-- Compétences -->
+<section id="skills" class="py-20">
+  <div class="container mx-auto px-4" data-aos="fade-up">
+    <h3 class="text-4xl font-bold text-center mb-16 text-white section-title" data-aos="zoom-in">
+      Compétences Techniques
+    </h3>
+
+    <div class="carousel-container relative max-w-5xl mx-auto">
+      <div class="carousel-wrapper relative">
+        <!-- Flèche précédente -->
+        <button class="carousel-arrow carousel-arrow-prev absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 md:-translate-x-8 z-10 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl border border-blue-400/20">
+          <i class="fas fa-chevron-left text-lg"></i>
+        </button>
+
+        <!-- Conteneur des slides -->
+        <div class="carousel-slides-container overflow-hidden rounded-2xl">
+          <div class="carousel-slides flex transition-transform duration-500 ease-in-out">
+            <!-- Frontend -->
+            <div class="carousel-slide flex-shrink-0 w-full">
+              <div class="skill-box w-full max-w-md mx-auto bg-gradient-to-br from-slate-800 to-slate-900 text-white p-8 rounded-2xl shadow-2xl flex flex-col justify-start items-center text-center border border-slate-700/50 backdrop-blur-sm">
+                <div class="mb-6 w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center shadow-lg">
+                  <i class="fas fa-code text-xl"></i>
+                </div>
+                <h5 class="text-2xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Frontend</h5>
+                <div class="grid grid-cols-2 gap-6 w-full">
+                  <div class="mb-6 transform transition-transform duration-300 hover:scale-105">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mx-auto mb-3 shadow-md">
+                      <i class="fab fa-html5 text-xl"></i>
+                    </div>
+                    <div class="font-semibold">HTML</div>
+                    <div class="text-blue-300 text-sm mt-1">Avancé</div>
+                  </div>
+                  <div class="mb-6 transform transition-transform duration-300 hover:scale-105">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mx-auto mb-3 shadow-md">
+                      <i class="fab fa-css3-alt text-xl"></i>
+                    </div>
+                    <div class="font-semibold">CSS</div>
+                    <div class="text-blue-300 text-sm mt-1">Avancé</div>
+                  </div>
+                  <div class="mb-6 transform transition-transform duration-300 hover:scale-105">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-700 flex items-center justify-center mx-auto mb-3 shadow-md">
+                      <i class="fab fa-bootstrap text-xl"></i>
+                    </div>
+                    <div class="font-semibold">Bootstrap</div>
+                    <div class="text-blue-300 text-sm mt-1">Avancé</div>
+                  </div>
+                  <div class="mb-6 transform transition-transform duration-300 hover:scale-105">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center mx-auto mb-3 shadow-md">
+                      <i class="fa fa-wind text-xl"></i>
+                    </div>
+                    <div class="font-semibold">Tailwind</div>
+                    <div class="text-blue-300 text-sm mt-1">Avancé</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="carousel-slide flex-shrink-0 w-full">
+              <div class="skill-box w-full max-w-md mx-auto bg-gradient-to-br from-slate-800 to-slate-900 text-white p-8 rounded-2xl shadow-2xl flex flex-col justify-start items-center text-center border border-slate-700/50 backdrop-blur-sm">
+                <div class="mb-6 w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center shadow-lg">
+                  <i class="fas fa-server text-xl"></i>
+                </div>
+                <h5 class="text-2xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">Backend</h5>
+                <div class="grid grid-cols-2 gap-6 w-full">
+                  <div class="mb-6 transform transition-transform duration-300 hover:scale-105">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mx-auto mb-3 shadow-md">
+                      <i class="fab fa-php text-xl"></i>
+                    </div>
+                    <div class="font-semibold">PHP</div>
+                    <div class="text-green-300 text-sm mt-1">Intermédiaire</div>
+                  </div>
+                  <div class="mb-6 transform transition-transform duration-300 hover:scale-105">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center mx-auto mb-3 shadow-md">
+                      <i class="fab fa-js text-xl"></i>
+                    </div>
+                    <div class="font-semibold">JavaScript</div>
+                    <div class="text-green-300 text-sm mt-1">Intermédiaire</div>
+                  </div>
+                  <div class="mb-6 transform transition-transform duration-300 hover:scale-105">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center mx-auto mb-3 shadow-md">
+                      <i class="fab fa-java text-xl"></i>
+                    </div>
+                    <div class="font-semibold">Java</div>
+                    <div class="text-green-300 text-sm mt-1">Intermédiaire</div>
+                  </div>
+                  <div class="mb-6 transform transition-transform duration-300 hover:scale-105">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center mx-auto mb-3 shadow-md">
+                      <i class="fab fa-python text-xl"></i>
+                    </div>
+                    <div class="font-semibold">Python</div>
+                    <div class="text-green-300 text-sm mt-1">Intermédiaire</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        <!-- Cloud et database -->
+        <div class="carousel-slide flex-shrink-0 w-full">
+          <div class="skill-box w-full max-w-md mx-auto bg-gradient-to-br from-slate-800 to-slate-900 text-white p-8 rounded-2xl shadow-2xl flex flex-col justify-start items-center text-center border border-slate-700/50 backdrop-blur-sm">
+            <div class="mb-6 w-16 h-16 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 flex items-center justify-center shadow-lg">
+              <i class="fas fa-cloud text-xl"></i>
+            </div>
+            <h5 class="text-2xl font-bold mb-8 bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Cloud et database</h5>
+            <div class="grid grid-cols-2 gap-6 w-full">
+              <div class="mb-6 transform transition-transform duration-300 hover:scale-105">
+                <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-white to-gray-500 flex items-center justify-center mx-auto mb-3 shadow-md">
+                  <img src="assets/img/mysql.png" alt="MySQL" class="w-7 h-7">
+                </div>
+                <div class="font-semibold">MySQL</div>
+                <div class="text-amber-300 text-sm mt-1">Intermédiaire</div>
+              </div>
+              <div class="mb-6 transform transition-transform duration-300 hover:scale-105">
+                <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-600 to-blue-800 flex items-center justify-center mx-auto mb-3 shadow-md">
+                  <img src="assets/img/Postgresql.png" alt="PostgreSQL" class="w-7 h-7">
+                </div>
+                <div class="font-semibold">PostgreSQL</div>
+                <div class="text-amber-300 text-sm mt-1">Intermédiaire</div>
+              </div>
+              <div class="mb-6 transform transition-transform duration-300 hover:scale-105">
+                <div class="w-14 h-14 rounded-xl bg-white flex items-center justify-center mx-auto mb-3 shadow-md">
+                  <img src="assets/img/vercel.png" alt="Vercel" class="w-7 h-7">
+                </div>
+                <div class="font-semibold">Vercel</div>
+                <div class="text-amber-300 text-sm mt-1">Avancé</div>
+              </div>
+              <div class="mb-6 transform transition-transform duration-300 hover:scale-105">
+                <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-black-600 to-black-800 flex items-center justify-center mx-auto mb-3 shadow-md">
+                  <img src="assets/img/alwaysdatalogo.png" alt="AlwaysData" class="w-7 h-7">
+                </div>
+                <div class="font-semibold">AlwaysData</div>
+                <div class="text-amber-300 text-sm mt-1">Avancé</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <!-- Flèche suivante -->
+        <button class="carousel-arrow carousel-arrow-next absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 md:translate-x-8 z-10 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl border border-blue-400/20">
+          <i class="fas fa-chevron-right text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Indicateurs de slide -->
+      <div class="carousel-indicators flex justify-center space-x-3 mt-10">
+        <button class="carousel-indicator w-4 h-4 rounded-full bg-slate-600 transition-all duration-300 hover:bg-blue-500" data-slide="0"></button>
+        <button class="carousel-indicator w-4 h-4 rounded-full bg-slate-600 transition-all duration-300 hover:bg-green-500" data-slide="1"></button>
+        <button class="carousel-indicator w-4 h-4 rounded-full bg-slate-600 transition-all duration-300 hover:bg-amber-500" data-slide="2"></button>
+      </div>
+    </div>
+    
+    <!-- Outils Collaboratifs -->
+    <div class="mt-24" data-aos="fade-up">
+      <h3 class="text-4xl font-bold text-center mb-16 text-white section-title" data-aos="zoom-in">
+        Outils Collaboratifs
+      </h3>
+      
+      <div class="flex flex-wrap justify-center gap-10 max-w-4xl mx-auto">
+        <!-- Teams -->
+        <div class="text-center w-28 transform transition-transform duration-300 hover:scale-110">
+          <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mx-auto mb-3 shadow-md">
+            <img src="https://cdn.worldvectorlogo.com/logos/microsoft-teams-1.svg" alt="Teams" class="w-8 h-8">
+          </div>
+          <div class="text-slate-300 font-medium">Teams</div>
+        </div>
+
+        <!-- Trello -->
+        <div class="text-center w-28 transform transition-transform duration-300 hover:scale-110">
+          <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mx-auto mb-3 shadow-md">
+            <img src="https://cdn.worldvectorlogo.com/logos/trello.svg" alt="Trello" class="w-8 h-8">
+          </div>
+          <div class="text-slate-300 font-medium">Trello</div>
+        </div>
+
+        <!-- Jira -->
+        <div class="text-center w-28 transform transition-transform duration-300 hover:scale-110">
+          <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center mx-auto mb-3 shadow-md">
+            <img src="https://cdn.worldvectorlogo.com/logos/jira-3.svg" alt="Jira" class="w-8 h-8">
+          </div>
+          <div class="text-slate-300 font-medium">Jira</div>
+        </div>
+
+        <!-- GitHub -->
+        <div class="text-center w-28 transform transition-transform duration-300 hover:scale-110">
+          <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center mx-auto mb-3 shadow-md">
+            <i class="fab fa-github text-2xl"></i>
+          </div>
+          <div class="text-slate-300 font-medium">GitHub</div>
+        </div>
+
+        <!-- Figma -->
+        <div class="text-center w-28 transform transition-transform duration-300 hover:scale-110">
+          <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mx-auto mb-3 shadow-md">
+            <i class="fa-brands fa-figma text-2xl"></i>
+          </div>
+          <div class="text-slate-300 font-medium">Figma</div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-
-<!-- Projet 2 -->
-<div class="col-md-6 col-lg-5 projet-item" data-type="stage">
-  <div class="card projet-card text-white">
-    <img src="assets/img/illustrationacensi.png" class="card-img" alt="Stage 2025">
-    <div class="card-img-overlay d-flex flex-column justify-content-between p-4">
-
-      <!-- Badges en haut -->
-      <div>
-        <span class="badge bg-dark me-2">CRM</span>
-        <span class="badge bg-dark">Formation en entreprise</span>
-      </div>
-
-      <!-- Titre et description -->
-      <div>
-        <h5 class="fw-bold mb-1">Stage 2025</h5>
-        <p class="mb-3">Apprentissage et innovation</p>
-
-        <!-- Boutons directement sur la carte -->
-       <div class="d-flex flex-wrap gap-2 buttons-container">
-        <a href="https://www.canva.com/design/DAGyq-S91ug/AF7o9bS3XKCuuLeHGzcPwA/view?utm_content=DAGyq-S91ug&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6b2d15b289"
-        target="_blank" class="project-btn">Présentation</a>
-        <button class="project-btn btn2" data-bs-toggle="modal" data-bs-target="#docsStage2025">Documents</button>
-        <button class="project-btn btn3" data-bs-toggle="modal" data-bs-target="#demoStage2025">Démo</button>
-      </div>
-      </div>
-
-    </div>
-  </div>
-</div>
 </section>
-<!-- Modal Documents Supercar -->
-<div class="modal fade" id="docsSupercar" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bg-dark text-white">
-      <div class="modal-header">
-        <h5 class="modal-title">Documents - Supercar</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+
+
+  <!-- Projets -->
+  <section id="projets" class="py-20 bg-[#1e1e1e]" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center mb-12 section-title" data-aos="zoom-in">Mes projets</h2>
+
+    <!-- Filtres -->
+    <div class="container mx-auto px-4 mb-8" data-aos="fade-right">
+      <div class="flex justify-center">
+        <div class="w-full md:w-1/3">
+          <select id="filtre-select" class="w-full bg-[#1c1c1c] text-white border border-gray-700 rounded-xl py-2 px-4 text-center focus:border-[#4c64ea] focus:ring-1 focus:ring-[#4c64ea]">
+            <option value="tous" selected>Tous</option>
+            <option value="projet">Réalisation professionnelle</option>
+            <option value="stage">Formation en entreprise</option>
+          </select>
+        </div>
       </div>
-      <div class="modal-body d-flex flex-column gap-2">
-        <a href="assets/docs/Contexte Supercar 2024-26.pdf" target="_blank" class="modal-btn">Contexte</a>
-        <a href="assets/docs/Rapport de projet Supercar.pdf" target="_blank" class="modal-btn">Rapport de projet</a>
+    </div>
+
+    <!-- Grille -->
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap justify-center gap-6 projets-grille">
+        <!-- Projet 1 -->
+        <div class="projet-item w-full md:w-5/12 lg:w-5/12" data-type="projet">
+          <div class="card projet-card text-white rounded-2xl overflow-hidden relative transition-transform hover:scale-105">
+            <img src="assets/img/illustrationsupercar.png" class="card-img w-full h-72 object-cover brightness-60 transition-all hover:brightness-80" alt="Supercar">
+            <div class="card-img-overlay absolute inset-0 flex flex-col justify-between p-6">
+              <!-- Badges en haut -->
+              <div>
+                <span class="bg-black text-white text-sm px-3 py-1 rounded-lg mr-2">Dév. web</span>
+                <span class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white text-sm px-3 py-1 rounded-lg">Réalisation professionnelle</span>
+              </div>
+
+              <!-- Titre et description -->
+              <div>
+                <h5 class="font-bold text-xl mb-1">Supercar</h5>
+                <p class="mb-3">Conduisez l'excellence</p>
+
+                <!-- Boutons -->
+                <div class="flex flex-wrap gap-2 buttons-container">
+                  <a href="https://www.canva.com/design/DAGzBvhLqJg/CVTNi4Nfut-rogdEW9VFmg/view" target="_blank" class="project-btn text-white font-medium py-1 px-3 text-sm rounded-md transition-transform hover:scale-105">Présentation</a>
+                  <button class="project-btn text-white font-medium py-1 px-3 text-sm rounded-md transition-transform hover:scale-105" data-bs-toggle="modal" data-bs-target="#docsSupercar">Documents</button>
+                  <button class="project-btn text-white font-medium py-1 px-3 text-sm rounded-md transition-transform hover:scale-105" data-bs-toggle="modal" data-bs-target="#demoSupercar">Démo</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="projet-item w-full md:w-5/12 lg:w-5/12" data-type="stage">
+          <div class="card projet-card text-white rounded-2xl overflow-hidden relative transition-transform hover:scale-105">
+            <img src="assets/img/illustrationacensi.png" class="card-img w-full h-72 object-cover brightness-60 transition-all hover:brightness-80" alt="Stage 2025">
+            <div class="card-img-overlay absolute inset-0 flex flex-col justify-between p-6">
+              <!-- Badges en haut -->
+              <div>
+                <span class="bg-black text-white text-sm px-3 py-1 rounded-lg mr-2">CRM</span>
+               <span class="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white text-sm px-3 py-1 rounded-lg">Formation en entreprise</span>
+              </div>
+
+              <!-- Titre et description -->
+              <div>
+                <h5 class="font-bold text-xl mb-1">Stage 2025</h5>
+                <p class="mb-3">Apprentissage et innovation</p>
+
+                <!-- Boutons directement sur la carte -->
+                <div class="flex flex-wrap gap-2 buttons-container">
+                  <a href="https://www.canva.com/design/DAGyq-S91ug/AF7o9bS3XKCuuLeHGzcPwA/view?utm_content=DAGyq-S91ug&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6b2d15b289"
+                    target="_blank" class="project-btn text-white font-medium py-1 px-3 text-sm rounded-md transition-transform hover:scale-105">Présentation</a>
+                  <button class="project-btn text-white font-medium py-1 px-3 text-sm rounded-md transition-transform hover:scale-105" data-bs-toggle="modal" data-bs-target="#docsStage2025">Documents</button>
+                  <button class="project-btn text-white font-medium py-1 px-3 text-sm rounded-md transition-transform hover:scale-105" data-bs-toggle="modal" data-bs-target="#demoStage2025">Démo</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
+  <!-- Modal Documents Supercar -->
+<div class="modal" id="docsSupercar" tabindex="-1" aria-hidden="true">
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Documents - Supercar</h5>
+      <button type="button" class="modal-close" data-modal="docsSupercar">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body">
+      <a href="assets/docs/Contexte Supercar 2024-26.pdf" target="_blank" class="modal-btn">
+        Contexte
+      </a>
+      <a href="assets/docs/fichedescriptive_supercar" target="_blank" class="modal-btn">
+        Fiche descriptive
+      </a>
+      <a href="assets/docs/Rapport de projet Supercar.pdf" target="_blank" class="modal-btn">
+        Rapport de projet
+      </a>
     </div>
   </div>
 </div>
+
 <!-- Modal Démo Supercar -->
-<div class="modal fade" id="demoSupercar" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bg-dark text-white">
-      <div class="modal-header">
-        <h5 class="modal-title">Démo - Supercar</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body d-flex flex-column gap-2">
-        <a href="http://localhost/supercar/supercar-client/" target="_blank" class="modal-btn">Client</a>
-        <a href="http://localhost/supercar/supercar-admin/" target="_blank" class="modal-btn">Administration</a>
-      </div>
+<div class="modal" id="demoSupercar" tabindex="-1" aria-hidden="true">
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Démo - Supercar</h5>
+      <button type="button" class="modal-close" data-modal="demoSupercar">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body">
+      <a href="http://localhost/supercar/supercar-client/" target="_blank" class="modal-btn">
+        Client
+      </a>
+      <a href="http://localhost/supercar/supercar-admin/" target="_blank" class="modal-btn">
+        Administration
+      </a>
     </div>
   </div>
 </div>
+
 <!-- Modal Documents Stage 2025 -->
-<div class="modal fade" id="docsStage2025" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bg-dark text-white">
-      <div class="modal-header">
-        <h5 class="modal-title">Documents - Stage 2025</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body d-flex flex-column gap-2">
-        <a href="assets/docs/Attestation de stage - Dimitri Meyepa.pdf" target="_blank" class="modal-btn">Attestation</a>
-        <a href="assets/docs/Rapport de Stage premiere année (1).pdf" target="_blank" class="modal-btn">Rapport de stage</a>
-      </div>
+<div class="modal" id="docsStage2025" tabindex="-1" aria-hidden="true">
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Documents - Stage 2025</h5>
+      <button type="button" class="modal-close" data-modal="docsStage2025">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body">
+      <a href="assets/docs/Attestation de stage - Dimitri Meyepa.pdf" target="_blank" class="modal-btn">
+        Attestation
+      </a>
+      <a href="assets/docs/Bilan de Stage_Dimitri Meyepa.PDF" target="_blank" class="modal-btn">
+        Bilan de stage
+      </a>
+      <a href="assets/docs/Rapport de Stage premiere année (1).pdf" target="_blank" class="modal-btn">
+        Rapport de stage
+      </a>
     </div>
   </div>
 </div>
 
 <!-- Modal Démo Stage 2025 -->
-<div class="modal fade" id="demoStage2025" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bg-dark text-white">
-      <div class="modal-header">
-        <h5 class="modal-title">Démo - Stage 2025</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body d-flex flex-column gap-2">
-        <a href="http://localhost:4200/deals/deals-list" target="_blank" class="modal-btn">Deals</a>
-        <a href="http://localhost:4200/tasks/all-tasks" target="_blank" class="modal-btn">Tasks</a>
-      </div>
+<div class="modal" id="demoStage2025" tabindex="-1" aria-hidden="true">
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Démo - Stage 2025</h5>
+      <button type="button" class="modal-close" data-modal="demoStage2025">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body">
+      <a href="http://localhost:4200/deals/deals-list" target="_blank" class="modal-btn">
+        Deals
+      </a>
+      <a href="http://localhost:4200/tasks/all-tasks" target="_blank" class="modal-btn">
+        Tasks
+      </a>
     </div>
   </div>
 </div>
 
-<!-- GLPI -->
-<section id="glpi" class="section">
-  <div class="container text-center">
-    <h2 class="mb-5" data-aos="zoom-in">GLPI</h2>
+  <!-- GLPI -->
+  <section id="glpi" class="py-20 bg-[#1e1e1e]">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-center mb-12 section-title" data-aos="zoom-in">GLPI</h2>
 
-    <div class="row justify-content-center g-4">
-      <!-- Cadre 1 -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="card p-4 text-center">
-          <i class="fas fa-server fa-2x mb-3" style="color:#4b6cb7;"></i>
-          <h5>Installation & Configuration</h5>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+        <!-- Cadre 1 -->
+        <div class="bg-[#4c64ea23] text-white p-6 rounded-2xl text-center transition-transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-server text-3xl mb-4" style="color:#4b6cb7;"></i>
+          <h5 class="font-bold mb-2">Installation & Configuration</h5>
           <p>Installer et configurer GLPI sur un serveur web (Apache + PHP + MySQL).</p>
         </div>
-      </div>
 
-      <!-- Cadre 2 -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="card p-4 text-center">
-          <i class="fas fa-users-cog fa-2x mb-3" style="color:#f39c12;"></i>
-          <h5>Gestion des utilisateurs</h5>
-          <p>Gérer les utilisateurs, profils et droits d’accès.</p>
+        <!-- Cadre 2 -->
+        <div class="bg-[#4c64ea23] text-white p-6 rounded-2xl text-center transition-transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-users-cog text-3xl mb-4" style="color:#f39c12;"></i>
+          <h5 class="font-bold mb-2">Gestion des utilisateurs</h5>
+          <p>Gérer les utilisateurs, profils et droits d'accès.</p>
         </div>
-      </div>
 
-      <!-- Cadre 3 -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="card p-4 text-center">
-          <i class="fas fa-headset fa-2x mb-3" style="color:#e74c3c;"></i>
-          <h5>Tickets & Helpdesk</h5>
-          <p>Suivre et traiter les tickets d’incidents et de demandes.</p>
+        <!-- Cadre 3 -->
+        <div class="bg-[#4c64ea23] text-white p-6 rounded-2xl text-center transition-transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-headset text-3xl mb-4" style="color:#e74c3c;"></i>
+          <h5 class="font-bold mb-2">Tickets & Helpdesk</h5>
+          <p>Suivre et traiter les tickets d'incidents et de demandes.</p>
         </div>
-      </div>
 
-      <!-- Cadre 4 -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-        <div class="card p-4 text-center">
-          <i class="fas fa-laptop fa-2x mb-3" style="color:#1abc9c;"></i>
-          <h5>Inventaire Matériel</h5>
-          <p>Inventorier le matériel et les logiciels de l’organisation.</p>
+        <!-- Cadre 4 -->
+        <div class="bg-[#4c64ea23] text-white p-6 rounded-2xl text-center transition-transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+          <i class="fas fa-laptop text-3xl mb-4" style="color:#1abc9c;"></i>
+          <h5 class="font-bold mb-2">Inventaire Matériel</h5>
+          <p>Inventorier le matériel et les logiciels de l'organisation.</p>
         </div>
-      </div>
 
-      <!-- Cadre 5 -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
-        <div class="card p-4 text-center">
-          <i class="fas fa-chart-line fa-2x mb-3" style="color:#9b59b6;"></i>
-          <h5>Rapports & Dashboard</h5>
+        <!-- Cadre 5 -->
+        <div class="bg-[#4c64ea23] text-white p-6 rounded-2xl text-center transition-transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
+          <i class="fas fa-chart-line text-3xl mb-4" style="color:#9b59b6;"></i>
+          <h5 class="font-bold mb-2">Rapports & Dashboard</h5>
           <p>Créer des rapports et tableaux de bord pour le suivi des interventions.</p>
         </div>
-      </div>
 
-      <!-- Cadre 6 -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-        <div class="card p-4 text-center">
-          <i class="fas fa-lightbulb fa-2x mb-3" style="color:#f1c40f;"></i>
-          <h5>Compétences Développées</h5>
+        <!-- Cadre 6 -->
+        <div class="bg-[#4c64ea23] text-white p-6 rounded-2xl text-center transition-transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="600">
+          <i class="fas fa-lightbulb text-3xl mb-4" style="color:#f1c40f;"></i>
+          <h5 class="font-bold mb-2">Compétences Développées</h5>
           <p>Administration système, gestion de base de données, ITSM et support utilisateur.</p>
         </div>
       </div>
     </div>
+  </section>
+
+
+  <!-- Contact -->
+  <div id="contact-float" class="fixed bottom-6 right-6 bg-[#4b6cb7] text-white rounded-lg w-14 h-14 flex items-center justify-center cursor-pointer text-xl shadow-lg transition-transform hover:scale-105 z-50">
+    <i class="fas fa-envelope"></i>
   </div>
-</section>
-
-<!-- Contact -->
-<div id="contact-float" onclick="toggleContactBox()">
-  <i class="fas fa-envelope"></i>
-</div>
-<div id="contact-overlay" onclick="toggleContactBox()"></div>
-<div id= "contact-box">
-  <span class="contact-close" onclick="toggleContactBox()">&times;</span>
-  <h2>Contact</h2>
-  <p><i class="fas fa-envelope"></i> dimitri.meyepa1@gmail.com</p>
-  <p><i class="fas fa-phone"></i> (+230)5536-0799</p>
-
-  <form id="contact-form" action="https://formsubmit.co/dimitri.meyepa1@gmail.com" method="POST">
-    <!-- Champ email -->
-    <div class="mb-3">
-      <input type="text" name="email" class="form-control" placeholder="Email" required>
-    </div>
-    <!-- Champ message -->
-    <div class="mb-3">
-      <textarea name="message" class="form-control" rows="4" placeholder="Votre message" required></textarea>
-    </div>
-    
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="">
-    <button type="submit" class="btn btn-primary">Envoyer</button>
-  </form>
-</div>
-
-<script>
-  const canvas = document.getElementById('stars-canvas');
-const ctx = canvas.getContext('2d');
-
-let stars = [];
-const numStars = 150;
-
-function initStars() {
-  stars = [];
-  for (let i = 0; i < numStars; i++) {
-    stars.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      radius: Math.random() * 1.2,
-      alpha: Math.random()
-    });
-  }
-}
-
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  initStars();
-}
-
-function animateStars() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  for (let star of stars) {
-    ctx.beginPath();
-    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
-    ctx.fill();
-    
-    // scintillement
-    star.alpha += (Math.random() - 0.5) * 0.05;
-    if (star.alpha < 0) star.alpha = 0;
-    if (star.alpha > 1) star.alpha = 1;
-  }
-  requestAnimationFrame(animateStars);
-}
-
-window.addEventListener('resize', resizeCanvas);
-
-resizeCanvas();
-animateStars();
-
-  const slides = document.querySelectorAll('.carousel-slide');
-  let current = 1;
-
-  function updateCarousel() {
-    slides.forEach((slide, index) => {
-      slide.classList.remove('left', 'center', 'right');
-      if (index === current) {
-        slide.classList.add('center');
-      } else if (index === (current - 1 + slides.length) % slides.length) {
-        slide.classList.add('left');
-      } else if (index === (current + 1) % slides.length) {
-        slide.classList.add('right');
-      }
-    });
-  }
-
-  slides.forEach((slide, index) => {
-    slide.addEventListener('click', () => {
-      if (index !== current) {
-        current = index;
-        updateCarousel();
-      }
-    });
-  });
-
-  window.addEventListener('DOMContentLoaded', updateCarousel);
-</script>
-
-<script>
- const select = document.getElementById("filtre-select");
-  const projets = document.querySelectorAll(".projet-item");
-
-  select.addEventListener("change", () => {
-    const value = select.value;
-    projets.forEach((p) => {
-      if (value === "tous" || p.dataset.type === value) {
-        p.style.display = "block";
-      } else {
-        p.style.display = "none";
-      }
-    });
-  });
-    const filterLinks = document.querySelectorAll('.filter-link');
-  const projetsItems = document.querySelectorAll('.projet-item');
-  const selectFilter = document.getElementById("filtre-select");
-
-  function filterProjects(filter) {
-    projetsItems.forEach(p => {
-      if (filter === "tous" || p.dataset.type === filter) {
-        p.style.display = "block";
-      } else {
-        p.style.display = "none";
-      }
-    });
-  }
-
-  // Navbar click
-  filterLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const filter = link.dataset.filter;
-
-      // Filtrer les projets
-      filterProjects(filter);
-
-      // Mettre à jour le select
-      selectFilter.value = filter;
-
-      // Scroll vers la section projets
-      document.getElementById('projets').scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-
-  // Select change
-  selectFilter.addEventListener("change", () => {
-    filterProjects(selectFilter.value);
-  });
-
-</script>
-
-
-<script>
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-  e.preventDefault(); // Empêche le rechargement/redirection
-  const form = e.target;
-
-  fetch(form.action, {
-    method: "POST",
-    body: new FormData(form)
-  }).then(() => {
-    alert("✅ Message envoyé !");
-    form.reset(); // vide les champs
-  }).catch(() => {
-    alert("❌ Une erreur est survenue. Réessayez.");
-  });
-});
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 1000, once: true });
-
-  function toggleContactBox() {
-    var box = document.getElementById('contact-box');
-    box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'block' : 'none';
-  }
   
-</script>
+  <div id="contact-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+  
+  <div id="contact-box" class="fixed right-6 bottom-24 w-80 bg-[#1e1e1e] text-white p-6 rounded-2xl hidden z-50">
+    <span class="contact-close absolute top-3 right-4 text-xl cursor-pointer">&times;</span>
+    <h2 class="text-xl font-bold mb-4">Contact</h2>
+    <p class="mb-2"><i class="fas fa-envelope mr-2"></i> dimitri.meyepa1@gmail.com</p>
+    <p class="mb-4"><i class="fas fa-phone mr-2"></i> (+230)5536-0799</p>
 
-<script>
- document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
+    <form id="contact-form" action="https://formsubmit.co/dimitri.meyepa1@gmail.com" method="POST">
+      <div class="mb-4">
+        <input type="text" name="email" class="w-full bg-[#1e1e1e] text-white border border-gray-600 rounded-lg py-2 px-3 focus:outline-none focus:border-[#4b6cb7] focus:ring-1 focus:ring-[#4b6cb7]" placeholder="Email" required>
+      </div>
+      <div class="mb-4">
+        <textarea name="message" class="w-full bg-[#1e1e1e] text-white border border-gray-600 rounded-lg py-2 px-3 focus:outline-none focus:border-[#4b6cb7] focus:ring-1 focus:ring-[#4b6cb7]" rows="4" placeholder="Votre message" required></textarea>
+      </div>
+      
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="">
+      <button type="submit" class="w-full bg-[#4b6cb7] hover:bg-[#3a559c] text-white py-2 px-4 rounded-lg transition-colors">Envoyer</button>
+    </form>
+  </div>
 
-    
-    const targetId = this.getAttribute('href').substring(1);
-    const targetElement = document.getElementById(targetId);
-
-    
-    window.scrollTo({
-      top: targetElement.offsetTop - document.querySelector('nav').offsetHeight, 
-      behavior: 'smooth'
-    });
-  });
-});
-
-
-</script>
-
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -62,7 +62,7 @@
           </li>
           
           <li class="nav-item">
-            <a class="nav-link text-white hover:text-[#4b6cb7] transition-colors" href="#synthese">Tableau de synthèse</a>
+            <a class="nav-link text-white hover:text-[#4b6cb7] transition-colors" href="#tableausynthese">Tableau de synthèse</a>
           </li>
         </ul>
       </div>
@@ -775,7 +775,10 @@
   <!-- GLPI -->
   <section id="glpi" class="py-16 sm:py-20 bg-[#1e1e1e]">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 section-title" data-aos="zoom-in">GLPI</h2>
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 section-title" 
+      data-aos="zoom-in"> 
+      Compétences GLPI
+      </h2>
       <p class="text-gray-300 text-base sm:text-lg mb-5">
          GLPI (Gestion Libre de Parc Informatique) est un logiciel open source utilisé pour gérer l’assistance informatique,
          le suivi des incidents, l’inventaire du matériel et la gestion des services IT. Il permet aux organisations 
@@ -1019,7 +1022,50 @@
       <input type="hidden" name="_next" value="">
       <button type="submit" class="w-full bg-[#4b6cb7] hover:bg-[#3a559c] text-white py-2 px-4 rounded-lg transition-colors text-sm sm:text-base">Envoyer</button>
     </form>
+  </div>'
+  
+  
+<section id="tableausynthese" class="py-16 sm:py-20 bg-[#1e1e1e]">
+  <div class="container mx-auto px-4 text-center">
+
+    <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 section-title"
+        data-aos="zoom-in">
+      Tableau de Synthèse
+    </h2>
+
+    <p class="text-gray-300 text-base sm:text-lg mb-6 max-w-2xl mx-auto" data-aos="fade-up">
+      Accédez au tableau de synthèse regroupant les compétences, activités et projets réalisés,
+      disponible en version PDF ou Excel.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
+
+      <!-- Bouton PDF -->
+      <a href="assets/docs/Dimitri-Tableau de synthese.pdf"
+         target="_blank"
+         class="bg-[#4c64ea23] border border-[#4b6cb7] hover:bg-[#4b6cb7] transition-all 
+                text-white px-6 py-4 rounded-2xl flex items-center gap-3 text-sm sm:text-base"
+         data-aos="zoom-in" data-aos-delay="200">
+        <i class="fas fa-file-pdf text-2xl" style="color:#e74c3c;"></i>
+        <span class="font-semibold">Ouvrir le Tableau (PDF)</span>
+      </a>
+
+      <!-- Bouton Excel -->
+      <a href="assets/docs/Dimitri-Tableau de synthese.xlsx"
+         download
+         class="bg-[#4c64ea23] border border-[#1abc9c] hover:bg-[#1abc9c] transition-all 
+                text-white px-6 py-4 rounded-2xl flex items-center gap-3 text-sm sm:text-base"
+         data-aos="zoom-in" data-aos-delay="300">
+        <i class="fas fa-file-excel text-2xl" style="color:#2ecc71;"></i>
+        <span class="font-semibold">Télécharger le fichier Excel</span>
+      </a>
+
+    </div>
+
   </div>
+</section>
+
+
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/script.js"></script>

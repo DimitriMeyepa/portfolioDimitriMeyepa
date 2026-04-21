@@ -752,8 +752,20 @@
                 <!-- Boutons -->
                 <div class="flex flex-wrap gap-1 sm:gap-2 buttons-container">
                   <a href="https://www.canva.com/design/DAHEFGTIa0o/SP7nTXXFTB6Hd2MDpN_gGQ/view?utm_content=DAHEFGTIa0o&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h588b9ec574" target="_blank" class="project-btn text-white font-medium py-1 px-2 sm:py-1 sm:px-3 text-xs sm:text-sm rounded-md transition-transform hover:scale-105">Présentation</a>
-                  <button class="project-btn text-white font-medium py-1 px-2 sm:py-1 sm:px-3 text-xs sm:text-sm rounded-md transition-transform hover:scale-105" data-bs-toggle="modal" data-bs-target="#docsSupercar">Documents</button>
-                  <button class="project-btn text-white font-medium py-1 px-2 sm:py-1 sm:px-3 text-xs sm:text-sm rounded-md transition-transform hover:scale-105" data-bs-toggle="modal" data-bs-target="#demoSupercar">Démo</button>
+                  <button class="project-btn text-white font-medium py-1 px-2 sm:py-1 sm:px-3 text-xs sm:text-sm rounded-md transition-transform hover:scale-105" data-bs-toggle="modal" data-bs-target="#docsVMS">Documents</button>
+                  <button class="project-btn text-white font-medium py-1 px-2 sm:py-1 sm:px-3 text-xs sm:text-sm rounded-md transition-transform hover:scale-105" onclick="downloadVMS()">
+                  Démo
+                </button> 
+
+                  <script>
+                  function downloadVMS() {
+                    const link = document.createElement('a');
+                    link.href = 'assets/docs/Livraison_VMS.zip';
+                    link.download = 'Livraison_VMS.zip';
+                    link.click();
+                  }
+                  </script>
+          
                 </div>
               </div>
             </div>
@@ -777,7 +789,7 @@
       <a href="assets/docs/Contexte Supercar 2024-26.pdf" target="_blank" class="modal-btn">
         Contexte
       </a>
-      <a href="assets/docs/Fiche Descriptive - Supercar RP1.pdf" target="_blank" class="modal-btn">
+      <a href="assets/docs/Dimitri-Fiche Descriptive - Supercar RP1.pdf" target="_blank" class="modal-btn">
         Fiche descriptive
       </a>
       <a href="assets/docs/Rapport de projet Supercar.pdf" target="_blank" class="modal-btn">
@@ -871,7 +883,7 @@
       <a href="assets/docs/Bilan de stage BTS SIO - Session 2026-1.pdf" target="_blank" class="modal-btn">
         Bilan de stage
       </a>
-      <a href="" target="_blank" class="modal-btn">
+      <a href="assets/docs/Rapport de stage frci.pdf" target="_blank" class="modal-btn">
         Rapport de stage
       </a> 
     </div>
@@ -896,6 +908,30 @@
       <!-- Capture Excel -->
       <a href="" target="_blank" class="modal-btn">
         Capture excel 
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- modal vms documents-->
+<div class="modal" id="docsVMS" tabindex="-1" aria-hidden="true">
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Documents - VMS</h5>
+      <button type="button" class="modal-close" data-modal="docsVMS">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body">
+      <a href="assets/docs/Contexte RP2 - projet VMS.pdf" target="_blank" class="modal-btn">
+        Contexte
+      </a>
+        <a href="assets/docs/Dimitri-Fiche Descriptive - VMS RP2.pdf" target="_blank" class="modal-btn">
+          Fiche descriptive
+        </a>
+      <a href="assets/docs/Rapport de projet VMS.pdf" target="_blank" class="modal-btn">
+        Rapport de projet 
       </a>
     </div>
   </div>
